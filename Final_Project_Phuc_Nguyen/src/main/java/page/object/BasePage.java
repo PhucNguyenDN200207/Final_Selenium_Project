@@ -14,47 +14,27 @@ public class BasePage {
     /**
      * Element locators of the common web elements' locator
      **/
-    final private By _formError = By.cssSelector(".message");
-
-    private final By _loginTab = By.cssSelector("a[href^='/Account/Login']");
-    private final By _logoutTab = By.cssSelector("a[href^='/Account/Logout']");
-    private final By _changePasswordTab = By.cssSelector("a[href^='/Account/Change']");
-    private final By _myTicketTab = By.cssSelector("a[href='/Page/ManageTicket.cshtml']");
-    private final By _contactTab = By.cssSelector("a[href='/Page/Contact.cshtml']");
-    private final By _registerTab = By.cssSelector("a[href='/Account/Register.cshtml']");
+    private final By _userName = By.cssSelector("#mod-login-username");
+    private final By _password = By.cssSelector("#mod-login-password");
+    private final By _loginBtn = By.cssSelector(".icon-white");
 
 
     /**
      * This is place create common Web elements
      */
 
-    private WebElement loginTab() {
-        return Constants.DRIVER.findElement(_loginTab);
+    private WebElement userName() {
+        return Constants.DRIVER.findElement(_userName);
     }
 
-    private WebElement logoutTab() {
-        return Constants.DRIVER.findElement(_logoutTab);
+    private WebElement password() {
+        return Constants.DRIVER.findElement(_password);
     }
 
-    private WebElement contactTab() {
-        return Constants.DRIVER.findElement(_contactTab);
+    private WebElement loginBtn() {
+        return Constants.DRIVER.findElement(_loginBtn);
     }
 
-    private WebElement myTicketTab() {
-        return Constants.DRIVER.findElement(_myTicketTab);
-    }
-
-    private WebElement registerTab() {
-        return Constants.DRIVER.findElement(_registerTab);
-    }
-
-    private WebElement changePasswordTab() {
-        return Constants.DRIVER.findElement(_changePasswordTab);
-    }
-
-    private WebElement formError() {
-        return Constants.DRIVER.findElement(_formError);
-    }
 
     /**
      * Verify that web element is display or not by WebElement
@@ -101,65 +81,46 @@ public class BasePage {
         return Constants.DRIVER.getCurrentUrl();
     }
 
-    public String formErrorMessage() {
-        return formError().getText();
+
+    /**
+     * Common method
+     */
+    public void inputUserName(String userName) {
+        scrollToElement(userName()).sendKeys(userName);
+    }
+
+    public void inputPassword(String password) {
+        scrollToElement(password()).sendKeys(password);
+    }
+
+    public void clickLoginBtn() {
+        Log4j.info("Click on Login Button");
+        scrollToElement(loginBtn()).click();
     }
 
     /**
-     * Click on Menu Tab
+     * input valid username and password to Joomla
      */
-    public void clickLoginTab() {
-        Log4j.info("Click on Login Tab");
-        this.scrollToElement(loginTab()).click();
-    }
+    public void login() {
 
-    public void clickContactTab() {
-        Log4j.info("Click on Contact Tab");
-        this.scrollToElement(contactTab()).click();
-    }
+        Log4j.info("Input to User Name text box: ");
+        this.inputUserName(Constants.USER_NAME);
 
-    public void clickMyTicketTab() {
-        Log4j.info("Click on My Ticket Tab");
-        this.scrollToElement(myTicketTab()).click();
-    }
+        Log4j.info("Input to Password text box: ");
+        this.inputPassword(Constants.PASSWORD);
 
-    public void clickChangePasswordTab() {
-        Log4j.info("Click on Change Password Tab");
-        this.scrollToElement(changePasswordTab()).click();
-    }
-
-    public void clickLogoutTab() {
-        Log4j.info("Click on Logout Tab");
-        this.scrollToElement(logoutTab()).click();
-    }
-
-    public void clickRegisterTab() {
-        Log4j.info("Click on Register Tab");
-        this.scrollToElement(registerTab()).click();
+        clickLoginBtn();
     }
 
     /**
      * Verify method
      */
-
-    public Boolean isLoginTabDisplayed() {
-        return isElementPresented(loginTab());
+    /**
+     * Verify that the text is existed on page
+     * @param text string
+     * @return true if text existed
+     */
+    public Boolean verifyTextOnPage(String text) {
+        return Constants.DRIVER.getPageSource().contains(text);
     }
-
-    public Boolean isLogoutTabDisplayed() {
-        return isElementPresented(logoutTab());
-    }
-
-    public Boolean isMyTicketTabDisplayed() {
-        return isElementPresented(myTicketTab());
-    }
-
-    public Boolean isChangePasswordTabDisplayed() {
-        return isElementPresented(changePasswordTab());
-    }
-
-    public Boolean isFormErrorDisplayed() {
-        return isElementPresented(formError());
-    }
-
 }

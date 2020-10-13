@@ -23,7 +23,7 @@ public class TestHelper {
             }
         }
         Constants.DRIVER.manage().window().maximize();
-        DriverHelper.navigate(Constants.RAILWAY_HOME_URL);
+        DriverHelper.navigate(Constants.JOOMLA_HOME_URL);
     }
 
     @AfterMethod
