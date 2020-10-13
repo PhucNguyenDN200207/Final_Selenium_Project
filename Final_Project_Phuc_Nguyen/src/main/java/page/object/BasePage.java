@@ -61,18 +61,6 @@ public class BasePage {
         return element;
     }
 
-    /**
-     * Wait for element is clickable with time out 100 seconds
-     *
-     * @param element Element
-     * @return Element
-     */
-    public WebElement waitElementClickable(WebElement element) {
-        WebDriverWait wait = new WebDriverWait(Constants.DRIVER, 100);
-        element = wait.until(ExpectedConditions.elementToBeClickable(By.id("usrUtils")));
-        return element;
-    }
-
     public String getTitle() {
         return Constants.DRIVER.getTitle();
     }

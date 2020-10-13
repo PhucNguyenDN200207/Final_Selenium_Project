@@ -19,5 +19,6 @@ public class Constants {
     public static final String SAMPLE_DATA_ARTICLES = "Sample Data-Articles";
     public static final String ARTICLE_CONTENT_TEXT = " This is article content";
     public static final String ARTICLE_ALERT_MESSAGE = "Article successfully saved";
+    public static final String HELP_PAGE_TITLE = "Joomla! Help Screens";
 
 }

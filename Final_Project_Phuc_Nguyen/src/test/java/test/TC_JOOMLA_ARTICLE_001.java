@@ -25,7 +25,7 @@ public class TC_JOOMLA_ARTICLE_001 extends TestHelper {
         Assert.assertEquals(articlePage.getAlertMessage(), ARTICLE_ALERT_MESSAGE, "Alert message failed");
 
         Log4j.info("Navigate to Article manager page");
-        DriverHelper.navigate(JOOMLA_ARTICLE_MANAGER_URL);
+        articlePage.navigateToArticleManager();
 
         Assert.assertEquals(articlePage.getFirstAuthor(), AUTHOR, "Author failed");
         Assert.assertEquals(articlePage.getFirstTitle(), ARTICLE_TITLE, "Article title fail");

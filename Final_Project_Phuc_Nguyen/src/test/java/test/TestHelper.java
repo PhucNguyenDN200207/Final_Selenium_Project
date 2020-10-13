@@ -23,6 +23,8 @@ public class TestHelper {
             }
         }
         Constants.DRIVER.manage().window().maximize();
+
+        Log4j.info("Navigate to JOOMLA Home Page");
         DriverHelper.navigate(Constants.JOOMLA_HOME_URL);
     }
 
