@@ -4,7 +4,8 @@
     <test name="Test-Chrome">
         <parameter name="browser" value="chrome"/>
         <classes>
-            <!--            <class name="test.TC_JOOMLA_CONTACTS_008"/>-->
+            <class name="test.TC_JOOMLA_ARTICLE_001"/>
+            <class name="test.TC_JOOMLA_CONTACTS_008"/>
         </classes>
     </test>
 
@@ -19,7 +20,7 @@
     <test name="Test-Edge">
         <parameter name="browser" value="edge"/>
         <classes>
-            <!--            <class name="test.TC_JOOMLA_CONTACTS_008"/>-->
+            <class name="test.TC_JOOMLA_CONTACTS_008"/>
         </classes>
     </test>
 </suite>

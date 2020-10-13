@@ -7,9 +7,6 @@ import org.openqa.selenium.WebElement;
 import utils.Constants;
 import utils.Log4j;
 
-import java.util.ArrayList;
-import java.util.concurrent.TimeUnit;
-
 import static utils.Constants.*;
 
 public class BasePage {
@@ -22,7 +19,7 @@ public class BasePage {
     private final By _password = By.cssSelector("#mod-login-password");
     private final By _loginBtn = By.cssSelector(".icon-white");
     private final By _saveBtn = By.cssSelector(".button-apply");
-    private final By _alertSuccessMessage = By.cssSelector("div.alert-success .alert-message");
+    private final By _alertSuccessMsg = By.cssSelector("div.alert-success .alert-message");
     private final By _helpBtn = By.cssSelector("#toolbar-help  button");
 
     /**
@@ -46,7 +43,7 @@ public class BasePage {
     }
 
     private WebElement alertSuccessMessage() {
-        return DRIVER.findElement(_alertSuccessMessage);
+        return DRIVER.findElement(_alertSuccessMsg);
     }
 
     private WebElement helpBtn() {
@@ -127,7 +124,7 @@ public class BasePage {
 
         clickLoginBtn();
     }
-    
+
 
     /**
      * Verify method

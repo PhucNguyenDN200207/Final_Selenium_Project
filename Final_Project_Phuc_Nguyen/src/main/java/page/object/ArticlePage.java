@@ -8,9 +8,8 @@ import org.openqa.selenium.WebElement;
 import utils.Constants;
 import utils.Log4j;
 
-import java.util.ArrayList;
-import java.util.concurrent.TimeUnit;
 
+import static helper.DataHelper.*;
 import static utils.Constants.*;
 
 public class ArticlePage extends BasePage {
@@ -91,8 +90,8 @@ public class ArticlePage extends BasePage {
 
     public void createNewArticle() {
         this.clickNewArticle();
-        this.inputArticleTitle(ARTICLE_TITLE);
-        this.inputArticleContentTxt(ARTICLE_CONTENT_TEXT);
+        this.inputArticleTitle(randomName());
+        this.inputArticleContentTxt(randomContent());
         this.clickSaveBtn();
     }
 

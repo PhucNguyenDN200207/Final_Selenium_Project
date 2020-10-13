@@ -11,10 +11,18 @@ public class DataHelper {
 
     static Faker faker = new Faker(new Locale("en"));
 
+    public static String randomName() {
+        return faker.name().username();
+    }
+
+    public static String randomContent() {
+        return faker.lorem().paragraph();
+    }
 
     public static int randomNumber(int min, int max) {
         return faker.number().numberBetween(min, max);
     }
+
     public static boolean verifyHelpPageTitle() throws InterruptedException {
         Thread.sleep(TIME_OUT_SHORT);
 
