@@ -6,8 +6,10 @@ import org.testng.annotations.Test;
 import page.object.ArticlePage;
 import utils.Log4j;
 
+import static helper.DataHelper.verifyHelpPageTitle;
 
-public class TO_JOOMLA_ARTICLE_008 extends TestHelper{
+
+public class TO_JOOMLA_ARTICLE_008 extends TestHelper {
     ArticlePage articlePage = new ArticlePage();
 
     @BeforeMethod
@@ -16,12 +18,13 @@ public class TO_JOOMLA_ARTICLE_008 extends TestHelper{
     }
 
     @Test(description = "User can access article's help section")
-    public void testcase008() throws InterruptedException{
+    public void testcase008() throws InterruptedException {
         Log4j.header("TO_JOOMLA_ARTICLE_008");
 
         Log4j.info("Navigate to Article manager page");
         articlePage.navigateToArticleManager();
+        articlePage.openHelpPage();
 
-        Assert.assertTrue(articlePage.verifyHelpPageTitle(), "Help page title failed");
+        Assert.assertTrue(verifyHelpPageTitle(), "Help page title failed");
     }
 }

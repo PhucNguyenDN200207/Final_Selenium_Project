@@ -101,6 +101,10 @@ public class ArticlePage extends BasePage {
         clickArticleManager();
     }
 
+    public void openHelpPage() {
+        clickHelpBtn();
+    }
+
     /**
      * This is place create verify methods
      */

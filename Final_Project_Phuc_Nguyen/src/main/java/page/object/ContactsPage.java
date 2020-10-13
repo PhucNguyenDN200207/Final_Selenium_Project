@@ -76,6 +76,11 @@ public class ContactsPage extends BasePage {
         clickContactDrd();
     }
 
+    public void openHelpPage() {
+        navigateToContactPage();
+        clickHelpBtn();
+    }
+
     public void createNewContact() {
         navigateToContactPage();
         clickNewBtn();

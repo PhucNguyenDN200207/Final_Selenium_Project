@@ -6,6 +6,7 @@ import org.testng.annotations.Test;
 import page.object.ContactsPage;
 import utils.Log4j;
 
+import static helper.DataHelper.verifyHelpPageTitle;
 import static utils.Constants.*;
 
 public class TC_JOOMLA_CONTACTS_008 extends TestHelper {
@@ -21,8 +22,8 @@ public class TC_JOOMLA_CONTACTS_008 extends TestHelper {
         Log4j.header("TC_JOOMLA_CONTACTS_008");
 
         Log4j.info("Navigate to Article manager page");
-        contactsPage.navigateToContactPage();
+        contactsPage.openHelpPage();
 
-        Assert.assertTrue(contactsPage.verifyHelpPageTitle(), "Help page title failed");
+        Assert.assertTrue(verifyHelpPageTitle(), "Help page title failed");
     }
 }

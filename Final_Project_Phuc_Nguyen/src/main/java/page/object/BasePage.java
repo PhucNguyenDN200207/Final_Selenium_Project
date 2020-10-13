@@ -8,6 +8,7 @@ import utils.Constants;
 import utils.Log4j;
 
 import java.util.ArrayList;
+import java.util.concurrent.TimeUnit;
 
 import static utils.Constants.*;
 
@@ -126,22 +127,7 @@ public class BasePage {
 
         clickLoginBtn();
     }
-
-    public boolean verifyHelpPageTitle() throws InterruptedException {
-        clickHelpBtn();
-        Thread.sleep(TIME_OUT_SHORT);
-
-        // Get all Open Tabs
-        ArrayList<String> tabHandles = new ArrayList<String>(DRIVER.getWindowHandles());
-        for (String eachHandle : tabHandles) {
-            DRIVER.switchTo().window(eachHandle);
-            // Check Help Page Title
-            if (DRIVER.getTitle().equalsIgnoreCase(HELP_PAGE_TITLE)) {
-                return true;
-            }
-        }
-        return false;
-    }
+    
 
     /**
      * Verify method
