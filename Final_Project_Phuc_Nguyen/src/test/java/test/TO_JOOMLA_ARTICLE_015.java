@@ -1,6 +1,5 @@
 package test;
 
-import helper.DriverHelper;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -9,7 +8,7 @@ import utils.Log4j;
 
 import static utils.Constants.*;
 
-public class TC_JOOMLA_ARTICLE_001 extends TestHelper {
+public class TO_JOOMLA_ARTICLE_015 extends TestHelper {
     ArticlePage articlePage = new ArticlePage();
 
     @BeforeMethod
@@ -17,9 +16,9 @@ public class TC_JOOMLA_ARTICLE_001 extends TestHelper {
         articlePage.login();
     }
 
-    @Test(description = "Verify user can create new article with valid information")
-    public void testcase001() {
-        Log4j.header("Testcase 001");
+    @Test(description = "User can change the status of articles using the Status column")
+    public void testcase015() {
+        Log4j.header("Testcase 015");
         articlePage.createNewArticle();
 
         Assert.assertEquals(articlePage.getAlertMessage(), ARTICLE_ALERT_MESSAGE, "Alert message failed");
@@ -29,5 +28,8 @@ public class TC_JOOMLA_ARTICLE_001 extends TestHelper {
 
         Assert.assertEquals(articlePage.getFirstAuthor(), AUTHOR, "Author failed");
         Assert.assertEquals(articlePage.getFirstTitle(), ARTICLE_TITLE, "Article title fail");
+
+        //Not finish yet
+
     }
 }

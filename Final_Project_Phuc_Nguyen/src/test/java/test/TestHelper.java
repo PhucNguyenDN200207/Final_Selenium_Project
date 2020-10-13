@@ -2,9 +2,9 @@ package test;
 
 import helper.DriverHelper;
 import org.testng.annotations.*;
-import page.object.BasePage;
-import utils.Constants;
 import utils.Log4j;
+
+import static utils.Constants.*;
 
 
 public class TestHelper {
@@ -22,15 +22,15 @@ public class TestHelper {
                 DriverHelper.openEdgeBrowser();
             }
         }
-        Constants.DRIVER.manage().window().maximize();
+        DRIVER.manage().window().maximize();
 
         Log4j.info("Navigate to JOOMLA Home Page");
-        DriverHelper.navigate(Constants.JOOMLA_HOME_URL);
+        DriverHelper.navigate(JOOMLA_HOME_URL);
     }
 
     @AfterMethod
     public void afterMethod() {
         Log4j.info("Close browser\n");
-        Constants.DRIVER.quit();
+        DRIVER.quit();
     }
 }

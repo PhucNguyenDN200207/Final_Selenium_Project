@@ -7,7 +7,7 @@ import page.object.ArticlePage;
 import utils.Log4j;
 
 
-public class TC_JOOMLA_ARTICLE_008 extends TestHelper {
+public class TO_JOOMLA_ARTICLE_008 extends TestHelper {
     ArticlePage articlePage = new ArticlePage();
 
     @BeforeMethod
@@ -15,7 +15,7 @@ public class TC_JOOMLA_ARTICLE_008 extends TestHelper {
         articlePage.login();
     }
 
-    @Test(testName = "TC_008", description = "User can access article's help section")
+    @Test(description = "User can access article's help section")
     public void testcase008() {
         Log4j.header("Testcase 008");
 

@@ -906,3 +906,160 @@
 2020-10-13 14:55:49,977 INFO  [Test] Step: Click on 'Help' icon of the top right toolbar 
 2020-10-13 14:55:52,459 INFO  [Test] Close browser
  
+2020-10-13 15:50:19,736 INFO  [Test] Input to User Name text box:  
+2020-10-13 15:50:19,759 INFO  [Test] Input to User Name text box:  
+2020-10-13 15:50:19,763 INFO  [Test] Input to User Name text box:  
+2020-10-13 15:50:53,902 INFO  [Test] <--------------------Browser: chrome-------------------->
+ 
+2020-10-13 15:50:56,043 INFO  [Test] Navigate to JOOMLA Home Page 
+2020-10-13 15:51:21,352 INFO  [Test] Input to User Name text box:  
+2020-10-13 15:51:36,802 INFO  [Test] <--------------------Browser: chrome-------------------->
+ 
+2020-10-13 15:51:38,945 INFO  [Test] Navigate to JOOMLA Home Page 
+2020-10-13 15:52:40,113 INFO  [Test] Input to User Name text box:  
+2020-10-13 15:52:45,459 INFO  [Test] <--------------------Browser: firefox-------------------->
+ 
+2020-10-13 15:52:45,472 INFO  [Test] Navigate to JOOMLA Home Page 
+2020-10-13 15:53:12,420 INFO  [Test] Input to User Name text box:  
+2020-10-13 15:54:21,077 INFO  [Test] <--------------------Browser: chrome-------------------->
+ 
+2020-10-13 15:54:23,230 INFO  [Test] Navigate to JOOMLA Home Page 
+2020-10-13 15:54:34,806 INFO  [Test] Input to User Name text box:  
+2020-10-13 15:56:32,822 INFO  [Test] <--------------------Browser: chrome-------------------->
+ 
+2020-10-13 15:56:34,955 INFO  [Test] Navigate to JOOMLA Home Page 
+2020-10-13 15:59:36,042 INFO  [Test] Input to User Name text box:  
+2020-10-13 16:03:52,760 INFO  [Test] <--------------------Browser: chrome-------------------->
+ 
+2020-10-13 16:03:54,906 INFO  [Test] Navigate to JOOMLA Home Page 
+2020-10-13 16:03:59,163 INFO  [Test] Input to User Name text box:  
+2020-10-13 16:03:59,293 INFO  [Test] Input to Password text box:  
+2020-10-13 16:03:59,448 INFO  [Test] Click on Login Button 
+2020-10-13 16:04:02,313 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-13 16:04:02,460 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-13 16:04:04,759 INFO  [Test] Close browser
+ 
+2020-10-13 16:04:11,626 INFO  [Test] <--------------------Browser: firefox-------------------->
+ 
+2020-10-13 16:04:11,641 INFO  [Test] Navigate to JOOMLA Home Page 
+2020-10-13 16:04:17,236 INFO  [Test] Input to User Name text box:  
+2020-10-13 16:04:17,333 INFO  [Test] Input to Password text box:  
+2020-10-13 16:04:17,387 INFO  [Test] Click on Login Button 
+2020-10-13 16:04:19,817 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-13 16:04:20,165 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-13 16:04:51,602 INFO  [Test] Close browser
+ 
+2020-10-13 16:05:02,696 INFO  [Test] <--------------------Browser: chrome-------------------->
+ 
+2020-10-13 16:05:04,856 INFO  [Test] Navigate to JOOMLA Home Page 
+2020-10-13 16:05:11,737 INFO  [Test] Input to User Name text box:  
+2020-10-13 16:05:11,852 INFO  [Test] Input to Password text box:  
+2020-10-13 16:05:12,026 INFO  [Test] Click on Login Button 
+2020-10-13 16:05:13,865 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-13 16:05:13,958 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-13 16:05:17,868 INFO  [Test] Close browser
+ 
+2020-10-13 16:05:23,202 INFO  [Test] <--------------------Browser: firefox-------------------->
+ 
+2020-10-13 16:05:23,240 INFO  [Test] Navigate to JOOMLA Home Page 
+2020-10-13 16:05:31,479 INFO  [Test] Input to User Name text box:  
+2020-10-13 16:05:31,599 INFO  [Test] Input to Password text box:  
+2020-10-13 16:05:31,664 INFO  [Test] Click on Login Button 
+2020-10-13 16:05:33,863 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-13 16:05:34,165 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-13 16:05:37,038 INFO  [Test] Close browser
+ 
+2020-10-13 16:05:41,865 INFO  [Test] <--------------------Browser: edge-------------------->
+ 
+2020-10-13 16:05:43,995 INFO  [Test] Navigate to JOOMLA Home Page 
+2020-10-13 16:06:05,417 INFO  [Test] Input to User Name text box:  
+2020-10-13 16:06:05,497 INFO  [Test] Input to Password text box:  
+2020-10-13 16:06:05,603 INFO  [Test] Click on Login Button 
+2020-10-13 16:06:07,646 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-13 16:06:07,745 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-13 16:06:09,187 INFO  [Test] Close browser
+ 
+2020-10-13 16:21:01,126 INFO  [Test] <--------------------Browser: chrome-------------------->
+ 
+2020-10-13 16:21:03,267 INFO  [Test] Navigate to JOOMLA Home Page 
+2020-10-13 16:21:05,940 INFO  [Test] Input to User Name text box:  
+2020-10-13 16:21:06,029 INFO  [Test] Input to Password text box:  
+2020-10-13 16:21:06,115 INFO  [Test] Click on Login Button 
+2020-10-13 16:21:07,724 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-13 16:21:07,818 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-13 16:21:09,290 INFO  [Test] Step: Click on 'New' icon of the top right toolbar 
+2020-10-13 16:21:15,311 INFO  [Test] Step: Click on 'Save & Close' icon of the top right toolbar 
+2020-10-13 16:21:17,216 INFO  [Test] Close browser
+ 
+2020-10-13 16:21:22,815 INFO  [Test] <--------------------Browser: firefox-------------------->
+ 
+2020-10-13 16:21:22,846 INFO  [Test] Navigate to JOOMLA Home Page 
+2020-10-13 16:21:25,587 INFO  [Test] Input to User Name text box:  
+2020-10-13 16:21:25,669 INFO  [Test] Input to Password text box:  
+2020-10-13 16:21:25,719 INFO  [Test] Click on Login Button 
+2020-10-13 16:21:27,260 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-13 16:21:27,616 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-13 16:21:29,102 INFO  [Test] Step: Click on 'New' icon of the top right toolbar 
+2020-10-13 16:21:35,056 INFO  [Test] Step: Click on 'Save & Close' icon of the top right toolbar 
+2020-10-13 16:21:37,101 INFO  [Test] Close browser
+ 
+2020-10-13 16:21:41,881 INFO  [Test] <--------------------Browser: edge-------------------->
+ 
+2020-10-13 16:21:44,013 INFO  [Test] Navigate to JOOMLA Home Page 
+2020-10-13 16:21:47,184 INFO  [Test] Input to User Name text box:  
+2020-10-13 16:21:47,305 INFO  [Test] Input to Password text box:  
+2020-10-13 16:21:47,467 INFO  [Test] Click on Login Button 
+2020-10-13 16:21:49,183 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-13 16:21:49,281 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-13 16:21:50,882 INFO  [Test] Step: Click on 'New' icon of the top right toolbar 
+2020-10-13 16:21:59,325 INFO  [Test] Step: Click on 'Save & Close' icon of the top right toolbar 
+2020-10-13 16:22:00,986 INFO  [Test] Close browser
+ 
+2020-10-13 16:22:21,684 INFO  [Test] <--------------------Browser: chrome-------------------->
+ 
+2020-10-13 16:22:23,843 INFO  [Test] Navigate to JOOMLA Home Page 
+2020-10-13 16:22:26,498 INFO  [Test] Input to User Name text box:  
+2020-10-13 16:22:26,619 INFO  [Test] Input to Password text box:  
+2020-10-13 16:22:26,742 INFO  [Test] Click on Login Button 
+2020-10-13 16:22:28,472 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-13 16:22:28,567 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-13 16:22:30,228 INFO  [Test] Step: Click on 'New' icon of the top right toolbar 
+2020-10-13 16:22:36,118 INFO  [Test] Step: Click on 'Save & Close' icon of the top right toolbar 
+2020-10-13 16:22:37,871 INFO  [Test] Close browser
+ 
+2020-10-13 16:29:14,603 INFO  [Test] <--------------------Browser: chrome-------------------->
+ 
+2020-10-13 16:29:16,750 INFO  [Test] Navigate to JOOMLA Home Page 
+2020-10-13 16:29:19,434 INFO  [Test] Input to User Name text box:  
+2020-10-13 16:29:19,547 INFO  [Test] Input to Password text box:  
+2020-10-13 16:29:19,691 INFO  [Test] Click on Login Button 
+2020-10-13 16:29:21,385 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-13 16:29:21,540 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-13 16:29:22,957 INFO  [Test] Step: Click on 'New' icon of the top right toolbar 
+2020-10-13 16:29:28,833 INFO  [Test] Step: Click on 'Save & Close' icon of the top right toolbar 
+2020-10-13 16:29:30,721 INFO  [Test] Close browser
+ 
+2020-10-13 16:29:36,212 INFO  [Test] <--------------------Browser: firefox-------------------->
+ 
+2020-10-13 16:29:36,229 INFO  [Test] Navigate to JOOMLA Home Page 
+2020-10-13 16:29:38,919 INFO  [Test] Input to User Name text box:  
+2020-10-13 16:29:38,997 INFO  [Test] Input to Password text box:  
+2020-10-13 16:29:39,049 INFO  [Test] Click on Login Button 
+2020-10-13 16:29:40,604 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-13 16:29:40,961 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-13 16:29:42,376 INFO  [Test] Step: Click on 'New' icon of the top right toolbar 
+2020-10-13 16:29:48,396 INFO  [Test] Step: Click on 'Save & Close' icon of the top right toolbar 
+2020-10-13 16:29:50,743 INFO  [Test] Close browser
+ 
+2020-10-13 16:29:55,453 INFO  [Test] <--------------------Browser: edge-------------------->
+ 
+2020-10-13 16:29:57,599 INFO  [Test] Navigate to JOOMLA Home Page 
+2020-10-13 16:30:08,650 INFO  [Test] Input to User Name text box:  
+2020-10-13 16:30:08,764 INFO  [Test] Input to Password text box:  
+2020-10-13 16:30:08,856 INFO  [Test] Click on Login Button 
+2020-10-13 16:30:10,715 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-13 16:30:10,815 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-13 16:30:12,340 INFO  [Test] Step: Click on 'New' icon of the top right toolbar 
+2020-10-13 16:30:18,333 INFO  [Test] Step: Click on 'Save & Close' icon of the top right toolbar 
+2020-10-13 16:30:20,409 INFO  [Test] Close browser
+ 

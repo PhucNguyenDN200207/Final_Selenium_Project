@@ -4,10 +4,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import utils.Constants;
 import utils.Log4j;
+
+import static utils.Constants.*;
 
 public class BasePage {
 
@@ -17,6 +17,8 @@ public class BasePage {
     private final By _userName = By.cssSelector("#mod-login-username");
     private final By _password = By.cssSelector("#mod-login-password");
     private final By _loginBtn = By.cssSelector(".icon-white");
+    private final By _saveBtn = By.cssSelector(".button-apply");
+    private final By _alertSuccessMessage = By.cssSelector("div.alert-success .alert-message");
 
 
     /**
@@ -35,6 +37,13 @@ public class BasePage {
         return Constants.DRIVER.findElement(_loginBtn);
     }
 
+    private WebElement saveBtn() {
+        return DRIVER.findElement(_saveBtn);
+    }
+
+    private WebElement alertSuccessMessage() {
+        return DRIVER.findElement(_alertSuccessMessage);
+    }
 
     /**
      * Verify that web element is display or not by WebElement
@@ -74,16 +83,21 @@ public class BasePage {
      * Common method
      */
     public void inputUserName(String userName) {
-        scrollToElement(userName()).sendKeys(userName);
+        userName().sendKeys(userName);
     }
 
     public void inputPassword(String password) {
-        scrollToElement(password()).sendKeys(password);
+        password().sendKeys(password);
     }
 
     public void clickLoginBtn() {
         Log4j.info("Click on Login Button");
         scrollToElement(loginBtn()).click();
+    }
+
+    public void clickSaveBtn() {
+        Log4j.info("Step: Click on 'Save & Close' icon of the top right toolbar");
+        scrollToElement(saveBtn()).click();
     }
 
     /**
@@ -105,10 +119,18 @@ public class BasePage {
      */
     /**
      * Verify that the text is existed on page
+     *
      * @param text string
      * @return true if text existed
      */
     public Boolean verifyTextOnPage(String text) {
         return Constants.DRIVER.getPageSource().contains(text);
+    }
+
+    public String getAlertMessage() {
+        if (isElementPresented(alertSuccessMessage())) {
+            return alertSuccessMessage().getText();
+        } else return NO_MESSAGE_FOUND;
+
     }
 }

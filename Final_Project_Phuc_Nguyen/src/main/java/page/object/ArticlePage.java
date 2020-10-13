@@ -22,11 +22,10 @@ public class ArticlePage extends BasePage {
     private final By _articleManager = By.xpath("//div[@class='j-links-groups']//a[contains(.,'Articles')]");
     private final By _articleTitle = By.cssSelector("#jform_title");
     private final By _articleContentTxt = By.cssSelector("#jform_articletext_ifr");
-    private final By _saveBtn = By.cssSelector(".button-apply");
-    private final By _alertMessage = By.cssSelector("div.alert-success .alert-message");
     private final By _firstAuthor = By.xpath("//*[@id='articleList']/tbody/tr/td/a");
-    private final By _firstTitle = By.xpath("//*[@id=\"articleList\"]/tbody/tr/td/div/a[@class='hasTooltip']");
+    private final By _firstTitle = By.xpath("//*[@id='articleList']/tbody/tr/td/div/a[@class='hasTooltip']");
     private final By _helpBtn = By.cssSelector("#toolbar-help  button");
+    private final By _iconPublish = By.xpath("//tbody//span[@class='icon-publish']");
 
     /**
      * This is place of Web Elements
@@ -48,24 +47,21 @@ public class ArticlePage extends BasePage {
         return DRIVER.findElement(_articleContentTxt);
     }
 
-    private WebElement saveBtn() {
-        return DRIVER.findElement(_saveBtn);
-    }
 
     private WebElement helpBtn() {
         return DRIVER.findElement(_helpBtn);
     }
 
-    private WebElement alertMessage() {
-        return DRIVER.findElement(_alertMessage);
-    }
-
     private WebElement firstTitle() {
-        return DRIVER.findElement((_firstTitle));
+        return DRIVER.findElement(_firstTitle);
     }
 
     private WebElement firstAuthor() {
-        return DRIVER.findElement((_firstAuthor));
+        return DRIVER.findElement(_firstAuthor);
+    }
+
+    private WebElement iconPublish() {
+        return DRIVER.findElement(_iconPublish);
     }
 
     /**
@@ -87,12 +83,6 @@ public class ArticlePage extends BasePage {
         scrollToElement(articleContentTxt()).sendKeys(text);
     }
 
-
-    public void clickSaveBtn() {
-        Log4j.info("Step: Click on 'Save & Close' icon of the top right toolbar");
-        scrollToElement(saveBtn()).click();
-    }
-
     public void clickHelpBtn() {
         Log4j.info("Step: Click on 'Help' icon of the top right toolbar");
         helpBtn().click();
@@ -101,6 +91,11 @@ public class ArticlePage extends BasePage {
     public void clickArticleManager() {
         Log4j.info("Step: Click on Articles in Content Tab");
         articleManager().click();
+    }
+
+    public void clickIconPublish() {
+        Log4j.info("Step: Click on the status icon of the selected article in the Status column");
+        iconPublish().click();
     }
 
     public void createNewArticle() {
@@ -133,9 +128,6 @@ public class ArticlePage extends BasePage {
     /**
      * This is place create verify methods
      */
-    public String getAlertMessage() {
-        return alertMessage().getText();
-    }
 
     public String getFirstAuthor() {
         return firstAuthor().getText();
