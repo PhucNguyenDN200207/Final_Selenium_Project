@@ -70,9 +70,14 @@ public class ContactsPage extends BasePage {
     /**
      * This is place create verify methods
      */
-    public void createNewContact() {
+
+    public void navigateToContactPage() {
         clickComponentsMenu();
         clickContactDrd();
+    }
+
+    public void createNewContact() {
+        navigateToContactPage();
         clickNewBtn();
         inputContactName(ARTICLE_TITLE);
         inputContactAlias(Integer.toString(DataHelper.randomNumber(0, 9999)));

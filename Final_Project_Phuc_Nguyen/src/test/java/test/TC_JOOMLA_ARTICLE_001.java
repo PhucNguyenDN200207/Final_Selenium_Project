@@ -19,7 +19,7 @@ public class TC_JOOMLA_ARTICLE_001 extends TestHelper {
 
     @Test(description = "Verify user can create new article with valid information")
     public void testcase001() {
-        Log4j.header("Testcase 001");
+        Log4j.header("TC_JOOMLA_ARTICLE_001");
         articlePage.createNewArticle();
 
         Assert.assertEquals(articlePage.getAlertMessage(), ARTICLE_ALERT_MESSAGE, "Alert message failed");

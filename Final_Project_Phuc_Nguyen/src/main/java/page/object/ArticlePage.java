@@ -9,6 +9,7 @@ import utils.Constants;
 import utils.Log4j;
 
 import java.util.ArrayList;
+import java.util.concurrent.TimeUnit;
 
 import static utils.Constants.*;
 
@@ -24,7 +25,6 @@ public class ArticlePage extends BasePage {
     private final By _articleContentTxt = By.cssSelector("#jform_articletext_ifr");
     private final By _firstAuthor = By.xpath("//*[@id='articleList']/tbody/tr/td/a");
     private final By _firstTitle = By.xpath("//*[@id='articleList']/tbody/tr/td/div/a[@class='hasTooltip']");
-    private final By _helpBtn = By.cssSelector("#toolbar-help  button");
     private final By _iconPublish = By.xpath("//tbody//span[@class='icon-publish']");
 
     /**
@@ -45,11 +45,6 @@ public class ArticlePage extends BasePage {
 
     private WebElement articleContentTxt() {
         return DRIVER.findElement(_articleContentTxt);
-    }
-
-
-    private WebElement helpBtn() {
-        return DRIVER.findElement(_helpBtn);
     }
 
     private WebElement firstTitle() {
@@ -83,10 +78,6 @@ public class ArticlePage extends BasePage {
         scrollToElement(articleContentTxt()).sendKeys(text);
     }
 
-    public void clickHelpBtn() {
-        Log4j.info("Step: Click on 'Help' icon of the top right toolbar");
-        helpBtn().click();
-    }
 
     public void clickArticleManager() {
         Log4j.info("Step: Click on Articles in Content Tab");
@@ -108,21 +99,6 @@ public class ArticlePage extends BasePage {
     public void navigateToArticleManager() {
         DriverHelper.navigate(Constants.JOOMLA_HOME_URL);
         clickArticleManager();
-    }
-
-    public boolean verifyHelpPageTitle() {
-        clickHelpBtn();
-
-        // Get all Open Tabs
-        ArrayList<String> tabHandles = new ArrayList<String>(DRIVER.getWindowHandles());
-        for (String eachHandle : tabHandles) {
-            DRIVER.switchTo().window(eachHandle);
-            // Check Help Page Title
-            if (DRIVER.getTitle().equalsIgnoreCase(HELP_PAGE_TITLE)) {
-                return true;
-            }
-        }
-        return false;
     }
 
     /**

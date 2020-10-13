@@ -22,5 +22,6 @@ public class Constants {
     public static final String HELP_PAGE_TITLE = "Joomla! Help Screens";
     public static final String CONTACT_SUCCESS_MESSAGE = "Contact successfully saved";
     public static final String NO_MESSAGE_FOUND = "NO MESSAGE FOUND";
+    public static final int TIME_OUT_SHORT = 2000;
 
 }

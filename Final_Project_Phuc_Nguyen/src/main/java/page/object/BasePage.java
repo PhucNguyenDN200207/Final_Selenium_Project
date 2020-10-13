@@ -7,6 +7,8 @@ import org.openqa.selenium.WebElement;
 import utils.Constants;
 import utils.Log4j;
 
+import java.util.ArrayList;
+
 import static utils.Constants.*;
 
 public class BasePage {
@@ -14,12 +16,13 @@ public class BasePage {
     /**
      * Element locators of the common web elements' locator
      **/
+
     private final By _userName = By.cssSelector("#mod-login-username");
     private final By _password = By.cssSelector("#mod-login-password");
     private final By _loginBtn = By.cssSelector(".icon-white");
     private final By _saveBtn = By.cssSelector(".button-apply");
     private final By _alertSuccessMessage = By.cssSelector("div.alert-success .alert-message");
-
+    private final By _helpBtn = By.cssSelector("#toolbar-help  button");
 
     /**
      * This is place create common Web elements
@@ -44,6 +47,11 @@ public class BasePage {
     private WebElement alertSuccessMessage() {
         return DRIVER.findElement(_alertSuccessMessage);
     }
+
+    private WebElement helpBtn() {
+        return DRIVER.findElement(_helpBtn);
+    }
+
 
     /**
      * Verify that web element is display or not by WebElement
@@ -100,6 +108,11 @@ public class BasePage {
         scrollToElement(saveBtn()).click();
     }
 
+    public void clickHelpBtn() {
+        Log4j.info("Step: Click on 'Help' icon of the top right toolbar");
+        helpBtn().click();
+    }
+
     /**
      * input valid username and password to Joomla
      */
@@ -112,6 +125,22 @@ public class BasePage {
         this.inputPassword(Constants.PASSWORD);
 
         clickLoginBtn();
+    }
+
+    public boolean verifyHelpPageTitle() throws InterruptedException {
+        clickHelpBtn();
+        Thread.sleep(TIME_OUT_SHORT);
+
+        // Get all Open Tabs
+        ArrayList<String> tabHandles = new ArrayList<String>(DRIVER.getWindowHandles());
+        for (String eachHandle : tabHandles) {
+            DRIVER.switchTo().window(eachHandle);
+            // Check Help Page Title
+            if (DRIVER.getTitle().equalsIgnoreCase(HELP_PAGE_TITLE)) {
+                return true;
+            }
+        }
+        return false;
     }
 
     /**
