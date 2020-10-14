@@ -5,7 +5,8 @@ import java.util.ArrayList;
 import static utils.Constants.*;
 
 public class NewTabHelper {
-    public static boolean verifyHelpPageTitle() throws InterruptedException {
+
+    public static boolean verifyNewTabTitle(String title) throws InterruptedException {
         // Get all Open Tabs
         ArrayList<String> tabHandles = new ArrayList<String>(DRIVER.getWindowHandles());
         for (String eachHandle : tabHandles) {
@@ -13,7 +14,7 @@ public class NewTabHelper {
             DRIVER.switchTo().window(eachHandle);
 
             // Check Help Page Title
-            if (DRIVER.getTitle().equalsIgnoreCase(HELP_PAGE_TITLE)) {
+            if (DRIVER.getTitle().equalsIgnoreCase(title)) {
                 return true;
             }
         }

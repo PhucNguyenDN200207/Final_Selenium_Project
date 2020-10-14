@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import utils.Constants;
 import utils.Log4j;
 
+import static helper.NewTabHelper.verifyNewTabTitle;
 import static utils.Constants.*;
 
 public class BasePage {
@@ -166,5 +167,9 @@ public class BasePage {
             return alertSuccessMessage().getText();
         } else return NO_MESSAGE_FOUND;
 
+    }
+
+    public Boolean verifyHelpPageTitle() throws InterruptedException {
+        return verifyNewTabTitle(HELP_PAGE_TITLE);
     }
 }

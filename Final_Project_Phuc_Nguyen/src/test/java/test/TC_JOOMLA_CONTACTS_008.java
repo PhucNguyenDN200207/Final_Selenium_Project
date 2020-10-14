@@ -5,8 +5,6 @@ import org.testng.annotations.Test;
 import page.object.ContactsPage;
 import utils.Log4j;
 
-import static helper.NewTabHelper.verifyHelpPageTitle;
-
 public class TC_JOOMLA_CONTACTS_008 extends BaseTest {
     ContactsPage contactsPage = new ContactsPage();
 
@@ -17,6 +15,6 @@ public class TC_JOOMLA_CONTACTS_008 extends BaseTest {
         Log4j.info("Navigate to Article manager page");
         contactsPage.openHelpPage();
 
-        Assert.assertTrue(verifyHelpPageTitle(), "Help page title failed");
+        Assert.assertTrue(contactsPage.verifyHelpPageTitle(), "Help page title failed");
     }
 }

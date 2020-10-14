@@ -5,9 +5,6 @@ import org.testng.annotations.Test;
 import page.object.ArticlePage;
 import utils.Log4j;
 
-import static helper.NewTabHelper.verifyHelpPageTitle;
-
-
 public class TO_JOOMLA_ARTICLE_008 extends BaseTest {
     ArticlePage articlePage = new ArticlePage();
 
@@ -19,6 +16,6 @@ public class TO_JOOMLA_ARTICLE_008 extends BaseTest {
         articlePage.navigateToArticleManager();
         articlePage.openHelpPage();
 
-        Assert.assertTrue(verifyHelpPageTitle(), "Help page title failed");
+        Assert.assertTrue(articlePage.verifyHelpPageTitle(), "Help page title failed");
     }
 }
