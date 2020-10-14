@@ -10,7 +10,7 @@ import utils.Log4j;
 import static helper.DataHelper.*;
 import static utils.Constants.*;
 
-public class TC_JOOMLA_ARTICLE_001 extends TestHelper {
+public class TC_JOOMLA_ARTICLE_001 extends BaseTest {
     ArticlePage articlePage = new ArticlePage();
     LoginPage loginPage = new LoginPage();
 
@@ -28,7 +28,7 @@ public class TC_JOOMLA_ARTICLE_001 extends TestHelper {
 
         articlePage.createNewArticle(title, content);
 
-        Assert.assertEquals(articlePage.getAlertMessage(), ARTICLE_ALERT_MESSAGE, "Alert message failed");
+        Assert.assertEquals(articlePage.getAlertMessage(), ARTICLE_ALERT_MESSAGE, "Article Alert message failed");
 
         Log4j.info("Navigate to Article manager page");
         articlePage.navigateToArticleManager();

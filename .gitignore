@@ -72,3 +72,5 @@ Final_Project_Phuc_Nguyen/target/test-classes/test/TO_JOOMLA_ARTICLE_015.class
 Final_Project_Phuc_Nguyen/.idea/codeStyles
 Final_Project_Phuc_Nguyen/target/classes/helper/NewTabHelper.class
 Final_Project_Phuc_Nguyen/target/classes/page/object/LoginPage.class
+Final_Project_Phuc_Nguyen/target/classes/page/object/BannersPage.class
+Final_Project_Phuc_Nguyen/target/test-classes/test/BaseTest.class

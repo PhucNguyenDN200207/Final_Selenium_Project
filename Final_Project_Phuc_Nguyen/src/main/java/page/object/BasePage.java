@@ -15,6 +15,7 @@ public class BasePage {
      * Element locators of the common web elements' locator
      **/
 
+    private final By _componentsMenu = By.xpath("//*[@id='menu']/li//a[contains(.,'Components')]");
     private final By _saveBtn = By.cssSelector(".button-apply");
     private final By _alertSuccessMsg = By.cssSelector("div.alert-success .alert-message");
     private final By _helpBtn = By.cssSelector("#toolbar-help  button");
@@ -33,6 +34,10 @@ public class BasePage {
 
     private WebElement helpBtn() {
         return DRIVER.findElement(_helpBtn);
+    }
+
+    private WebElement componentsMenu() {
+        return DRIVER.findElement(_componentsMenu);
     }
 
 
@@ -82,6 +87,11 @@ public class BasePage {
     public void clickHelpBtn() {
         Log4j.info("Step: Click on 'Help' icon of the top right toolbar");
         helpBtn().click();
+    }
+
+    public void clickComponentsMenu() {
+        Log4j.info("Step: Click on Components on Menu tab");
+        componentsMenu().click();
     }
 
     /**

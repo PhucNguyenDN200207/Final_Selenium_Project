@@ -10,7 +10,7 @@ import utils.Log4j;
 import static helper.NewTabHelper.verifyHelpPageTitle;
 
 
-public class TO_JOOMLA_ARTICLE_008 extends TestHelper {
+public class TO_JOOMLA_ARTICLE_008 extends BaseTest {
     ArticlePage articlePage = new ArticlePage();
     LoginPage loginPage = new LoginPage();
 

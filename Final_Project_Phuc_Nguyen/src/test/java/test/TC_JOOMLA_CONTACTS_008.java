@@ -9,7 +9,7 @@ import utils.Log4j;
 
 import static helper.NewTabHelper.verifyHelpPageTitle;
 
-public class TC_JOOMLA_CONTACTS_008 extends TestHelper {
+public class TC_JOOMLA_CONTACTS_008 extends BaseTest {
     ContactsPage contactsPage = new ContactsPage();
     LoginPage loginPage = new LoginPage();
 

@@ -3,14 +3,15 @@ package test;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import page.object.BannersPage;
 import page.object.ContactsPage;
 import page.object.LoginPage;
 import utils.Log4j;
 
-import static utils.Constants.*;
+import static utils.Constants.CONTACT_SUCCESS_MESSAGE;
 
-public class TC_JOOMLA_CONTACTS_001 extends BaseTest {
-    ContactsPage contactsPage = new ContactsPage();
+public class TC_JOOMLA_BANNERS_BANNERS_001 extends BaseTest {
+    BannersPage bannersPage = new BannersPage();
     LoginPage loginPage = new LoginPage();
 
     @BeforeMethod
@@ -23,8 +24,10 @@ public class TC_JOOMLA_CONTACTS_001 extends BaseTest {
     public void testcase001() {
         Log4j.header("TC_JOOMLA_CONTACTS_001");
 
-        contactsPage.createNewContact();
-        Assert.assertEquals(contactsPage.getAlertMessage(),
-                CONTACT_SUCCESS_MESSAGE, "Contact Alert message failed");
+        bannersPage.createNewBanner();
+        Assert.assertEquals(bannersPage.getAlertMessage(),
+                CONTACT_SUCCESS_MESSAGE, "Banners Alert message failed");
+
+        //TODO: Not finished yet
     }
 }

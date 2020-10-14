@@ -51,7 +51,6 @@ public class LoginPage extends BasePage {
         loginBtn().click();
     }
 
-
     /**
      * input valid username and password to Joomla
      */
@@ -65,6 +64,5 @@ public class LoginPage extends BasePage {
 
         clickLoginBtn();
     }
-
 
 }

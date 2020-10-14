@@ -21,6 +21,9 @@ public class Constants {
     public static final String ARTICLE_ALERT_MESSAGE = "Article successfully saved";
     public static final String HELP_PAGE_TITLE = "Joomla! Help Screens";
     public static final String CONTACT_SUCCESS_MESSAGE = "Contact successfully saved";
+    public static final String BANNERS_SUCCESS_MESSAGE = "Banner successfully saved";
+    public static final String CLIENTS_SUCCESS_MESSAGE = "Client successfully saved";
+    public static final String CATEGORIES_SUCCESS_MESSAGE = "Category successfully saved";
     public static final String NO_MESSAGE_FOUND = "NO MESSAGE FOUND";
     public static final int TIME_OUT_SHORT = 2000;
 

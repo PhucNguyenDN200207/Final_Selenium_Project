@@ -19,6 +19,14 @@ public class DataHelper {
         return faker.book().title();
     }
 
+    public static String randomBanner() {
+        return faker.app().name();
+    }
+
+    public static String randomCategories() {
+        return faker.educator().university();
+    }
+
     public static String randomContent() {
         return faker.lorem().paragraph();
     }

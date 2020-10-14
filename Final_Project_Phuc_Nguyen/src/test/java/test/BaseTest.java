@@ -7,7 +7,7 @@ import utils.Log4j;
 import static utils.Constants.*;
 
 
-public class TestHelper {
+public class BaseTest {
 
     @Parameters("browser")
     @BeforeMethod

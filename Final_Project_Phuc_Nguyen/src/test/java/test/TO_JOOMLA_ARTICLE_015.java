@@ -11,7 +11,7 @@ import static helper.DataHelper.randomContent;
 import static helper.DataHelper.randomTitle;
 import static utils.Constants.*;
 
-public class TO_JOOMLA_ARTICLE_015 extends TestHelper {
+public class TO_JOOMLA_ARTICLE_015 extends BaseTest {
     ArticlePage articlePage = new ArticlePage();
     LoginPage loginPage = new LoginPage();
 
@@ -37,7 +37,7 @@ public class TO_JOOMLA_ARTICLE_015 extends TestHelper {
         Assert.assertEquals(articlePage.getFirstAuthor(), AUTHOR, "Author failed");
         Assert.assertEquals(articlePage.getFirstTitle(), title, "Article title fail");
 
-        //Not finish yet
+        //TODO: Not finish yet
 
     }
 }
