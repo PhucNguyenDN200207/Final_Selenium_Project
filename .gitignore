@@ -76,3 +76,6 @@ Final_Project_Phuc_Nguyen/target/classes/page/object/BannersPage.class
 Final_Project_Phuc_Nguyen/target/test-classes/test/BaseTest.class
 Final_Project_Phuc_Nguyen/target/test-classes/test/TC_JOOMLA_BANNERS_BANNERS_001.class
 Final_Project_Phuc_Nguyen/target/test-classes/test/TO_JOOMLA_BANNERS_BANNERS_015.class
+Final_Project_Phuc_Nguyen/target/classes/page/object/BannersBannersPage.class
+Final_Project_Phuc_Nguyen/target/test-classes/test/TC_JOOMLA_BANNERS_CLIENTS_004.class
+Final_Project_Phuc_Nguyen/target/classes/page/object/BannersClientsPage.class

@@ -98,6 +98,7 @@ public class ArticlePage extends BasePage {
     public void navigateToArticleManager() {
         DriverHelper.navigate(Constants.JOOMLA_HOME_URL);
         clickArticleManager();
+        chooseSortByIdDescending();
     }
 
     public void openHelpPage() {

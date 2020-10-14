@@ -13,8 +13,6 @@ public class ContactsPage extends BasePage {
      * This is place of Locator
      */
     private final By _contactDrd = By.xpath("//li[@class='dropdown open']//li[@class='dropdown-submenu']/a[.='Contacts']");
-    private final By _newBtn = By.cssSelector(".button-new");
-    private final By _contactName = By.cssSelector("#jform_name");
     private final By _contactAlias = By.cssSelector("#jform_alias");
 
     /**
@@ -23,14 +21,6 @@ public class ContactsPage extends BasePage {
 
     private WebElement contactDrd() {
         return DRIVER.findElement(_contactDrd);
-    }
-
-    private WebElement newBtn() {
-        return DRIVER.findElement(_newBtn);
-    }
-
-    private WebElement contactName() {
-        return DRIVER.findElement(_contactName);
     }
 
     private WebElement contactAlias() {
@@ -44,19 +34,6 @@ public class ContactsPage extends BasePage {
     public void clickContactDrd() {
         Log4j.info("Step: Click on Components on Menu tab");
         contactDrd().click();
-    }
-
-    public void clickNewBtn() {
-        Log4j.info("Step: Click on 'New' icon of the top right toolbar");
-        newBtn().click();
-    }
-
-    public void inputContactName(String name) {
-        contactName().sendKeys(name);
-    }
-
-    public void inputContactAlias(String alias) {
-        contactAlias().sendKeys(alias);
     }
 
     /**
@@ -76,7 +53,7 @@ public class ContactsPage extends BasePage {
     public void createNewContact() {
         navigateToContactPage();
         clickNewBtn();
-        inputContactName(randomName());
+        inputNameTxt(randomName());
         clickSaveBtn();
     }
 
