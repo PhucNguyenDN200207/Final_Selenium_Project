@@ -17,7 +17,6 @@ public class BannersClientsPage extends BasePage {
     private final By _emailTxt = By.cssSelector("#jform_email");
     private final By _contactNameTxt = By.cssSelector("#jform_contact");
     private final String _newClientName = "//a[contains(.,'%s')]";
-    private final String _newClientContact = "//a[contains(.,'%s')]//ancestor::tr//td[@class='small hidden-phone']";
 
 
     /**
@@ -38,10 +37,6 @@ public class BannersClientsPage extends BasePage {
 
     private WebElement newClientName(String name) {
         return elementByText(_newClientName, name);
-    }
-
-    private WebElement newClientContact(String contact) {
-        return elementByText(_newClientContact, contact);
     }
 
     /**
@@ -79,17 +74,19 @@ public class BannersClientsPage extends BasePage {
         clickSaveBtn();
     }
 
+    public Boolean isNewClientTitleDisplayed(String title) {
+        return isElementPresented(newClientName(title));
+    }
+
+
     /**
      * This is place create verify methods
      */
 
-    public Boolean verifyCreateNewClientSuccess() {
-//        DriverHelper.navigate(Constants.JOOMLA_HOME_URL);
-//        navigateToClientsPage();
-//        chooseSortByIdDescending();
-
-        //TODO: create new element client and verify its
-        return true;
+    public void navigateToClientManager() {
+        DriverHelper.navigate(Constants.JOOMLA_HOME_URL);
+        navigateToClientsPage();
+        chooseSortByIdDescending();
     }
 
 }
