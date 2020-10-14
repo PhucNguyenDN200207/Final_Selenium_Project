@@ -15,6 +15,10 @@ public class DataHelper {
         return faker.name().username();
     }
 
+    public static String randomTitle() {
+        return faker.book().title();
+    }
+
     public static String randomContent() {
         return faker.lorem().paragraph();
     }
@@ -23,19 +27,5 @@ public class DataHelper {
         return faker.number().numberBetween(min, max);
     }
 
-    public static boolean verifyHelpPageTitle() throws InterruptedException {
-        Thread.sleep(TIME_OUT_SHORT);
 
-        // Get all Open Tabs
-        ArrayList<String> tabHandles = new ArrayList<String>(DRIVER.getWindowHandles());
-        for (String eachHandle : tabHandles) {
-            DRIVER.switchTo().window(eachHandle);
-
-            // Check Help Page Title
-            if (DRIVER.getTitle().equalsIgnoreCase(HELP_PAGE_TITLE)) {
-                return true;
-            }
-        }
-        return false;
-    }
 }

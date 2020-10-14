@@ -1,11 +1,11 @@
 package page.object;
 
 
-import helper.DataHelper;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import utils.Log4j;
 
+import static helper.DataHelper.*;
 import static utils.Constants.*;
 
 public class ContactsPage extends BasePage {
@@ -84,8 +84,7 @@ public class ContactsPage extends BasePage {
     public void createNewContact() {
         navigateToContactPage();
         clickNewBtn();
-        inputContactName(ARTICLE_TITLE);
-        inputContactAlias(Integer.toString(DataHelper.randomNumber(0, 9999)));
+        inputContactName(randomName());
         clickSaveBtn();
     }
 

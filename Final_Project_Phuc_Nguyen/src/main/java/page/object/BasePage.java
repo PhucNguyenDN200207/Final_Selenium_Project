@@ -15,9 +15,6 @@ public class BasePage {
      * Element locators of the common web elements' locator
      **/
 
-    private final By _userName = By.cssSelector("#mod-login-username");
-    private final By _password = By.cssSelector("#mod-login-password");
-    private final By _loginBtn = By.cssSelector(".icon-white");
     private final By _saveBtn = By.cssSelector(".button-apply");
     private final By _alertSuccessMsg = By.cssSelector("div.alert-success .alert-message");
     private final By _helpBtn = By.cssSelector("#toolbar-help  button");
@@ -25,18 +22,6 @@ public class BasePage {
     /**
      * This is place create common Web elements
      */
-
-    private WebElement userName() {
-        return Constants.DRIVER.findElement(_userName);
-    }
-
-    private WebElement password() {
-        return Constants.DRIVER.findElement(_password);
-    }
-
-    private WebElement loginBtn() {
-        return Constants.DRIVER.findElement(_loginBtn);
-    }
 
     private WebElement saveBtn() {
         return DRIVER.findElement(_saveBtn);
@@ -88,18 +73,6 @@ public class BasePage {
     /**
      * Common method
      */
-    public void inputUserName(String userName) {
-        userName().sendKeys(userName);
-    }
-
-    public void inputPassword(String password) {
-        password().sendKeys(password);
-    }
-
-    public void clickLoginBtn() {
-        Log4j.info("Click on Login Button");
-        scrollToElement(loginBtn()).click();
-    }
 
     public void clickSaveBtn() {
         Log4j.info("Step: Click on 'Save & Close' icon of the top right toolbar");
@@ -112,23 +85,10 @@ public class BasePage {
     }
 
     /**
-     * input valid username and password to Joomla
-     */
-    public void login() {
-
-        Log4j.info("Input to User Name text box: ");
-        this.inputUserName(Constants.USER_NAME);
-
-        Log4j.info("Input to Password text box: ");
-        this.inputPassword(Constants.PASSWORD);
-
-        clickLoginBtn();
-    }
-
-
-    /**
      * Verify method
      */
+
+
     /**
      * Verify that the text is existed on page
      *

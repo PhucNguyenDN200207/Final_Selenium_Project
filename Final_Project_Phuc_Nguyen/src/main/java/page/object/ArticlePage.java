@@ -88,10 +88,10 @@ public class ArticlePage extends BasePage {
         iconPublish().click();
     }
 
-    public void createNewArticle() {
+    public void createNewArticle(String title, String content) {
         this.clickNewArticle();
-        this.inputArticleTitle(randomName());
-        this.inputArticleContentTxt(randomContent());
+        this.inputArticleTitle(title);
+        this.inputArticleContentTxt(content);
         this.clickSaveBtn();
     }
 
