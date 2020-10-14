@@ -2,12 +2,14 @@ package test;
 
 import helper.DriverHelper;
 import org.testng.annotations.*;
+import page.object.LoginPage;
 import utils.Log4j;
 
 import static utils.Constants.*;
 
 
 public class BaseTest {
+    LoginPage loginPage = new LoginPage();
 
     @Parameters("browser")
     @BeforeMethod
@@ -26,6 +28,8 @@ public class BaseTest {
 
         Log4j.info("Navigate to JOOMLA Home Page");
         DriverHelper.navigate(JOOMLA_HOME_URL);
+
+        loginPage.login();
     }
 
     @AfterMethod

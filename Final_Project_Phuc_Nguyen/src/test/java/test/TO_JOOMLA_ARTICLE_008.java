@@ -1,10 +1,8 @@
 package test;
 
 import org.testng.Assert;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import page.object.ArticlePage;
-import page.object.LoginPage;
 import utils.Log4j;
 
 import static helper.NewTabHelper.verifyHelpPageTitle;
@@ -12,13 +10,6 @@ import static helper.NewTabHelper.verifyHelpPageTitle;
 
 public class TO_JOOMLA_ARTICLE_008 extends BaseTest {
     ArticlePage articlePage = new ArticlePage();
-    LoginPage loginPage = new LoginPage();
-
-    @BeforeMethod
-    public void preCondition() {
-        loginPage.login();
-    }
-
 
     @Test(description = "User can access article's help section")
     public void testcase008() throws InterruptedException {

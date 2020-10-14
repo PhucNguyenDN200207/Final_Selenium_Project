@@ -1,10 +1,8 @@
 package test;
 
 import org.testng.Assert;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import page.object.ArticlePage;
-import page.object.LoginPage;
 import utils.Log4j;
 
 import static helper.DataHelper.*;
@@ -12,12 +10,6 @@ import static utils.Constants.*;
 
 public class TC_JOOMLA_ARTICLE_001 extends BaseTest {
     ArticlePage articlePage = new ArticlePage();
-    LoginPage loginPage = new LoginPage();
-
-    @BeforeMethod
-    public void preCondition() {
-        loginPage.login();
-    }
 
     @Test(description = "Verify user can create new article with valid information")
     public void testcase001() {

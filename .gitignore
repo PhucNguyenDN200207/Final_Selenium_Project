@@ -74,3 +74,5 @@ Final_Project_Phuc_Nguyen/target/classes/helper/NewTabHelper.class
 Final_Project_Phuc_Nguyen/target/classes/page/object/LoginPage.class
 Final_Project_Phuc_Nguyen/target/classes/page/object/BannersPage.class
 Final_Project_Phuc_Nguyen/target/test-classes/test/BaseTest.class
+Final_Project_Phuc_Nguyen/target/test-classes/test/TC_JOOMLA_BANNERS_BANNERS_001.class
+Final_Project_Phuc_Nguyen/target/test-classes/test/TO_JOOMLA_BANNERS_BANNERS_015.class

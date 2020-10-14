@@ -1,10 +1,8 @@
 package test;
 
 import org.testng.Assert;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import page.object.ArticlePage;
-import page.object.LoginPage;
 import utils.Log4j;
 
 import static helper.DataHelper.randomContent;
@@ -13,12 +11,6 @@ import static utils.Constants.*;
 
 public class TO_JOOMLA_ARTICLE_015 extends BaseTest {
     ArticlePage articlePage = new ArticlePage();
-    LoginPage loginPage = new LoginPage();
-
-    @BeforeMethod
-    public void preCondition() {
-        loginPage.login();
-    }
 
     @Test(description = "User can change the status of articles using the Status column")
     public void testcase015() {
