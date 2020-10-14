@@ -10,7 +10,7 @@ import static utils.Constants.CONTACT_SUCCESS_MESSAGE;
 public class TC_JOOMLA_BANNERS_BANNERS_001 extends BaseTest {
     BannersPage bannersPage = new BannersPage();
 
-    @Test(description = "User can create new contact with valid information")
+    @Test(description = "User can create new banner with valid information")
     public void testcase001() {
         Log4j.header("TC_JOOMLA_CONTACTS_001");
 

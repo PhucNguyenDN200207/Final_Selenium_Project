@@ -18,6 +18,8 @@ public class BannersPage extends BasePage {
     private final By _nameTxt = By.cssSelector("#jform_name");
     private final By _bannerClients = By.xpath("//ul[@id='nav-empty']//a[.='Clients']");
     private final By _bannerCategories = By.xpath("//ul[@id='nav-empty']//a[.='Categories']");
+    private final By _bannerQuantity = By.cssSelector("#list_limit_chzn > a");
+    private final By _bannerQuantity20 = By.xpath("//li[.='20']");
 
     /**
      * This is place of Web Elements
@@ -41,6 +43,14 @@ public class BannersPage extends BasePage {
 
     private WebElement bannerCategories() {
         return DRIVER.findElement(_bannerCategories);
+    }
+
+    private WebElement bannerQuantity() {
+        return DRIVER.findElement(_bannerQuantity);
+    }
+
+    private WebElement bannerQuantity20() {
+        return DRIVER.findElement(_bannerQuantity20);
     }
 
     /**
@@ -67,14 +77,20 @@ public class BannersPage extends BasePage {
         bannerCategories().click();
     }
 
+    public void clickBannerQuantity() {
+        Log4j.info("Step: Select quantity that user wants to display");
+        bannerQuantity().click();
+    }
+
+    public void clickBannerQuantity20() {
+        Log4j.info("Step: Select quantity : 20");
+        bannerQuantity20().click();
+    }
+
     public void inputNameTxt(String name) {
         nameTxt().sendKeys(name);
     }
 
-
-    /**
-     * This is place create verify methods
-     */
 
     public void navigateToBannersPage() {
         clickComponentsMenu();
@@ -111,4 +127,19 @@ public class BannersPage extends BasePage {
         inputNameTxt(randomCategories());
         clickSaveBtn();
     }
+
+    public void selectQuantity20() throws InterruptedException {
+        navigateToBannersPage();
+        clickBannerQuantity();
+        clickBannerQuantity20();
+    }
+
+    /**
+     * This is place create verify methods
+     */
+    public Boolean verifyUserChoose20() {
+        navigateToBannersPage();
+        return bannerQuantity().getText().equals("20");
+    }
+
 }

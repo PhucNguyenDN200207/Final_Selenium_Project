@@ -1797,3 +1797,200 @@
 2020-10-14 09:35:45,406 INFO  [Test] Step: Click on 'Save & Close' icon of the top right toolbar 
 2020-10-14 09:35:47,643 INFO  [Test] Close browser
  
+2020-10-14 09:55:01,949 INFO  [Test] <--------------------Browser: chrome-------------------->
+ 
+2020-10-14 09:55:04,090 INFO  [Test] Navigate to JOOMLA Home Page 
+2020-10-14 09:55:06,707 INFO  [Test] Input to User Name text box:  
+2020-10-14 09:55:06,792 INFO  [Test] Input to Password text box:  
+2020-10-14 09:55:06,888 INFO  [Test] Click on Login Button 
+2020-10-14 09:55:08,633 INFO  [Test] <--------------------TO_JOOMLA_BANNERS_BANNERS_015-------------------->
+ 
+2020-10-14 09:55:08,634 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-14 09:55:08,750 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-14 09:55:10,223 INFO  [Test] Step: Select quantity that user wants to display 
+2020-10-14 09:55:10,334 INFO  [Test] Step: Select quantity : 20 
+2020-10-14 09:55:12,463 INFO  [Test] Close browser
+ 
+2020-10-14 09:55:18,268 INFO  [Test] <--------------------Browser: firefox-------------------->
+ 
+2020-10-14 09:55:18,332 INFO  [Test] Navigate to JOOMLA Home Page 
+2020-10-14 09:55:22,368 INFO  [Test] Input to User Name text box:  
+2020-10-14 09:55:22,442 INFO  [Test] Input to Password text box:  
+2020-10-14 09:55:22,494 INFO  [Test] Click on Login Button 
+2020-10-14 09:55:24,183 INFO  [Test] <--------------------TO_JOOMLA_BANNERS_BANNERS_015-------------------->
+ 
+2020-10-14 09:55:24,183 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-14 09:55:24,510 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-14 09:55:25,975 INFO  [Test] Step: Select quantity that user wants to display 
+2020-10-14 09:55:26,277 INFO  [Test] Step: Select quantity : 20 
+2020-10-14 09:55:28,545 INFO  [Test] Close browser
+ 
+2020-10-14 09:58:26,306 INFO  [Test] <--------------------Browser: chrome-------------------->
+ 
+2020-10-14 09:58:28,445 INFO  [Test] Navigate to JOOMLA Home Page 
+2020-10-14 09:58:31,092 INFO  [Test] Input to User Name text box:  
+2020-10-14 09:58:31,175 INFO  [Test] Input to Password text box:  
+2020-10-14 09:58:31,275 INFO  [Test] Click on Login Button 
+2020-10-14 09:58:32,912 INFO  [Test] <--------------------TO_JOOMLA_BANNERS_BANNERS_015-------------------->
+ 
+2020-10-14 09:58:32,912 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-14 09:58:33,008 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-14 09:58:34,462 INFO  [Test] Step: Select quantity that user wants to display 
+2020-10-14 09:58:34,549 INFO  [Test] Step: Select quantity : 20 
+2020-10-14 09:58:44,934 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-14 09:58:45,029 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-14 09:58:49,113 INFO  [Test] Close browser
+ 
+2020-10-14 09:58:55,306 INFO  [Test] <--------------------Browser: firefox-------------------->
+ 
+2020-10-14 09:58:55,320 INFO  [Test] Navigate to JOOMLA Home Page 
+2020-10-14 09:58:58,092 INFO  [Test] Input to User Name text box:  
+2020-10-14 09:58:58,264 INFO  [Test] Input to Password text box:  
+2020-10-14 09:58:58,350 INFO  [Test] Click on Login Button 
+2020-10-14 09:58:59,932 INFO  [Test] <--------------------TO_JOOMLA_BANNERS_BANNERS_015-------------------->
+ 
+2020-10-14 09:58:59,933 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-14 09:59:00,283 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-14 09:59:01,797 INFO  [Test] Step: Select quantity that user wants to display 
+2020-10-14 09:59:02,096 INFO  [Test] Step: Select quantity : 20 
+2020-10-14 09:59:12,118 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-14 09:59:56,729 INFO  [Test] <--------------------Browser: chrome-------------------->
+ 
+2020-10-14 09:59:58,872 INFO  [Test] Navigate to JOOMLA Home Page 
+2020-10-14 10:00:01,706 INFO  [Test] Input to User Name text box:  
+2020-10-14 10:00:01,808 INFO  [Test] Input to Password text box:  
+2020-10-14 10:00:01,903 INFO  [Test] Click on Login Button 
+2020-10-14 10:00:03,664 INFO  [Test] <--------------------TO_JOOMLA_BANNERS_BANNERS_015-------------------->
+ 
+2020-10-14 10:00:05,504 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-14 10:00:05,668 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-14 10:00:07,315 INFO  [Test] Step: Select quantity that user wants to display 
+2020-10-14 10:00:07,394 INFO  [Test] Step: Select quantity : 20 
+2020-10-14 10:00:12,484 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-14 10:00:12,573 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-14 10:00:19,014 INFO  [Test] Close browser
+ 
+2020-10-14 10:00:25,430 INFO  [Test] <--------------------Browser: firefox-------------------->
+ 
+2020-10-14 10:00:25,445 INFO  [Test] Navigate to JOOMLA Home Page 
+2020-10-14 10:00:28,173 INFO  [Test] Input to User Name text box:  
+2020-10-14 10:00:28,246 INFO  [Test] Input to Password text box:  
+2020-10-14 10:00:28,297 INFO  [Test] Click on Login Button 
+2020-10-14 10:00:29,827 INFO  [Test] <--------------------TO_JOOMLA_BANNERS_BANNERS_015-------------------->
+ 
+2020-10-14 10:00:31,716 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-14 10:00:32,052 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-14 10:00:33,555 INFO  [Test] Step: Select quantity that user wants to display 
+2020-10-14 10:00:33,858 INFO  [Test] Step: Select quantity : 20 
+2020-10-14 10:00:37,885 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-14 10:00:38,207 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-14 10:00:41,720 INFO  [Test] Close browser
+ 
+2020-10-14 10:00:46,668 INFO  [Test] <--------------------Browser: edge-------------------->
+ 
+2020-10-14 10:00:48,806 INFO  [Test] Navigate to JOOMLA Home Page 
+2020-10-14 10:00:52,133 INFO  [Test] Input to User Name text box:  
+2020-10-14 10:00:52,261 INFO  [Test] Input to Password text box:  
+2020-10-14 10:00:52,390 INFO  [Test] Click on Login Button 
+2020-10-14 10:00:54,399 INFO  [Test] <--------------------TO_JOOMLA_BANNERS_BANNERS_015-------------------->
+ 
+2020-10-14 10:00:55,363 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-14 10:00:55,453 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-14 10:00:56,956 INFO  [Test] Step: Select quantity that user wants to display 
+2020-10-14 10:00:57,040 INFO  [Test] Step: Select quantity : 20 
+2020-10-14 10:01:00,835 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-14 10:01:00,925 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-14 10:01:03,815 INFO  [Test] Close browser
+ 
+2020-10-14 10:01:39,209 INFO  [Test] <--------------------Browser: chrome-------------------->
+ 
+2020-10-14 10:01:41,344 INFO  [Test] Navigate to JOOMLA Home Page 
+2020-10-14 10:01:43,972 INFO  [Test] Input to User Name text box:  
+2020-10-14 10:01:44,094 INFO  [Test] Input to Password text box:  
+2020-10-14 10:01:44,254 INFO  [Test] Click on Login Button 
+2020-10-14 10:01:45,906 INFO  [Test] <--------------------TO_JOOMLA_BANNERS_BANNERS_015-------------------->
+ 
+2020-10-14 10:01:45,907 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-14 10:01:45,979 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-14 10:01:46,018 INFO  [Test] Close browser
+ 
+2020-10-14 10:01:51,729 INFO  [Test] <--------------------Browser: firefox-------------------->
+ 
+2020-10-14 10:01:51,752 INFO  [Test] Navigate to JOOMLA Home Page 
+2020-10-14 10:01:54,476 INFO  [Test] Input to User Name text box:  
+2020-10-14 10:01:54,545 INFO  [Test] Input to Password text box:  
+2020-10-14 10:01:54,596 INFO  [Test] Click on Login Button 
+2020-10-14 10:01:56,257 INFO  [Test] <--------------------TO_JOOMLA_BANNERS_BANNERS_015-------------------->
+ 
+2020-10-14 10:01:56,257 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-14 10:01:56,570 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-14 10:01:58,036 INFO  [Test] Step: Select quantity that user wants to display 
+2020-10-14 10:01:58,355 INFO  [Test] Step: Select quantity : 20 
+2020-10-14 10:01:58,621 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-14 10:01:58,913 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-14 10:01:59,944 INFO  [Test] Close browser
+ 
+2020-10-14 10:02:04,892 INFO  [Test] <--------------------Browser: edge-------------------->
+ 
+2020-10-14 10:02:07,033 INFO  [Test] Navigate to JOOMLA Home Page 
+2020-10-14 10:02:09,798 INFO  [Test] Input to User Name text box:  
+2020-10-14 10:02:09,910 INFO  [Test] Input to Password text box:  
+2020-10-14 10:02:10,007 INFO  [Test] Click on Login Button 
+2020-10-14 10:02:11,643 INFO  [Test] <--------------------TO_JOOMLA_BANNERS_BANNERS_015-------------------->
+ 
+2020-10-14 10:02:11,643 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-14 10:02:11,755 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-14 10:02:13,146 INFO  [Test] Step: Select quantity that user wants to display 
+2020-10-14 10:02:13,245 INFO  [Test] Step: Select quantity : 20 
+2020-10-14 10:02:13,432 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-14 10:02:13,526 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-14 10:02:14,373 INFO  [Test] Close browser
+ 
+2020-10-14 10:03:42,279 INFO  [Test] <--------------------Browser: chrome-------------------->
+ 
+2020-10-14 10:03:44,423 INFO  [Test] Navigate to JOOMLA Home Page 
+2020-10-14 10:03:47,088 INFO  [Test] Input to User Name text box:  
+2020-10-14 10:03:47,159 INFO  [Test] Input to Password text box:  
+2020-10-14 10:03:47,253 INFO  [Test] Click on Login Button 
+2020-10-14 10:03:48,908 INFO  [Test] <--------------------TO_JOOMLA_BANNERS_BANNERS_015-------------------->
+ 
+2020-10-14 10:03:48,909 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-14 10:03:49,006 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-14 10:03:50,379 INFO  [Test] Step: Select quantity that user wants to display 
+2020-10-14 10:03:50,501 INFO  [Test] Step: Select quantity : 20 
+2020-10-14 10:03:50,596 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-14 10:03:50,718 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-14 10:03:51,566 INFO  [Test] Close browser
+ 
+2020-10-14 10:03:57,322 INFO  [Test] <--------------------Browser: firefox-------------------->
+ 
+2020-10-14 10:03:57,339 INFO  [Test] Navigate to JOOMLA Home Page 
+2020-10-14 10:04:00,016 INFO  [Test] Input to User Name text box:  
+2020-10-14 10:04:00,086 INFO  [Test] Input to Password text box:  
+2020-10-14 10:04:00,129 INFO  [Test] Click on Login Button 
+2020-10-14 10:04:01,790 INFO  [Test] <--------------------TO_JOOMLA_BANNERS_BANNERS_015-------------------->
+ 
+2020-10-14 10:04:01,791 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-14 10:04:02,104 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-14 10:04:03,543 INFO  [Test] Step: Select quantity that user wants to display 
+2020-10-14 10:04:03,855 INFO  [Test] Step: Select quantity : 20 
+2020-10-14 10:04:04,134 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-14 10:04:04,434 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-14 10:04:05,547 INFO  [Test] Close browser
+ 
+2020-10-14 10:04:10,719 INFO  [Test] <--------------------Browser: edge-------------------->
+ 
+2020-10-14 10:04:12,874 INFO  [Test] Navigate to JOOMLA Home Page 
+2020-10-14 10:04:15,850 INFO  [Test] Input to User Name text box:  
+2020-10-14 10:04:15,937 INFO  [Test] Input to Password text box:  
+2020-10-14 10:04:16,025 INFO  [Test] Click on Login Button 
+2020-10-14 10:04:17,799 INFO  [Test] <--------------------TO_JOOMLA_BANNERS_BANNERS_015-------------------->
+ 
+2020-10-14 10:04:17,799 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-14 10:04:17,918 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-14 10:04:19,444 INFO  [Test] Step: Select quantity that user wants to display 
+2020-10-14 10:04:19,526 INFO  [Test] Step: Select quantity : 20 
+2020-10-14 10:04:19,706 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-14 10:04:19,780 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-14 10:04:20,593 INFO  [Test] Close browser
+ 
