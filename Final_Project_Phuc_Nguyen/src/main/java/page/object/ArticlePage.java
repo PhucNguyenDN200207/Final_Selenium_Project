@@ -9,7 +9,6 @@ import utils.Constants;
 import utils.Log4j;
 
 
-import static helper.DataHelper.*;
 import static utils.Constants.*;
 
 public class ArticlePage extends BasePage {
@@ -40,7 +39,6 @@ public class ArticlePage extends BasePage {
     private WebElement articleTitle() {
         return DRIVER.findElement(_articleTitle);
     }
-
 
     private WebElement articleContentTxt() {
         return DRIVER.findElement(_articleContentTxt);

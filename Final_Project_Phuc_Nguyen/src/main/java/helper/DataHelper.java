@@ -1,12 +1,8 @@
 package helper;
 
 import com.github.javafaker.Faker;
-import utils.Constants;
 
-import java.util.ArrayList;
 import java.util.Locale;
-
-import static utils.Constants.*;
 
 public class DataHelper {
 
@@ -39,17 +35,5 @@ public class DataHelper {
     public static int randomNumber(int min, int max) {
         return faker.number().numberBetween(min, max);
     }
-
-    /**
-     * Verify that the text is existed on page
-     *
-     * @param text string
-     * @return true if text existed
-     */
-
-    public Boolean verifyTextOnPage(String text) {
-        return Constants.DRIVER.getPageSource().contains(text);
-    }
-
 
 }

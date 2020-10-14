@@ -6,11 +6,10 @@ import static utils.Constants.*;
 
 public class NewTabHelper {
     public static boolean verifyHelpPageTitle() throws InterruptedException {
-        Thread.sleep(TIME_OUT_SHORT);
-
         // Get all Open Tabs
         ArrayList<String> tabHandles = new ArrayList<String>(DRIVER.getWindowHandles());
         for (String eachHandle : tabHandles) {
+            Thread.sleep(TIME_OUT_SHORT);
             DRIVER.switchTo().window(eachHandle);
 
             // Check Help Page Title

@@ -2474,3 +2474,191 @@
 2020-10-14 13:36:43,926 INFO  [Test] Step: Click on Clients 
 2020-10-14 13:36:48,481 INFO  [Test] Close browser
  
+2020-10-14 14:10:29,003 INFO  [Test] <--------------------Browser: chrome-------------------->
+ 
+2020-10-14 14:10:31,194 INFO  [Test] Navigate to JOOMLA Home Page 
+2020-10-14 14:10:34,020 INFO  [Test] Input to User Name text box:  
+2020-10-14 14:10:34,152 INFO  [Test] Input to Password text box:  
+2020-10-14 14:10:34,257 INFO  [Test] Click on Login Button 
+2020-10-14 14:10:35,978 INFO  [Test] <--------------------TC_JOOMLA_ARTICLE_001-------------------->
+ 
+2020-10-14 14:10:36,191 INFO  [Test] Step: Click on New Article in Content Tab 
+2020-10-14 14:10:42,896 INFO  [Test] Step: Input a title on 'Title' field 
+2020-10-14 14:10:43,118 INFO  [Test] Step: Input value on 'Article Text' text area 
+2020-10-14 14:10:43,610 INFO  [Test] Step: Click on 'Save & Close' icon of the top right toolbar 
+2020-10-14 14:10:45,688 INFO  [Test] Navigate to Article manager page 
+2020-10-14 14:10:46,310 INFO  [Test] Step: Click on Articles in Content Tab 
+2020-10-14 14:10:47,693 INFO  [Test] Close browser
+ 
+2020-10-14 14:10:51,793 INFO  [Test] <--------------------Browser: chrome-------------------->
+ 
+2020-10-14 14:10:53,974 INFO  [Test] Navigate to JOOMLA Home Page 
+2020-10-14 14:10:56,690 INFO  [Test] Input to User Name text box:  
+2020-10-14 14:10:56,791 INFO  [Test] Input to Password text box:  
+2020-10-14 14:10:56,908 INFO  [Test] Click on Login Button 
+2020-10-14 14:10:58,471 INFO  [Test] <--------------------TC_JOOMLA_CONTACTS_001-------------------->
+ 
+2020-10-14 14:10:58,575 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-14 14:10:58,763 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-14 14:11:00,251 INFO  [Test] Step: Click on Clients 
+2020-10-14 14:11:00,992 INFO  [Test] Step: Click on 'New' icon of the top right toolbar 
+2020-10-14 14:11:02,203 INFO  [Test] Input Title name 
+2020-10-14 14:11:02,411 INFO  [Test] Input Email text field 
+2020-10-14 14:11:02,533 INFO  [Test] Input Email text field 
+2020-10-14 14:11:02,683 INFO  [Test] Step: Click on 'Save & Close' icon of the top right toolbar 
+2020-10-14 14:11:04,559 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-14 14:11:04,649 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-14 14:11:05,612 INFO  [Test] Step: Click on Clients 
+2020-10-14 14:11:07,135 INFO  [Test] Close browser
+ 
+2020-10-14 14:11:11,241 INFO  [Test] <--------------------Browser: chrome-------------------->
+ 
+2020-10-14 14:11:13,440 INFO  [Test] Navigate to JOOMLA Home Page 
+2020-10-14 14:11:16,130 INFO  [Test] Input to User Name text box:  
+2020-10-14 14:11:16,226 INFO  [Test] Input to Password text box:  
+2020-10-14 14:11:16,348 INFO  [Test] Click on Login Button 
+2020-10-14 14:11:17,916 INFO  [Test] <--------------------TC_JOOMLA_CONTACTS_001-------------------->
+ 
+2020-10-14 14:11:17,916 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-14 14:11:18,032 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-14 14:11:19,544 INFO  [Test] Step: Click on 'New' icon of the top right toolbar 
+2020-10-14 14:11:25,162 INFO  [Test] Input Title name 
+2020-10-14 14:11:25,330 INFO  [Test] Step: Click on 'Save & Close' icon of the top right toolbar 
+2020-10-14 14:11:27,323 INFO  [Test] Close browser
+ 
+2020-10-14 14:11:31,480 INFO  [Test] <--------------------Browser: chrome-------------------->
+ 
+2020-10-14 14:11:33,661 INFO  [Test] Navigate to JOOMLA Home Page 
+2020-10-14 14:11:36,285 INFO  [Test] Input to User Name text box:  
+2020-10-14 14:11:36,407 INFO  [Test] Input to Password text box:  
+2020-10-14 14:11:36,497 INFO  [Test] Click on Login Button 
+2020-10-14 14:11:38,289 INFO  [Test] <--------------------TC_JOOMLA_CONTACTS_008-------------------->
+ 
+2020-10-14 14:11:38,289 INFO  [Test] Navigate to Article manager page 
+2020-10-14 14:11:38,289 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-14 14:11:38,398 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-14 14:11:39,855 INFO  [Test] Step: Click on 'Help' icon of the top right toolbar 
+2020-10-14 14:11:46,284 INFO  [Test] Close browser
+ 
+2020-10-14 14:11:50,537 INFO  [Test] <--------------------Browser: chrome-------------------->
+ 
+2020-10-14 14:11:52,711 INFO  [Test] Navigate to JOOMLA Home Page 
+2020-10-14 14:11:55,367 INFO  [Test] Input to User Name text box:  
+2020-10-14 14:11:55,467 INFO  [Test] Input to Password text box:  
+2020-10-14 14:11:55,552 INFO  [Test] Click on Login Button 
+2020-10-14 14:11:57,118 INFO  [Test] <--------------------TO_JOOMLA_ARTICLE_008-------------------->
+ 
+2020-10-14 14:11:57,118 INFO  [Test] Navigate to Article manager page 
+2020-10-14 14:11:57,706 INFO  [Test] Step: Click on Articles in Content Tab 
+2020-10-14 14:11:59,292 INFO  [Test] Step: Click on 'Help' icon of the top right toolbar 
+2020-10-14 14:12:05,637 INFO  [Test] Close browser
+ 
+2020-10-14 14:12:09,819 INFO  [Test] <--------------------Browser: chrome-------------------->
+ 
+2020-10-14 14:12:12,012 INFO  [Test] Navigate to JOOMLA Home Page 
+2020-10-14 14:12:14,662 INFO  [Test] Input to User Name text box:  
+2020-10-14 14:12:14,734 INFO  [Test] Input to Password text box:  
+2020-10-14 14:12:14,826 INFO  [Test] Click on Login Button 
+2020-10-14 14:12:16,421 INFO  [Test] <--------------------TO_JOOMLA_ARTICLE_015-------------------->
+ 
+2020-10-14 14:12:16,422 INFO  [Test] Step: Click on New Article in Content Tab 
+2020-10-14 14:12:22,676 INFO  [Test] Step: Input a title on 'Title' field 
+2020-10-14 14:12:22,868 INFO  [Test] Step: Input value on 'Article Text' text area 
+2020-10-14 14:12:23,278 INFO  [Test] Step: Click on 'Save & Close' icon of the top right toolbar 
+2020-10-14 14:12:25,362 INFO  [Test] Close browser
+ 
+2020-10-14 14:12:29,869 INFO  [Test] <--------------------Browser: chrome-------------------->
+ 
+2020-10-14 14:12:32,049 INFO  [Test] Navigate to JOOMLA Home Page 
+2020-10-14 14:12:34,690 INFO  [Test] Input to User Name text box:  
+2020-10-14 14:12:34,801 INFO  [Test] Input to Password text box:  
+2020-10-14 14:12:34,985 INFO  [Test] Click on Login Button 
+2020-10-14 14:12:36,707 INFO  [Test] <--------------------TO_JOOMLA_BANNERS_BANNERS_015-------------------->
+ 
+2020-10-14 14:12:36,708 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-14 14:12:36,822 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-14 14:12:38,244 INFO  [Test] Step: Select quantity that user wants to display 
+2020-10-14 14:12:38,332 INFO  [Test] Step: Select quantity : 20 
+2020-10-14 14:12:38,429 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-14 14:12:38,545 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-14 14:12:39,318 INFO  [Test] Close browser
+ 
+2020-10-14 14:12:45,128 INFO  [Test] <--------------------Browser: firefox-------------------->
+ 
+2020-10-14 14:12:45,150 INFO  [Test] Navigate to JOOMLA Home Page 
+2020-10-14 14:12:47,904 INFO  [Test] Input to User Name text box:  
+2020-10-14 14:12:47,989 INFO  [Test] Input to Password text box:  
+2020-10-14 14:12:48,036 INFO  [Test] Click on Login Button 
+2020-10-14 14:12:49,555 INFO  [Test] <--------------------TC_JOOMLA_ARTICLE_001-------------------->
+ 
+2020-10-14 14:12:49,562 INFO  [Test] Step: Click on New Article in Content Tab 
+2020-10-14 14:12:57,211 INFO  [Test] Step: Input a title on 'Title' field 
+2020-10-14 14:12:57,316 INFO  [Test] Step: Input value on 'Article Text' text area 
+2020-10-14 14:12:57,723 INFO  [Test] Step: Click on 'Save & Close' icon of the top right toolbar 
+2020-10-14 14:13:00,109 INFO  [Test] Navigate to Article manager page 
+2020-10-14 14:13:00,764 INFO  [Test] Step: Click on Articles in Content Tab 
+2020-10-14 14:13:02,870 INFO  [Test] Close browser
+ 
+2020-10-14 14:13:08,973 INFO  [Test] <--------------------Browser: firefox-------------------->
+ 
+2020-10-14 14:13:08,993 INFO  [Test] Navigate to JOOMLA Home Page 
+2020-10-14 14:13:11,732 INFO  [Test] Input to User Name text box:  
+2020-10-14 14:13:11,801 INFO  [Test] Input to Password text box:  
+2020-10-14 14:13:11,854 INFO  [Test] Click on Login Button 
+2020-10-14 14:13:13,562 INFO  [Test] <--------------------TC_JOOMLA_CONTACTS_001-------------------->
+ 
+2020-10-14 14:13:13,562 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-14 14:13:13,894 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-14 14:13:15,398 INFO  [Test] Step: Click on Clients 
+2020-10-14 14:13:16,316 INFO  [Test] Step: Click on 'New' icon of the top right toolbar 
+2020-10-14 14:13:17,689 INFO  [Test] Input Title name 
+2020-10-14 14:13:17,790 INFO  [Test] Input Email text field 
+2020-10-14 14:13:17,859 INFO  [Test] Input Email text field 
+2020-10-14 14:13:17,937 INFO  [Test] Step: Click on 'Save & Close' icon of the top right toolbar 
+2020-10-14 14:13:20,169 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-14 14:13:20,501 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-14 14:13:21,504 INFO  [Test] Step: Click on Clients 
+2020-10-14 14:13:23,579 INFO  [Test] Close browser
+ 
+2020-10-14 14:13:29,525 INFO  [Test] <--------------------Browser: firefox-------------------->
+ 
+2020-10-14 14:13:29,547 INFO  [Test] Navigate to JOOMLA Home Page 
+2020-10-14 14:13:32,233 INFO  [Test] Input to User Name text box:  
+2020-10-14 14:13:32,302 INFO  [Test] Input to Password text box:  
+2020-10-14 14:13:32,355 INFO  [Test] Click on Login Button 
+2020-10-14 14:13:34,006 INFO  [Test] <--------------------TC_JOOMLA_CONTACTS_001-------------------->
+ 
+2020-10-14 14:13:34,006 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-14 14:13:34,345 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-14 14:13:35,802 INFO  [Test] Step: Click on 'New' icon of the top right toolbar 
+2020-10-14 14:13:41,675 INFO  [Test] Input Title name 
+2020-10-14 14:13:41,758 INFO  [Test] Step: Click on 'Save & Close' icon of the top right toolbar 
+2020-10-14 14:13:44,147 INFO  [Test] Close browser
+ 
+2020-10-14 14:13:49,607 INFO  [Test] <--------------------Browser: firefox-------------------->
+ 
+2020-10-14 14:13:50,130 INFO  [Test] Navigate to JOOMLA Home Page 
+2020-10-14 14:13:52,939 INFO  [Test] Input to User Name text box:  
+2020-10-14 14:13:53,017 INFO  [Test] Input to Password text box:  
+2020-10-14 14:13:53,071 INFO  [Test] Click on Login Button 
+2020-10-14 14:13:54,559 INFO  [Test] <--------------------TC_JOOMLA_CONTACTS_008-------------------->
+ 
+2020-10-14 14:13:54,559 INFO  [Test] Navigate to Article manager page 
+2020-10-14 14:13:54,559 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-14 14:13:54,938 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-14 14:13:56,380 INFO  [Test] Step: Click on 'Help' icon of the top right toolbar 
+2020-10-14 14:14:01,066 INFO  [Test] Close browser
+ 
+2020-10-14 14:14:07,226 INFO  [Test] <--------------------Browser: firefox-------------------->
+ 
+2020-10-14 14:14:07,241 INFO  [Test] Navigate to JOOMLA Home Page 
+2020-10-14 14:14:10,000 INFO  [Test] Input to User Name text box:  
+2020-10-14 14:14:10,084 INFO  [Test] Input to Password text box:  
+2020-10-14 14:14:10,169 INFO  [Test] Click on Login Button 
+2020-10-14 14:14:11,657 INFO  [Test] <--------------------TO_JOOMLA_ARTICLE_008-------------------->
+ 
+2020-10-14 14:14:11,657 INFO  [Test] Navigate to Article manager page 
+2020-10-14 14:14:12,428 INFO  [Test] Step: Click on Articles in Content Tab 
+2020-10-14 14:14:14,583 INFO  [Test] Step: Click on 'Help' icon of the top right toolbar 
+2020-10-14 14:14:19,227 INFO  [Test] Close browser
+ 
