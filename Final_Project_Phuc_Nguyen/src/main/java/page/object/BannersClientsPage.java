@@ -16,6 +16,9 @@ public class BannersClientsPage extends BasePage {
     private final By _bannerClients = By.xpath("//*[@id='submenu']/li/a[.='Clients']");
     private final By _emailTxt = By.cssSelector("#jform_email");
     private final By _contactNameTxt = By.cssSelector("#jform_contact");
+    private final String _newClientName = "//a[contains(.,'%s')]";
+    private final String _newClientContact = "//a[contains(.,'%s')]//ancestor::tr//td[@class='small hidden-phone']";
+
 
     /**
      * This is place of Web Elements
@@ -31,6 +34,14 @@ public class BannersClientsPage extends BasePage {
 
     private WebElement contactNameTxt() {
         return DRIVER.findElement(_contactNameTxt);
+    }
+
+    private WebElement newClientName(String name) {
+        return elementByText(_newClientName, name);
+    }
+
+    private WebElement newClientContact(String contact) {
+        return elementByText(_newClientContact, contact);
     }
 
     /**
@@ -73,9 +84,9 @@ public class BannersClientsPage extends BasePage {
      */
 
     public Boolean verifyCreateNewClientSuccess() {
-        DriverHelper.navigate(Constants.JOOMLA_HOME_URL);
-        navigateToClientsPage();
-        chooseSortByIdDescending();
+//        DriverHelper.navigate(Constants.JOOMLA_HOME_URL);
+//        navigateToClientsPage();
+//        chooseSortByIdDescending();
 
         //TODO: create new element client and verify its
         return true;
