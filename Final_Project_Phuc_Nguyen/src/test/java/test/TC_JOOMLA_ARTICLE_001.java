@@ -6,7 +6,7 @@ import page.object.ArticlePage;
 import utils.Log4j;
 
 import static helper.DataHelper.*;
-import static utils.Constants.*;
+import static utils.Constants.ARTICLE_ALERT_MESSAGE;
 
 public class TC_JOOMLA_ARTICLE_001 extends BaseTest {
     ArticlePage articlePage = new ArticlePage();
@@ -20,12 +20,12 @@ public class TC_JOOMLA_ARTICLE_001 extends BaseTest {
 
         articlePage.createNewArticle(title, content);
 
-     //   Assert.assertEquals(articlePage.getAlertMessage(), ARTICLE_ALERT_MESSAGE, "Article Alert message failed");
+        Assert.assertEquals(articlePage.getAlertMessage(), ARTICLE_ALERT_MESSAGE, "Article Alert message failed");
 
         Log4j.info("Navigate to Article manager page");
         articlePage.navigateToArticleManager();
 
-        Assert.assertEquals(articlePage.getFirstAuthor(), AUTHOR, "Author failed");
-        Assert.assertEquals(articlePage.getFirstTitle(), title, "Article title fail");
+        Assert.assertTrue(articlePage.isTitleDisplay(title), "Article title fail");
+        Assert.assertTrue(articlePage.isAuthorCorrect(title), "Author failed");
     }
 }

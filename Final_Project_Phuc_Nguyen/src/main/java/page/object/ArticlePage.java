@@ -21,9 +21,10 @@ public class ArticlePage extends BasePage {
     private final By _articleManager = By.xpath("//div[@class='j-links-groups']//a[contains(.,'Articles')]");
     private final By _articleTitle = By.cssSelector("#jform_title");
     private final By _articleContentTxt = By.cssSelector("#jform_articletext_ifr");
-    private final By _firstAuthor = By.xpath("//*[@id='articleList']/tbody/tr/td/a");
-    private final By _firstTitle = By.xpath("//*[@id='articleList']/tbody/tr/td/div/a[@class='hasTooltip']");
-    private final By _iconPublish = By.xpath("//tbody//span[@class='icon-publish']");
+    private final String _iconPublish = "//tbody/tr//a[contains(.,'%s')]//ancestor::tr//div//a//span[@class='icon-publish']']";
+    private final String _iconUnPublish = "//tbody/tr//a[contains(.,'%s')]//ancestor::tr//div//a//span[@class='icon-unpublish']']";
+    private final String _newTitle = "//tbody/tr//a[contains(.,'%s')]";
+    private final String _authorByNewTitle = "//tbody/tr//a[contains(.,'%s')]//ancestor::tr//td/a[@data-original-title='Author']";
 
     /**
      * This is place of Web Elements
@@ -44,16 +45,21 @@ public class ArticlePage extends BasePage {
         return DRIVER.findElement(_articleContentTxt);
     }
 
-    private WebElement firstTitle() {
-        return DRIVER.findElement(_firstTitle);
+
+    private WebElement iconPublishByTitle(String title) {
+        return elementByText(_iconPublish, title);
     }
 
-    private WebElement firstAuthor() {
-        return DRIVER.findElement(_firstAuthor);
+    private WebElement iconUnPublishByTitle(String title) {
+        return elementByText(_iconUnPublish, title);
     }
 
-    private WebElement iconPublish() {
-        return DRIVER.findElement(_iconPublish);
+    private WebElement newTitle(String title) {
+        return elementByText(_newTitle, title);
+    }
+
+    private WebElement authorByNewTitle(String author) {
+        return elementByText(_authorByNewTitle, author);
     }
 
     /**
@@ -81,9 +87,14 @@ public class ArticlePage extends BasePage {
         articleManager().click();
     }
 
-    public void clickIconPublish() {
+    public void clickIconPublish(String title) {
         Log4j.info("Step: Click on the status icon of the selected article in the Status column");
-        iconPublish().click();
+        iconPublishByTitle(title).click();
+    }
+
+    public void clickIconUnPublish(String title) {
+        Log4j.info("Step: Click on the status icon of the selected article in the Status column");
+        iconUnPublishByTitle(title).click();
     }
 
     public void createNewArticle(String title, String content) {
@@ -107,11 +118,11 @@ public class ArticlePage extends BasePage {
      * This is place create verify methods
      */
 
-    public String getFirstAuthor() {
-        return firstAuthor().getText();
+    public Boolean isTitleDisplay(String title) {
+        return isElementPresented(newTitle(title));
     }
 
-    public String getFirstTitle() {
-        return firstTitle().getText();
+    public Boolean isAuthorCorrect(String title) {
+        return authorByNewTitle(title).getText().equals(AUTHOR);
     }
 }

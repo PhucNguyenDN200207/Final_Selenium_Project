@@ -91,6 +91,16 @@ public class BasePage {
         return element;
     }
 
+    /***
+     * This method choose Web Element by String Test
+     * @param element for example: "//tbody/tr//a[contains(.,'%s')]"
+     * @param text title
+     * @return Web Element identify by Xpath title
+     */
+    public WebElement elementByText(String element, String text) {
+        return DRIVER.findElement(By.xpath(String.format(element, text)));
+    }
+
     public String getTitle() {
         return Constants.DRIVER.getTitle();
     }

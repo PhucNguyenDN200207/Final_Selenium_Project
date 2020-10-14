@@ -4,14 +4,14 @@
     <test name="Test-Chrome">
         <parameter name="browser" value="chrome"/>
         <classes>
-            <class name="test.TC_JOOMLA_ARTICLE_001"/>
-            <class name="test.TC_JOOMLA_BANNERS_BANNERS_001"/>
-            <class name="test.TC_JOOMLA_BANNERS_CLIENTS_004"/>
+<!--            <class name="test.TC_JOOMLA_ARTICLE_001"/>-->
+<!--            <class name="test.TC_JOOMLA_BANNERS_BANNERS_001"/>-->
+<!--            <class name="test.TC_JOOMLA_BANNERS_CLIENTS_004"/>-->
             <class name="test.TC_JOOMLA_CONTACTS_001"/>
-            <class name="test.TC_JOOMLA_CONTACTS_008"/>
-            <class name="test.TO_JOOMLA_ARTICLE_008"/>
-            <class name="test.TO_JOOMLA_ARTICLE_015"/>
-            <class name="test.TO_JOOMLA_BANNERS_BANNERS_015"/>
+<!--            <class name="test.TC_JOOMLA_CONTACTS_008"/>-->
+<!--            <class name="test.TO_JOOMLA_ARTICLE_008"/>-->
+<!--            <class name="test.TO_JOOMLA_ARTICLE_015"/>-->
+<!--            <class name="test.TO_JOOMLA_BANNERS_BANNERS_015"/>-->
         </classes>
     </test>
 

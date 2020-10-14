@@ -10,6 +10,6 @@ public class TC_JOOMLA_BANNERS_CLIENTS_004 extends BasePage {
 
     @Test(description = "Verify that user can unpublished a client")
     public void testcase004() {
-        //TODO
+        //TODO: not finished
     }
 }

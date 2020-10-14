@@ -1,8 +1,10 @@
 package page.object;
 
 
+import helper.DriverHelper;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import utils.Constants;
 import utils.Log4j;
 
 import static helper.DataHelper.*;
@@ -13,7 +15,7 @@ public class ContactsPage extends BasePage {
      * This is place of Locator
      */
     private final By _contactDrd = By.xpath("//li[@class='dropdown open']//li[@class='dropdown-submenu']/a[.='Contacts']");
-    private final By _contactAlias = By.cssSelector("#jform_alias");
+    private final String _newContactTitle = "//a[.='%s']";
 
     /**
      * This is place of Web Elements
@@ -23,8 +25,8 @@ public class ContactsPage extends BasePage {
         return DRIVER.findElement(_contactDrd);
     }
 
-    private WebElement contactAlias() {
-        return DRIVER.findElement(_contactAlias);
+    private WebElement newContactTitle(String title) {
+        return elementByText(_newContactTitle, title);
     }
 
     /**
@@ -50,11 +52,23 @@ public class ContactsPage extends BasePage {
         clickHelpBtn();
     }
 
-    public void createNewContact() {
+    public void createNewContact(String name) {
         navigateToContactPage();
         clickNewBtn();
-        inputNameTxt(randomName());
+
+        Log4j.info("Create new contact: " + name);
+        inputNameTxt(name);
         clickSaveBtn();
     }
 
+    public void navigateToContactManagerPage() {
+        Log4j.info("Navigate to Contact manager Page to verify new Contact");
+        DriverHelper.navigate(Constants.JOOMLA_HOME_URL);
+        navigateToContactPage();
+        chooseSortByIdDescending();
+    }
+
+    public Boolean isNewContactDisplayed(String title) {
+        return isElementPresented(newContactTitle(title));
+    }
 }
