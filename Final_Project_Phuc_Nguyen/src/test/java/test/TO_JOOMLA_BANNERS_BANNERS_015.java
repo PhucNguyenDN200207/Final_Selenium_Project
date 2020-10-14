@@ -12,6 +12,6 @@ public class TO_JOOMLA_BANNERS_BANNERS_015 extends BaseTest {
     public void testcase015() {
         Log4j.header("TO_JOOMLA_BANNERS_BANNERS_015");
         bannersPage.selectQuantity20();
-        Assert.assertTrue(bannersPage.verifyUserChoose20(), "Choose quantity 20 failed");
+        Assert.assertTrue(bannersPage.verifyChooseQuantity20(), "Choose quantity 20 failed");
     }
 }

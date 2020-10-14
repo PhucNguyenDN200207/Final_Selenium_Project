@@ -21,7 +21,6 @@ public class BannersBannersPage extends BasePage {
      * This is place of Web Elements
      */
 
-
     private WebElement bannerCategories() {
         return DRIVER.findElement(_bannerCategories);
     }
@@ -87,7 +86,8 @@ public class BannersBannersPage extends BasePage {
     /**
      * This is place create verify methods
      */
-    public Boolean verifyUserChoose20() {
+
+    public Boolean verifyChooseQuantity20() {
         navigateToBannersPage();
         return bannerQuantity().getText().equals("20");
     }

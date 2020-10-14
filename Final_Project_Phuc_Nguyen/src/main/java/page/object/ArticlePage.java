@@ -1,13 +1,10 @@
 package page.object;
 
-
 import helper.DriverHelper;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-
 import utils.Constants;
 import utils.Log4j;
-
 
 import static utils.Constants.*;
 
@@ -45,7 +42,6 @@ public class ArticlePage extends BasePage {
         return DRIVER.findElement(_articleContentTxt);
     }
 
-
     private WebElement iconPublishByTitle(String title) {
         return elementByText(_iconPublish, title);
     }
@@ -70,15 +66,14 @@ public class ArticlePage extends BasePage {
         newArticle().click();
     }
 
-
     public void inputArticleTitle(String title) {
         Log4j.info("Step: Input a title on 'Title' field");
-        scrollToElement(articleTitle()).sendKeys(title);
+        articleTitle().sendKeys(title);
     }
 
     public void inputArticleContentTxt(String text) {
         Log4j.info("Step: Input value on 'Article Text' text area");
-        scrollToElement(articleContentTxt()).sendKeys(text);
+        articleContentTxt().sendKeys(text);
     }
 
 
@@ -88,12 +83,12 @@ public class ArticlePage extends BasePage {
     }
 
     public void clickIconPublish(String title) {
-        Log4j.info("Step: Click on the status icon of the selected article in the Status column");
+        Log4j.info("Step: Click on icon Publish with title: " + title);
         iconPublishByTitle(title).click();
     }
 
     public void clickIconUnPublish(String title) {
-        Log4j.info("Step: Click on the status icon of the selected article in the Status column");
+        Log4j.info("Step: Click on icon unPublish with title: " + title);
         iconUnPublishByTitle(title).click();
     }
 
@@ -118,11 +113,11 @@ public class ArticlePage extends BasePage {
      * This is place create verify methods
      */
 
-    public Boolean isTitleDisplay(String title) {
+    public Boolean isNewArticleTitleDisplayed(String title) {
         return isElementPresented(newTitle(title));
     }
 
-    public Boolean isAuthorCorrect(String title) {
+    public Boolean isAuthorCorrected(String title) {
         return authorByNewTitle(title).getText().equals(AUTHOR);
     }
 }

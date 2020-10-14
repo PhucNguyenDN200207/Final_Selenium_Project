@@ -26,8 +26,8 @@ public class TO_JOOMLA_ARTICLE_015 extends BaseTest {
         Log4j.info("Navigate to Article manager page");
         articlePage.navigateToArticleManager();
 
-        Assert.assertTrue(articlePage.isTitleDisplay(title), "Article title fail");
-        Assert.assertTrue(articlePage.isAuthorCorrect(title), "Author failed");
+        Assert.assertTrue(articlePage.isNewArticleTitleDisplayed(title), "Article title fail");
+        Assert.assertTrue(articlePage.isAuthorCorrected(title), "Author failed");
 
         //TODO: Not finish yet
 

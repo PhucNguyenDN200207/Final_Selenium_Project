@@ -16,8 +16,6 @@ public class BannersClientsPage extends BasePage {
     private final By _bannerClients = By.xpath("//*[@id='submenu']/li/a[.='Clients']");
     private final By _emailTxt = By.cssSelector("#jform_email");
     private final By _contactNameTxt = By.cssSelector("#jform_contact");
-    private final By _firstClient = By.cssSelector(".nowrap div a ~ a");
-    private final By _firstAuthor = By.xpath("//*[@id='articleList']/tbody/tr/td/div/a[@class='hasTooltip']");
 
     /**
      * This is place of Web Elements
@@ -61,7 +59,6 @@ public class BannersClientsPage extends BasePage {
         clickBannerClients();
     }
 
-
     public void createNewClient(String title, String name, String email) {
         navigateToClientsPage();
         clickNewBtn();
@@ -71,7 +68,6 @@ public class BannersClientsPage extends BasePage {
         clickSaveBtn();
     }
 
-
     /**
      * This is place create verify methods
      */
@@ -80,7 +76,8 @@ public class BannersClientsPage extends BasePage {
         DriverHelper.navigate(Constants.JOOMLA_HOME_URL);
         navigateToClientsPage();
         chooseSortByIdDescending();
-        //TODO:
+
+        //TODO: create new element client and verify its
         return true;
     }
 

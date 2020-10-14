@@ -66,7 +66,6 @@ public class BasePage {
         return DRIVER.findElement(_sortByIdDescending);
     }
 
-
     /**
      * Verify that web element is display or not by WebElement
      *
@@ -101,7 +100,6 @@ public class BasePage {
     public WebElement elementByText(String element, String text) {
         return DRIVER.findElement(By.xpath(String.format(element, text)));
     }
-    
 
     /**
      * Common method
@@ -109,7 +107,7 @@ public class BasePage {
 
     public void clickSaveBtn() {
         Log4j.info("Step: Click on 'Save & Close' icon of the top right toolbar");
-        scrollToElement(saveBtn()).click();
+        saveBtn().click();
     }
 
     public void clickHelpBtn() {
@@ -123,7 +121,7 @@ public class BasePage {
     }
 
     public void clickBannersDrd() {
-        Log4j.info("Step: Click on Components on Menu tab");
+        Log4j.info("Step: Click on Banners dropdown on Menu tab");
         bannersDrd().click();
     }
 

@@ -11,6 +11,7 @@ import static helper.DataHelper.*;
 import static utils.Constants.*;
 
 public class ContactsPage extends BasePage {
+
     /**
      * This is place of Locator
      */

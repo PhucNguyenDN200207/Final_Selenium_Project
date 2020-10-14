@@ -13,7 +13,7 @@ public class NewTabHelper {
             Thread.sleep(TIME_OUT_SHORT);
             DRIVER.switchTo().window(eachHandle);
 
-            // Check Help Page Title
+            // Check Page Title
             if (DRIVER.getTitle().equalsIgnoreCase(title)) {
                 return true;
             }
