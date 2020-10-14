@@ -2972,3 +2972,15 @@
 2020-10-14 16:03:51,913 INFO  [Test] Step: Click on 'Help' icon of the top right toolbar 
 2020-10-14 16:03:58,278 INFO  [Test] Close browser
  
+2020-10-14 16:41:19,114 INFO  [Test] <--------------------Browser: chrome-------------------->
+ 
+2020-10-14 16:41:21,261 INFO  [Test] Navigate to JOOMLA Home Page 
+2020-10-14 16:41:26,438 INFO  [Test] Input to User Name text box:  
+2020-10-14 16:41:26,519 INFO  [Test] Input to Password text box:  
+2020-10-14 16:41:26,605 INFO  [Test] Click on Login Button 
+2020-10-14 16:41:28,425 INFO  [Test] <--------------------TC_JOOMLA_CONTACTS_008-------------------->
+ 
+2020-10-14 16:41:28,425 INFO  [Test] Navigate to Article manager page 
+2020-10-14 16:41:28,426 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-14 16:41:28,574 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-14 16:41:33,001 INFO  [Test] Step: Click on 'Help' icon of the top right toolbar 
