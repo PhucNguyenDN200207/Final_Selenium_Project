@@ -101,15 +101,7 @@ public class BasePage {
     public WebElement elementByText(String element, String text) {
         return DRIVER.findElement(By.xpath(String.format(element, text)));
     }
-
-    public String getTitle() {
-        return Constants.DRIVER.getTitle();
-    }
-
-    public String getURL() {
-        return Constants.DRIVER.getCurrentUrl();
-    }
-
+    
 
     /**
      * Common method
