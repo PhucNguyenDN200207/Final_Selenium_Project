@@ -18,6 +18,8 @@ public class ArticlePage extends BasePage {
     private final By _articleManager = By.xpath("//div[@class='j-links-groups']//a[contains(.,'Articles')]");
     private final By _articleTitle = By.cssSelector("#jform_title");
     private final By _articleContentTxt = By.cssSelector("#jform_articletext_ifr");
+    private final By _categoryDropdown = By.xpath("//div[@class='controls']/select[@id='jform_catid']/..");
+    private String _categoryOption = "//ul[@class='chzn-results']/li[contains(.,'%s')]";
     private final String _iconPublish = "//tbody/tr//a[contains(.,'%s')]//ancestor::tr//div//a//span[@class='icon-publish']']";
     private final String _iconUnPublish = "//tbody/tr//a[contains(.,'%s')]//ancestor::tr//div//a//span[@class='icon-unpublish']']";
     private final String _newTitle = "//tbody/tr//a[contains(.,'%s')]";
@@ -58,9 +60,18 @@ public class ArticlePage extends BasePage {
         return elementByText(_authorByNewTitle, author);
     }
 
+    private WebElement categoryDropdown() {
+        return DRIVER.findElement(_categoryDropdown);
+    }
+
+    private WebElement categoryOption(String option) {
+        return DRIVER.findElement(By.xpath(String.format(_categoryOption, option)));
+    }
+
     /**
      * This is place create methods
      */
+
     public void clickNewArticle() {
         Log4j.info("Step: Click on New Article in Content Tab");
         newArticle().click();
@@ -82,6 +93,12 @@ public class ArticlePage extends BasePage {
         articleManager().click();
     }
 
+    public void selectCategory(String category) {
+        clickWhenElementReady(categoryDropdown());
+        clickWhenElementReady(categoryOption(category));
+        Log4j.info("Selected: " + category);
+    }
+
     public void clickIconPublish(String title) {
         Log4j.info("Step: Click on icon Publish with title: " + title);
         iconPublishByTitle(title).click();
@@ -92,11 +109,12 @@ public class ArticlePage extends BasePage {
         iconUnPublishByTitle(title).click();
     }
 
-    public void createNewArticle(String title, String content) {
-        this.clickNewArticle();
-        this.inputArticleTitle(title);
-        this.inputArticleContentTxt(content);
-        this.clickSaveBtn();
+    public void createNewArticle(String title, String content, String articleCategory) {
+        clickNewArticle();
+        inputArticleTitle(title);
+        inputArticleContentTxt(content);
+        selectCategory(articleCategory);
+        clickSaveBtn();
     }
 
     public void navigateToArticleManager() {

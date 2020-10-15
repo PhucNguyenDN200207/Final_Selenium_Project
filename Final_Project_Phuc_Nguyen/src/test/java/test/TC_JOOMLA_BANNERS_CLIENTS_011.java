@@ -48,7 +48,5 @@ public class TC_JOOMLA_BANNERS_CLIENTS_011 extends BaseTest {
                 "Create new client 1 title failed");
         Assert.assertTrue(bannersClientsPage.isNewClientTitleDisplayed(client2Title),
                 "Create new client 2 title failed");
-
-        //TODO fix error
     }
 }

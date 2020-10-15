@@ -6,7 +6,7 @@ import page.object.ArticlePage;
 import utils.Log4j;
 
 import static helper.DataHelper.*;
-import static utils.Constants.ARTICLE_ALERT_MESSAGE;
+import static utils.Constants.*;
 
 public class TC_JOOMLA_ARTICLE_001 extends BaseTest {
     ArticlePage articlePage = new ArticlePage();
@@ -18,9 +18,9 @@ public class TC_JOOMLA_ARTICLE_001 extends BaseTest {
         String title = randomTitle();
         String content = randomContent();
 
-        articlePage.createNewArticle(title, content);
+        articlePage.createNewArticle(title, content, DEFAUT_ARTICLE_CATEGORY);
 
-        Assert.assertEquals(articlePage.getAlertMessage(), ARTICLE_ALERT_MESSAGE, "Article Alert message failed");
+        // Assert.assertEquals(articlePage.getAlertMessage(), ARTICLE_ALERT_MESSAGE, "Article Alert message failed");
 
         Log4j.info("Navigate to Article manager page");
         articlePage.navigateToArticleManager();
