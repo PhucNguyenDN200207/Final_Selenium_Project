@@ -1,13 +1,12 @@
 package page.object;
 
 
-import helper.DriverHelper;
+import helper.BrowserHelper;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import utils.Constants;
 import utils.Log4j;
 
-import static helper.DataHelper.*;
 import static utils.Constants.*;
 
 public class ContactsPage extends BasePage {
@@ -64,7 +63,7 @@ public class ContactsPage extends BasePage {
 
     public void navigateToContactManagerPage() {
         Log4j.info("Navigate to Contact manager Page to verify new Contact");
-        DriverHelper.navigate(Constants.JOOMLA_HOME_URL);
+        BrowserHelper.navigate(Constants.JOOMLA_HOME_URL);
         navigateToContactPage();
         chooseSortByIdDescending();
     }

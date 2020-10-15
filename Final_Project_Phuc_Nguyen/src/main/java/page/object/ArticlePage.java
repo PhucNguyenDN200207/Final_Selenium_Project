@@ -1,6 +1,6 @@
 package page.object;
 
-import helper.DriverHelper;
+import helper.BrowserHelper;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import utils.Constants;
@@ -100,7 +100,7 @@ public class ArticlePage extends BasePage {
     }
 
     public void navigateToArticleManager() {
-        DriverHelper.navigate(Constants.JOOMLA_HOME_URL);
+        BrowserHelper.navigate(Constants.JOOMLA_HOME_URL);
         clickArticleManager();
         chooseSortByIdDescending();
     }

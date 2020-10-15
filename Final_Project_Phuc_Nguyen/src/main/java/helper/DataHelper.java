@@ -13,23 +13,23 @@ public class DataHelper {
     }
 
     public static String randomEmail() {
-        return faker.internet().safeEmailAddress();
+        return faker.internet().safeEmailAddress().trim();
     }
 
     public static String randomTitle() {
-        return faker.company().name();
+        return faker.company().name().trim();
     }
 
     public static String randomBanner() {
-        return faker.app().name();
+        return faker.app().name().trim();
     }
 
     public static String randomCategories() {
-        return faker.educator().university();
+        return faker.educator().university().trim();
     }
 
     public static String randomContent() {
-        return faker.lorem().paragraph();
+        return faker.lorem().paragraph().trim();
     }
 
     public static int randomNumber(int min, int max) {

@@ -1,6 +1,6 @@
 package test;
 
-import helper.DriverHelper;
+import helper.BrowserHelper;
 import org.testng.annotations.*;
 import page.object.LoginPage;
 import utils.Log4j;
@@ -15,19 +15,19 @@ public class BaseTest {
     @BeforeMethod
     public void beforeMethod(String browser) {
         if (browser.equals("chrome")) {
-            DriverHelper.openChromeBrowser();
+            BrowserHelper.openChromeBrowser();
 
         } else {
             if (browser.equals("firefox")) {
-                DriverHelper.openFirefoxBrowser();
+                BrowserHelper.openFirefoxBrowser();
             } else {
-                DriverHelper.openEdgeBrowser();
+                BrowserHelper.openEdgeBrowser();
             }
         }
         DRIVER.manage().window().maximize();
 
         Log4j.info("Navigate to JOOMLA Home Page");
-        DriverHelper.navigate(JOOMLA_HOME_URL);
+        BrowserHelper.navigate(JOOMLA_HOME_URL);
 
         loginPage.login();
     }
