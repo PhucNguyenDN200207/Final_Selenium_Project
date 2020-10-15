@@ -25,11 +25,14 @@ public class BasePage {
     private final By _helpBtn = By.cssSelector("#toolbar-help  button");
     private final By _newBtn = By.cssSelector(".button-new");
     private final By _searchBtn = By.cssSelector(".icon-search");
+    private final By _saveAndCloseBtn = By.xpath("//*[@id='toolbar-save']");
     private final By _nameTxt = By.cssSelector("#jform_name");
     private final By _titleTxt = By.cssSelector("#jform_title");
     private final By _searchTxt = By.cssSelector("#filter_search");
     private final By _sortByDrd = By.xpath("//*[@id='list_fullordering_chzn']/a");
     private final By _sortByIdDescending = By.xpath("//li[.='ID descending']");
+    private final By _unpublishBtn = By.id("toolbar-unpublish");
+
 
     /**
      * This is place create common Web elements
@@ -37,6 +40,10 @@ public class BasePage {
 
     private WebElement saveBtn() {
         return DRIVER.findElement(_saveBtn);
+    }
+
+    private WebElement saveAndCloseBtn() {
+        return DRIVER.findElement(_saveAndCloseBtn);
     }
 
     private WebElement alertSuccessMessage() {
@@ -111,9 +118,17 @@ public class BasePage {
         return DRIVER.findElement(By.xpath(String.format(element, text)));
     }
 
+    public void clickUnPublishBtn() {
+        Constants.DRIVER.findElement(_unpublishBtn).click();
+    }
+
     public void clickSaveBtn() {
         Log4j.info("Step: Click on 'Save & Close' icon of the top right toolbar");
         saveBtn().click();
+    }
+
+    public void clickSaveAndCloseBtn() {
+        saveAndCloseBtn().click();
     }
 
     public void clickHelpBtn() {
@@ -187,12 +202,6 @@ public class BasePage {
     public void chooseSortByIdDescending() {
         clickSortByDrd();
         clickSortByIdDescending();
-    }
-
-
-    public void navigateToBannersPage() {
-        clickComponentsMenu();
-        clickBannersDrd();
     }
 
     /**

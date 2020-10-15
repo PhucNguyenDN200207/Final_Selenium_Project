@@ -1,10 +1,8 @@
 package page.object;
 
 
-import helper.BrowserHelper;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import utils.Constants;
 import utils.Log4j;
 
 import static utils.Constants.*;
@@ -43,8 +41,7 @@ public class ContactsPage extends BasePage {
      */
 
     public void navigateToContactPage() {
-        clickComponentsMenu();
-        clickContactDrd();
+
     }
 
     public void openHelpPage() {
@@ -57,11 +54,8 @@ public class ContactsPage extends BasePage {
      * @param name random contract name
      */
     public void createNewContact(String name) {
-        navigateToContactPage();
-        clickNewBtn();
         Log4j.info("Create new contact: " + name);
         inputNameTxt(name);
-        clickSaveBtn();
     }
 
     public Boolean isNewContactDisplayed(String title) {

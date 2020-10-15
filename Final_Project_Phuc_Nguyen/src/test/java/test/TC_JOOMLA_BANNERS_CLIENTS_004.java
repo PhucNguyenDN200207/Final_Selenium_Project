@@ -6,6 +6,8 @@ import page.object.BannersClientsPage;
 import utils.Log4j;
 
 import static helper.DataHelper.*;
+import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
 import static utils.Constants.CLIENTS_SUCCESS_MESSAGE;
 
 public class TC_JOOMLA_BANNERS_CLIENTS_004 extends BaseTest {
@@ -28,13 +30,24 @@ public class TC_JOOMLA_BANNERS_CLIENTS_004 extends BaseTest {
         Assert.assertEquals(bannersClientsPage.getAlertMessage(), CLIENTS_SUCCESS_MESSAGE,
                 "New Client Alert message failed");
 
-        bannersClientsPage.navigateToClientManager();
+        browserHelper.navigateToClientManager();
+        bannersClientsPage.chooseSortByIdDescending();
 
         Assert.assertTrue(bannersClientsPage.isNewClientTitleDisplayed(clientTitle),
                 "Create new client title failed");
 
         // Verify point 2: TO_JOOMLA_BANNERS_CLIENTS_004
-        //TODO: Publish and un Publish
 
+        bannersClientsPage.selectCheckbox(clientTitle);
+
+        bannersClientsPage.clickUnPublishBtn();
+
+        // VP 2. A message : "1 client successfully unpublished" shows and Client is unpublished
+        assertEquals(bannersClientsPage.getAlertMessage(), "1 client unpublished.",
+                "Unpublished failed ");
+        assertTrue(bannersClientsPage.doesElementStatus(clientTitle,
+                "unpublish"), "Element does not exist");
     }
+
 }
+

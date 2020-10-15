@@ -13,8 +13,10 @@ public class TC_JOOMLA_ARTICLE_008 extends BaseTest {
         Log4j.header("TO_JOOMLA_ARTICLE_008");
 
         Log4j.info("Navigate to Article manager page");
+
         browserHelper.navigateToArticleManager();
-        articlePage.openHelpPage();
+
+        articlePage.clickHelpBtn();
 
         Assert.assertTrue(articlePage.doesHelpWindowDisplay(), "Help page title failed");
     }

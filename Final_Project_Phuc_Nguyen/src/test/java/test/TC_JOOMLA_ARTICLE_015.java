@@ -33,6 +33,7 @@ public class TC_JOOMLA_ARTICLE_015 extends BaseTest {
 
         Log4j.info("Navigate to Article manager page");
         browserHelper.navigateToArticleManager();
+        articlePage.chooseSortByIdDescending();
 
         Assert.assertTrue(articlePage.isNewArticleTitleDisplayed(title), "Article title fail");
         Assert.assertEquals(articlePage.getAuthor(title), AUTHOR, "Author failed");

@@ -1,9 +1,7 @@
 package page.object;
 
-import helper.BrowserHelper;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import utils.Constants;
 import utils.Log4j;
 
 import static utils.Constants.*;
@@ -20,8 +18,6 @@ public class ArticlePage extends BasePage {
     private final By _articleContentTxt = By.cssSelector("#jform_articletext_ifr");
     private final By _categoryDropdown = By.xpath("//div[@class='controls']/select[@id='jform_catid']/..");
     private final String _categoryOption = "//ul[@class='chzn-results']/li[contains(.,'%s')]";
-    private final String _iconPublish = "//tbody/tr//a[contains(.,'%s')]//ancestor::tr//div//a//span[@class='icon-publish']']";
-    private final String _iconUnPublish = "//tbody/tr//a[contains(.,'%s')]//ancestor::tr//div//a//span[@class='icon-unpublish']']";
     private final String _newTitle = "//tbody/tr//a[contains(.,'%s')]";
     private final String _authorByNewTitle = "//tbody/tr//a[contains(.,'%s')]//ancestor::tr//td/a[@data-original-title='Author']";
 
@@ -43,14 +39,6 @@ public class ArticlePage extends BasePage {
 
     private WebElement articleContentTxt() {
         return DRIVER.findElement(_articleContentTxt);
-    }
-
-    private WebElement iconPublishByTitle(String title) {
-        return elementByText(_iconPublish, title);
-    }
-
-    private WebElement iconUnPublishByTitle(String title) {
-        return elementByText(_iconUnPublish, title);
     }
 
     private WebElement newTitle(String title) {
@@ -100,16 +88,6 @@ public class ArticlePage extends BasePage {
         Log4j.info("Selected: " + category);
     }
 
-    public void clickIconPublish(String title) {
-        Log4j.info("Step: Click on icon Publish with title: " + title);
-        iconPublishByTitle(title).click();
-    }
-
-    public void clickIconUnPublish(String title) {
-        Log4j.info("Step: Click on icon unPublish with title: " + title);
-        iconUnPublishByTitle(title).click();
-    }
-
     /***
      * Create New Article
      * @param title random Article Title
@@ -128,10 +106,6 @@ public class ArticlePage extends BasePage {
         selectCategory(articleCategory);
     }
 
-
-    public void openHelpPage() {
-        clickHelpBtn();
-    }
 
     /**
      * This is place create verify methods

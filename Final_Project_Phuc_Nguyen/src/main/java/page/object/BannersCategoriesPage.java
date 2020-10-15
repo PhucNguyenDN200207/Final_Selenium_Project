@@ -51,10 +51,7 @@ public class BannersCategoriesPage extends BasePage {
      * TODO function fail when create random data with special characters.
      */
     public void createCategories(String title) {
-        navigateToCategoriesPage();
-        clickNewBtn();
         inputTitleTxt(title);
-        clickSaveBtn();
     }
 
 

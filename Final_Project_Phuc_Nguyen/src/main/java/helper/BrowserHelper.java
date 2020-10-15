@@ -53,35 +53,16 @@ public class BrowserHelper {
     public void navigateToArticleManager() {
         navigate(Constants.JOOMLA_HOME_URL);
         articlePage.clickArticleManager();
-        articlePage.chooseSortByIdDescending();
     }
 
+
     /**
-     * Re-navigate to JOOMLA administrator main page then navigate to Banner Manager
-     * to verify new create Banner
+     * Re-navigate to JOOMLA administrator main page then navigate to Client Manager
+     * to verify new create Client
      */
-    public void navigateToBannerManager() {
+    public void navigateToClientManager() {
         navigate(Constants.JOOMLA_HOME_URL);
-        bannersBannersPage.navigateToBannersPage();
-        bannersBannersPage.chooseSortByIdDescending();
-    }
-
-
-    /**
-     * Re-navigate to JOOMLA administrator main page then navigate to Categories Manager
-     * to verify new create category
-     */
-    public void navigateToCategoriesManager() {
-        BrowserHelper.navigate(Constants.JOOMLA_HOME_URL);
-        bannersCategoriesPage.navigateToCategoriesPage();
-        bannersCategoriesPage.chooseSortByIdDescending();
-    }
-
-    public void navigateToContactManagerPage() {
-        Log4j.info("Navigate to Contact manager Page to verify new Contact");
-        BrowserHelper.navigate(Constants.JOOMLA_HOME_URL);
-        contactsPage.navigateToContactPage();
-        contactsPage.chooseSortByIdDescending();
+        bannersClientsPage.navigateToClientsPage();
     }
 
     /**

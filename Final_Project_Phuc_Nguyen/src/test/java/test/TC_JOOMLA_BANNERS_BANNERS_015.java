@@ -13,7 +13,8 @@ public class TC_JOOMLA_BANNERS_BANNERS_015 extends BaseTest {
         Log4j.header("TO_JOOMLA_BANNERS_BANNERS_015");
 
         String quantity = "25";
-        bannersPage.navigateToBannersPage();
+        bannersPage.clickComponentsMenu();
+        bannersPage.clickBannersDrd();
 
         bannersPage.selectQuantityNumber(quantity);
         Assert.assertTrue(bannersPage.verifyChooseQuantityNumber(quantity), "Choose quantity 20 failed");

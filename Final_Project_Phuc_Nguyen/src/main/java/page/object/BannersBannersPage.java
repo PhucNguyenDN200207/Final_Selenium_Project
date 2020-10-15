@@ -86,27 +86,26 @@ public class BannersBannersPage extends BasePage {
      * @param bannerName    random Banner Name
      * @param categoryTitle choose from dropdown Category
      * @param clientTitle   choose from dropdown Client
-     *                      TODO function fail when create random data with special characters.
      */
     public void createNewBanner(String bannerName, String categoryTitle, String clientTitle) {
-        navigateToBannersPage();
-        clickNewBtn();
         inputNameTxt(bannerName);
+
         clickWhenElementReady(categoryDropdown());
         clickWhenElementReady(dropdownOption(categoryTitle));
         Log4j.info("Choose Category Dropdown: " + categoryTitle);
+
         clickWhenElementReady(bannerDetailsTab());
         clickWhenElementReady(clientDropdown());
         clickWhenElementReady(dropdownOption(clientTitle));
         Log4j.info("Choose Client Dropdown: " + clientTitle);
-        clickSaveBtn();
     }
 
     /**
      * Choose value 20 option as testcase Banner Banner 15 asked for
      */
     public void selectQuantityNumber(String number) {
-        navigateToBannersPage();
+        clickComponentsMenu();
+        clickBannersDrd();
         clickBannerQuantity();
         clickBannerQuantitySelect(number);
     }

@@ -6,6 +6,8 @@ import org.openqa.selenium.WebElement;
 import utils.Constants;
 import utils.Log4j;
 
+import java.util.List;
+
 import static utils.Constants.DRIVER;
 
 public class BannersClientsPage extends BasePage {
@@ -18,6 +20,8 @@ public class BannersClientsPage extends BasePage {
     private final By _contactNameTxt = By.cssSelector("#jform_contact");
     private final By _saveNewBtn = By.cssSelector(".button-save-new");
     private final String _newClientName = "//a[contains(.,'%s')]";
+    private final String _checkBox = "//td//a[normalize-space(text())='%s']//ancestor::tr//input";
+    private final String _boxName = "//td//a[normalize-space(text())='%s']//ancestor::tr//span[@class='icon-%s']";
 
 
     /**
@@ -42,6 +46,11 @@ public class BannersClientsPage extends BasePage {
 
     private WebElement saveNewBtn() {
         return DRIVER.findElement(_saveNewBtn);
+    }
+
+    private List<WebElement> checkBox(String title) {
+        return DRIVER.findElements(
+                By.xpath(String.format(_checkBox, title)));
     }
 
     /**
@@ -76,15 +85,28 @@ public class BannersClientsPage extends BasePage {
 
     /**
      * Create new Client for Banner
+     *
      * @param title random Client title
-     * @param name random Client name
+     * @param name  random Client name
      * @param email radom Client email
-     * TODO function fail when create random data with special characters.
      */
     public void createNewClient(String title, String name, String email) {
         inputNameTxt(title);
         inputContactNameTxt(name);
         inputEmailTxt(email);
+    }
+
+    public void selectCheckbox(String title) {
+        if (checkBox(title).size() == 1){
+            Constants.DRIVER.findElement(
+                    By.xpath(String.format(_checkBox, title))).click();
+        }
+    }
+
+    public boolean doesElementStatus(String title, String status) {
+        return Constants.DRIVER.findElements(
+                By.xpath(String.format(_boxName, title, status))).size() == 1;
+
     }
 
     public Boolean isNewClientTitleDisplayed(String title) {
@@ -95,15 +117,5 @@ public class BannersClientsPage extends BasePage {
     /**
      * This is place create verify methods
      */
-
-    /**
-     * Re-navigate to JOOMLA administrator main page then navigate to Client Manager
-     * to verify new create Client
-     */
-    public void navigateToClientManager() {
-        BrowserHelper.navigate(Constants.JOOMLA_HOME_URL);
-        navigateToClientsPage();
-        chooseSortByIdDescending();
-    }
 
 }
