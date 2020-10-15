@@ -10,6 +10,7 @@ import static utils.Constants.*;
 
 public class BaseTest {
     LoginPage loginPage = new LoginPage();
+    BrowserHelper browserHelper = new BrowserHelper();
 
     @Parameters("browser")
     @BeforeMethod

@@ -6,6 +6,8 @@ import org.openqa.selenium.WebElement;
 import utils.Constants;
 import utils.Log4j;
 
+import java.util.List;
+
 import static utils.Constants.*;
 
 public class BannersBannersPage extends BasePage {
@@ -15,13 +17,13 @@ public class BannersBannersPage extends BasePage {
      */
 
     private final By _bannerQuantity = By.cssSelector("#list_limit_chzn > a");
-    private final By _bannerQuantity20 = By.xpath("//li[.='20']");
+    private final String _bannerQuantitySelect = "//li[.='%s']";
     private final String _newBanner = "//a[contains(.,'%s')]";
     private final By _categoryDropdown = By.xpath("//div[@class='controls']/select[@id='jform_catid']/..");
     private final String _dropdownOption = "//ul[@class='chzn-results']/li[contains(.,'%s')]";
     private final By _bannerDetailsTab = By.cssSelector("div.form-horizontal li>a[href='#otherparams']");
     private final By _clientDropdown = By.cssSelector("div[id='jform_cid_chzn']>a");
-
+    private final By _numberTableRows = By.xpath("//*[@id=\"articleList\"]/tbody/tr");
 
     /**
      * This is place of Web Elements
@@ -32,8 +34,8 @@ public class BannersBannersPage extends BasePage {
         return DRIVER.findElement(_bannerQuantity);
     }
 
-    private WebElement bannerQuantity20() {
-        return DRIVER.findElement(_bannerQuantity20);
+    private WebElement bannerQuantitySelect(String number) {
+        return elementByText(_bannerQuantitySelect, number);
     }
 
     private WebElement newBannersBanner(String banner) {
@@ -56,6 +58,10 @@ public class BannersBannersPage extends BasePage {
         return DRIVER.findElement(_clientDropdown);
     }
 
+    private List<WebElement> numberTableRows() {
+        return DRIVER.findElements(_numberTableRows);
+    }
+
     /**
      * This is place create methods
      */
@@ -65,9 +71,13 @@ public class BannersBannersPage extends BasePage {
         bannerQuantity().click();
     }
 
-    public void clickBannerQuantity20() {
+    public void clickBannerQuantitySelect(String number) {
         Log4j.info("Step: Select quantity : 20");
-        bannerQuantity20().click();
+        bannerQuantitySelect(number).click();
+    }
+
+    public String getNumberTableRows() {
+        return String.valueOf(numberTableRows().size());
     }
 
     /**
@@ -76,7 +86,7 @@ public class BannersBannersPage extends BasePage {
      * @param bannerName    random Banner Name
      * @param categoryTitle choose from dropdown Category
      * @param clientTitle   choose from dropdown Client
-     * TODO function fail when create random data with special characters.
+     *                      TODO function fail when create random data with special characters.
      */
     public void createNewBanner(String bannerName, String categoryTitle, String clientTitle) {
         navigateToBannersPage();
@@ -93,31 +103,20 @@ public class BannersBannersPage extends BasePage {
     }
 
     /**
-     * Re-navigate to JOOMLA administrator main page then navigate to Banner Manager
-     * to verify new create Banner
-     */
-    public void navigateToBannerManager() {
-        BrowserHelper.navigate(Constants.JOOMLA_HOME_URL);
-        navigateToBannersPage();
-        chooseSortByIdDescending();
-    }
-
-    /**
      * Choose value 20 option as testcase Banner Banner 15 asked for
      */
-    public void selectQuantity20() {
+    public void selectQuantityNumber(String number) {
         navigateToBannersPage();
         clickBannerQuantity();
-        clickBannerQuantity20();
+        clickBannerQuantitySelect(number);
     }
 
     /**
      * This is place create verify methods
      */
 
-    public Boolean verifyChooseQuantity20() {
-        navigateToBannersPage();
-        return bannerQuantity().getText().equals("20");
+    public Boolean verifyChooseQuantityNumber(String num) {
+        return getNumberTableRows().equals(num);
     }
 
     public Boolean isNewBannerDisplayed(String banner) {

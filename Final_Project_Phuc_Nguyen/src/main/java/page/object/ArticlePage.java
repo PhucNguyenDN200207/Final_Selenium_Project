@@ -118,22 +118,16 @@ public class ArticlePage extends BasePage {
      *  TODO function fail when create random data with special characters.
      */
     public void createNewArticle(String title, String content, String articleCategory) {
-        clickNewArticle();
+        Log4j.info("Enter a title on 'Title' field");
         inputArticleTitle(title);
+
+        Log4j.info("Enter value on 'Article Text' text area");
         inputArticleContentTxt(content);
+
+        Log4j.info("Select an item from the 'Category' dropdown list");
         selectCategory(articleCategory);
-        clickSaveBtn();
     }
 
-    /**
-     * Re-navigate to JOOMLA administrator main page then navigate to Article Manager
-     * to verify new create Article
-     */
-    public void navigateToArticleManager() {
-        BrowserHelper.navigate(Constants.JOOMLA_HOME_URL);
-        clickArticleManager();
-        chooseSortByIdDescending();
-    }
 
     public void openHelpPage() {
         clickHelpBtn();
@@ -147,7 +141,7 @@ public class ArticlePage extends BasePage {
         return isElementPresented(newTitle(title));
     }
 
-    public Boolean isAuthorCorrected(String title) {
-        return authorByNewTitle(title).getText().equals(AUTHOR);
+    public String getAuthor(String title) {
+        return authorByNewTitle(title).getText();
     }
 }

@@ -1,5 +1,6 @@
 package test;
 
+import helper.BrowserHelper;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import page.object.ArticlePage;
@@ -19,15 +20,22 @@ public class TC_JOOMLA_ARTICLE_015 extends BaseTest {
         String title = randomTitle();
         String content = randomContent();
 
+        Log4j.info("Select Content > Article Manager");
+        articlePage.clickNewArticle();
+
+
         articlePage.createNewArticle(title, content, DEFAUT_ARTICLE_CATEGORY);
 
-        //   Assert.assertEquals(articlePage.getAlertMessage(), ARTICLE_ALERT_MESSAGE, "Alert message failed");
+        Log4j.info("Click on 'Save & Close' icon of the top right toolbar");
+        articlePage.clickSaveBtn();
+
+        Assert.assertEquals(articlePage.getAlertMessage(), ARTICLE_ALERT_MESSAGE, "Article Alert message failed");
 
         Log4j.info("Navigate to Article manager page");
-        articlePage.navigateToArticleManager();
+        browserHelper.navigateToArticleManager();
 
         Assert.assertTrue(articlePage.isNewArticleTitleDisplayed(title), "Article title fail");
-        Assert.assertTrue(articlePage.isAuthorCorrected(title), "Author failed");
+        Assert.assertEquals(articlePage.getAuthor(title), AUTHOR, "Author failed");
 
         //TODO: Publish and un Publish
 

@@ -11,7 +11,11 @@ public class TC_JOOMLA_BANNERS_BANNERS_015 extends BaseTest {
     @Test(description = "User can change the quantity of items displayed in banner table")
     public void testcase015() {
         Log4j.header("TO_JOOMLA_BANNERS_BANNERS_015");
-        bannersPage.selectQuantity20();
-        Assert.assertTrue(bannersPage.verifyChooseQuantity20(), "Choose quantity 20 failed");
+
+        String quantity = "25";
+        bannersPage.navigateToBannersPage();
+
+        bannersPage.selectQuantityNumber(quantity);
+        Assert.assertTrue(bannersPage.verifyChooseQuantityNumber(quantity), "Choose quantity 20 failed");
     }
 }

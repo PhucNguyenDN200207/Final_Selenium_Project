@@ -64,13 +64,6 @@ public class ContactsPage extends BasePage {
         clickSaveBtn();
     }
 
-    public void navigateToContactManagerPage() {
-        Log4j.info("Navigate to Contact manager Page to verify new Contact");
-        BrowserHelper.navigate(Constants.JOOMLA_HOME_URL);
-        navigateToContactPage();
-        chooseSortByIdDescending();
-    }
-
     public Boolean isNewContactDisplayed(String title) {
         return isElementPresented(newContactTitle(title));
     }

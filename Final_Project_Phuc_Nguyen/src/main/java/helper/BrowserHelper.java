@@ -8,6 +8,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import page.object.*;
 import utils.Constants;
 import utils.Log4j;
 
@@ -17,6 +18,11 @@ import static utils.Constants.DRIVER;
 import static utils.Constants.PAGE_LOAD_TIME_OUT;
 
 public class BrowserHelper {
+    ArticlePage articlePage = new ArticlePage();
+    BannersBannersPage bannersBannersPage = new BannersBannersPage();
+    BannersCategoriesPage bannersCategoriesPage = new BannersCategoriesPage();
+    BannersClientsPage bannersClientsPage = new BannersClientsPage();
+    ContactsPage contactsPage = new ContactsPage();
 
     public static void openChromeBrowser() {
         WebDriverManager.chromedriver().setup();
@@ -41,7 +47,46 @@ public class BrowserHelper {
     }
 
     /**
+     * Re-navigate to JOOMLA administrator main page then navigate to Article Manager
+     * to verify new create Article
+     */
+    public void navigateToArticleManager() {
+        navigate(Constants.JOOMLA_HOME_URL);
+        articlePage.clickArticleManager();
+        articlePage.chooseSortByIdDescending();
+    }
+
+    /**
+     * Re-navigate to JOOMLA administrator main page then navigate to Banner Manager
+     * to verify new create Banner
+     */
+    public void navigateToBannerManager() {
+        navigate(Constants.JOOMLA_HOME_URL);
+        bannersBannersPage.navigateToBannersPage();
+        bannersBannersPage.chooseSortByIdDescending();
+    }
+
+
+    /**
+     * Re-navigate to JOOMLA administrator main page then navigate to Categories Manager
+     * to verify new create category
+     */
+    public void navigateToCategoriesManager() {
+        BrowserHelper.navigate(Constants.JOOMLA_HOME_URL);
+        bannersCategoriesPage.navigateToCategoriesPage();
+        bannersCategoriesPage.chooseSortByIdDescending();
+    }
+
+    public void navigateToContactManagerPage() {
+        Log4j.info("Navigate to Contact manager Page to verify new Contact");
+        BrowserHelper.navigate(Constants.JOOMLA_HOME_URL);
+        contactsPage.navigateToContactPage();
+        contactsPage.chooseSortByIdDescending();
+    }
+
+    /**
      * Use for Help page
+     *
      * @param title New web title after action click or open
      * @return true if it has two browser windows and the title of new window match
      */

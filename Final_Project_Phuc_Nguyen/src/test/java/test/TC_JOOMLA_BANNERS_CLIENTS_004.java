@@ -6,6 +6,7 @@ import page.object.BannersClientsPage;
 import utils.Log4j;
 
 import static helper.DataHelper.*;
+import static utils.Constants.CLIENTS_SUCCESS_MESSAGE;
 
 public class TC_JOOMLA_BANNERS_CLIENTS_004 extends BaseTest {
     BannersClientsPage bannersClientsPage = new BannersClientsPage();
@@ -24,8 +25,8 @@ public class TC_JOOMLA_BANNERS_CLIENTS_004 extends BaseTest {
         bannersClientsPage.createNewClient(clientTitle, clientName, clientEmail);
         bannersClientsPage.clickSaveBtn();
 
-//        Assert.assertEquals(bannersClientsPage.getAlertMessage(), CLIENTS_SUCCESS_MESSAGE,
-//                "New Client Alert message failed");
+        Assert.assertEquals(bannersClientsPage.getAlertMessage(), CLIENTS_SUCCESS_MESSAGE,
+                "New Client Alert message failed");
 
         bannersClientsPage.navigateToClientManager();
 

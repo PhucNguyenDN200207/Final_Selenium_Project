@@ -21,7 +21,7 @@ public class TC_JOOMLA_CONTACTS_001 extends BaseTest {
         Assert.assertEquals(contactsPage.getAlertMessage(),
                 CONTACT_SUCCESS_MESSAGE, "Contact Alert message failed");
 
-        contactsPage.navigateToContactManagerPage();
+        browserHelper.navigateToContactManagerPage();
 
         Assert.assertTrue(contactsPage.isNewContactDisplayed(name), "New Contact create failed");
     }

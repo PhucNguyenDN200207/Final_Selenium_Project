@@ -8,6 +8,7 @@ import page.object.BannersClientsPage;
 import utils.Log4j;
 
 import static helper.DataHelper.*;
+import static utils.Constants.*;
 
 public class TC_JOOMLA_BANNERS_BANNERS_008 extends BaseTest {
     BannersBannersPage bannersBannersPage = new BannersBannersPage();
@@ -28,8 +29,8 @@ public class TC_JOOMLA_BANNERS_BANNERS_008 extends BaseTest {
         bannersClientsPage.createNewClient(clientTitle, clientName, clientEmail);
         bannersClientsPage.clickSaveBtn();
 
-//        Assert.assertEquals(bannersClientsPage.getAlertMessage(), CLIENTS_SUCCESS_MESSAGE,
-//                "New Client Alert message failed");
+        Assert.assertEquals(bannersClientsPage.getAlertMessage(), CLIENTS_SUCCESS_MESSAGE,
+                "New Client Alert message failed");
 
         bannersClientsPage.navigateToClientManager();
 
@@ -42,10 +43,10 @@ public class TC_JOOMLA_BANNERS_BANNERS_008 extends BaseTest {
 
         bannersCategoriesPage.createCategories(categoryTitle);
 
-//        Assert.assertEquals(bannersCategoriesPage.getAlertMessage(), CATEGORIES_SUCCESS_MESSAGE,
-//                "New Client Alert message failed");
+        Assert.assertEquals(bannersCategoriesPage.getAlertMessage(), CATEGORIES_SUCCESS_MESSAGE,
+                "New Client Alert message failed");
 
-        bannersCategoriesPage.navigateToCategoriesManager();
+        browserHelper.navigateToCategoriesManager();
 
         Assert.assertTrue(bannersCategoriesPage.isNewCateGoryTitleDisplayed(categoryTitle),
                 "Create new category title failed");
@@ -56,10 +57,10 @@ public class TC_JOOMLA_BANNERS_BANNERS_008 extends BaseTest {
 
         bannersBannersPage.createNewBanner(bannerName, categoryTitle, clientTitle);
 
-//        Assert.assertEquals(bannersBannersPage.getAlertMessage(), BANNERS_SUCCESS_MESSAGE,
-//                "New Banner Alert message failed");
+        Assert.assertEquals(bannersBannersPage.getAlertMessage(), BANNERS_SUCCESS_MESSAGE,
+                "New Banner Alert message failed");
 
-        bannersBannersPage.navigateToBannerManager();
+        browserHelper.navigateToBannerManager();
 
         Assert.assertTrue(bannersBannersPage.isNewBannerDisplayed(bannerName),
                 "Create new banner title failed");
