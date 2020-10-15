@@ -16,6 +16,7 @@ public class BannersClientsPage extends BasePage {
     private final By _bannerClients = By.xpath("//*[@id='submenu']/li/a[.='Clients']");
     private final By _emailTxt = By.cssSelector("#jform_email");
     private final By _contactNameTxt = By.cssSelector("#jform_contact");
+    private final By _saveNewBtn = By.cssSelector(".button-save-new");
     private final String _newClientName = "//a[contains(.,'%s')]";
 
 
@@ -39,6 +40,10 @@ public class BannersClientsPage extends BasePage {
         return elementByText(_newClientName, name);
     }
 
+    private WebElement saveNewBtn() {
+        return DRIVER.findElement(_saveNewBtn);
+    }
+
     /**
      * This is place create methods
      */
@@ -58,6 +63,10 @@ public class BannersClientsPage extends BasePage {
         bannerClients().click();
     }
 
+    public void clickSaveNewBtn() {
+        Log4j.info("Step: Click on Save & New button");
+        saveNewBtn().click();
+    }
 
     public void navigateToClientsPage() {
         clickComponentsMenu();
@@ -71,7 +80,6 @@ public class BannersClientsPage extends BasePage {
         inputNameTxt(title);
         inputContactNameTxt(name);
         inputEmailTxt(email);
-        clickSaveBtn();
     }
 
     public Boolean isNewClientTitleDisplayed(String title) {

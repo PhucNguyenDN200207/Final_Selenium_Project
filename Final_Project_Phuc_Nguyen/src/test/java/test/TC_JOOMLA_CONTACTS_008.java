@@ -15,6 +15,6 @@ public class TC_JOOMLA_CONTACTS_008 extends BaseTest {
         Log4j.info("Navigate to Article manager page");
         contactsPage.openHelpPage();
 
-        Assert.assertTrue(contactsPage.verifyHelpPageTitle(), "Help page title failed");
+        Assert.assertTrue(contactsPage.doesHelpWindowDisplay(), "Help page title failed");
     }
 }

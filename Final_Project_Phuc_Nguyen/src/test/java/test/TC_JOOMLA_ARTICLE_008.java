@@ -16,6 +16,6 @@ public class TC_JOOMLA_ARTICLE_008 extends BaseTest {
         articlePage.navigateToArticleManager();
         articlePage.openHelpPage();
 
-        Assert.assertTrue(articlePage.verifyHelpPageTitle(), "Help page title failed");
+        Assert.assertTrue(articlePage.doesHelpWindowDisplay(), "Help page title failed");
     }
 }

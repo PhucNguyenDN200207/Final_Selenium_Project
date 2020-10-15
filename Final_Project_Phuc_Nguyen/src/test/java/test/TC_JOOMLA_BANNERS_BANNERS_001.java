@@ -25,6 +25,7 @@ public class TC_JOOMLA_BANNERS_BANNERS_001 extends BaseTest {
 
         // Verify point 1: TO_JOOMLA_BANNERS_CLIENTS_001
         bannersClientsPage.createNewClient(clientTitle, clientName, clientEmail);
+        bannersClientsPage.clickSaveBtn();
 
         Assert.assertEquals(bannersClientsPage.getAlertMessage(), CLIENTS_SUCCESS_MESSAGE,
                 "New Client Alert message failed");

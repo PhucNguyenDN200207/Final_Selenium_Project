@@ -1,6 +1,5 @@
 package page.object;
 
-import helper.DriverHelper;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchElementException;
@@ -10,7 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import utils.Constants;
 import utils.Log4j;
 
-import static helper.NewTabHelper.verifyNewTabTitle;
+import static helper.NewWindowHelper.doesNewWindowDisplay;
 import static utils.Constants.*;
 
 public class BasePage {
@@ -216,7 +215,7 @@ public class BasePage {
 
     }
 
-    public Boolean verifyHelpPageTitle() throws InterruptedException {
-        return verifyNewTabTitle(HELP_PAGE_TITLE);
+    public Boolean doesHelpWindowDisplay() {
+        return doesNewWindowDisplay(HELP_PAGE_TITLE);
     }
 }
