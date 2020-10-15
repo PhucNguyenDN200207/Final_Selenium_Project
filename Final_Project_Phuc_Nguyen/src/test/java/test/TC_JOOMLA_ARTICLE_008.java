@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 import page.object.ArticlePage;
 import utils.Log4j;
 
-public class TO_JOOMLA_ARTICLE_008 extends BaseTest {
+public class TC_JOOMLA_ARTICLE_008 extends BaseTest {
     ArticlePage articlePage = new ArticlePage();
 
     @Test(description = "User can access article's help section")

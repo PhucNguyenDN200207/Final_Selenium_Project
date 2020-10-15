@@ -9,7 +9,7 @@ import static helper.DataHelper.randomContent;
 import static helper.DataHelper.randomTitle;
 import static utils.Constants.*;
 
-public class TO_JOOMLA_ARTICLE_015 extends BaseTest {
+public class TC_JOOMLA_ARTICLE_015 extends BaseTest {
     ArticlePage articlePage = new ArticlePage();
 
     @Test(description = "User can change the status of articles using the Status column")

@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 import page.object.BannersBannersPage;
 import utils.Log4j;
 
-public class TO_JOOMLA_BANNERS_BANNERS_015 extends BaseTest {
+public class TC_JOOMLA_BANNERS_BANNERS_015 extends BaseTest {
     BannersBannersPage bannersPage = new BannersBannersPage();
 
     @Test(description = "User can change the quantity of items displayed in banner table")
