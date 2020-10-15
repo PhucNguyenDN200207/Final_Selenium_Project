@@ -19,7 +19,7 @@ public class ArticlePage extends BasePage {
     private final By _articleTitle = By.cssSelector("#jform_title");
     private final By _articleContentTxt = By.cssSelector("#jform_articletext_ifr");
     private final By _categoryDropdown = By.xpath("//div[@class='controls']/select[@id='jform_catid']/..");
-    private String _categoryOption = "//ul[@class='chzn-results']/li[contains(.,'%s')]";
+    private final String _categoryOption = "//ul[@class='chzn-results']/li[contains(.,'%s')]";
     private final String _iconPublish = "//tbody/tr//a[contains(.,'%s')]//ancestor::tr//div//a//span[@class='icon-publish']']";
     private final String _iconUnPublish = "//tbody/tr//a[contains(.,'%s')]//ancestor::tr//div//a//span[@class='icon-unpublish']']";
     private final String _newTitle = "//tbody/tr//a[contains(.,'%s')]";
@@ -28,6 +28,7 @@ public class ArticlePage extends BasePage {
     /**
      * This is place of Web Elements
      */
+
     private WebElement newArticle() {
         return DRIVER.findElement(_newArticle);
     }
@@ -109,6 +110,13 @@ public class ArticlePage extends BasePage {
         iconUnPublishByTitle(title).click();
     }
 
+    /***
+     * Create New Article
+     * @param title random Article Title
+     * @param content random Article Content
+     * @param articleCategory default Sample Data-Articles
+     *  TODO function fail when create random data with special characters.
+     */
     public void createNewArticle(String title, String content, String articleCategory) {
         clickNewArticle();
         inputArticleTitle(title);
@@ -117,6 +125,10 @@ public class ArticlePage extends BasePage {
         clickSaveBtn();
     }
 
+    /**
+     * Re-navigate to JOOMLA administrator main page then navigate to Article Manager
+     * to verify new create Article
+     */
     public void navigateToArticleManager() {
         BrowserHelper.navigate(Constants.JOOMLA_HOME_URL);
         clickArticleManager();

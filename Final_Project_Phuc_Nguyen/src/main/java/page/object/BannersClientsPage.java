@@ -74,6 +74,13 @@ public class BannersClientsPage extends BasePage {
         clickBannerClients();
     }
 
+    /**
+     * Create new Client for Banner
+     * @param title random Client title
+     * @param name random Client name
+     * @param email radom Client email
+     * TODO function fail when create random data with special characters.
+     */
     public void createNewClient(String title, String name, String email) {
         inputNameTxt(title);
         inputContactNameTxt(name);
@@ -89,6 +96,10 @@ public class BannersClientsPage extends BasePage {
      * This is place create verify methods
      */
 
+    /**
+     * Re-navigate to JOOMLA administrator main page then navigate to Client Manager
+     * to verify new create Client
+     */
     public void navigateToClientManager() {
         BrowserHelper.navigate(Constants.JOOMLA_HOME_URL);
         navigateToClientsPage();

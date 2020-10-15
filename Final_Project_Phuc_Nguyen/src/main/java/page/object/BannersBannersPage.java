@@ -17,10 +17,10 @@ public class BannersBannersPage extends BasePage {
     private final By _bannerQuantity = By.cssSelector("#list_limit_chzn > a");
     private final By _bannerQuantity20 = By.xpath("//li[.='20']");
     private final String _newBanner = "//a[contains(.,'%s')]";
-    private By _categoryDropdown = By.xpath("//div[@class='controls']/select[@id='jform_catid']/..");
-    private String _dropdownOption = "//ul[@class='chzn-results']/li[contains(.,'%s')]";
-    private By _bannerDetailsTab = By.cssSelector("div.form-horizontal li>a[href='#otherparams']");
-    private By _clientDropdown = By.cssSelector("div[id='jform_cid_chzn']>a");
+    private final By _categoryDropdown = By.xpath("//div[@class='controls']/select[@id='jform_catid']/..");
+    private final String _dropdownOption = "//ul[@class='chzn-results']/li[contains(.,'%s')]";
+    private final By _bannerDetailsTab = By.cssSelector("div.form-horizontal li>a[href='#otherparams']");
+    private final By _clientDropdown = By.cssSelector("div[id='jform_cid_chzn']>a");
 
 
     /**
@@ -45,7 +45,7 @@ public class BannersBannersPage extends BasePage {
     }
 
     private WebElement dropdownOption(String option) {
-        return DRIVER.findElement(By.xpath(String.format(_dropdownOption, option)));
+        return elementByText(_dropdownOption, option);
     }
 
     private WebElement bannerDetailsTab() {
@@ -70,26 +70,41 @@ public class BannersBannersPage extends BasePage {
         bannerQuantity20().click();
     }
 
+    /**
+     * Create New Banner
+     *
+     * @param bannerName    random Banner Name
+     * @param categoryTitle choose from dropdown Category
+     * @param clientTitle   choose from dropdown Client
+     * TODO function fail when create random data with special characters.
+     */
     public void createNewBanner(String bannerName, String categoryTitle, String clientTitle) {
         navigateToBannersPage();
         clickNewBtn();
         inputNameTxt(bannerName);
         clickWhenElementReady(categoryDropdown());
         clickWhenElementReady(dropdownOption(categoryTitle));
-        Log4j.info("   Choose Category Dropdown: " + categoryTitle);
+        Log4j.info("Choose Category Dropdown: " + categoryTitle);
         clickWhenElementReady(bannerDetailsTab());
         clickWhenElementReady(clientDropdown());
         clickWhenElementReady(dropdownOption(clientTitle));
-        Log4j.info("   Choose Client Dropdown: " + clientTitle);
+        Log4j.info("Choose Client Dropdown: " + clientTitle);
         clickSaveBtn();
     }
 
+    /**
+     * Re-navigate to JOOMLA administrator main page then navigate to Banner Manager
+     * to verify new create Banner
+     */
     public void navigateToBannerManager() {
         BrowserHelper.navigate(Constants.JOOMLA_HOME_URL);
         navigateToBannersPage();
         chooseSortByIdDescending();
     }
 
+    /**
+     * Choose value 20 option as testcase Banner Banner 15 asked for
+     */
     public void selectQuantity20() {
         navigateToBannersPage();
         clickBannerQuantity();

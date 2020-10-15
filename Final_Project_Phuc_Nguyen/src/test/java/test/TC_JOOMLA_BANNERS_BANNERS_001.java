@@ -8,7 +8,6 @@ import page.object.BannersClientsPage;
 import utils.Log4j;
 
 import static helper.DataHelper.*;
-import static utils.Constants.*;
 
 public class TC_JOOMLA_BANNERS_BANNERS_001 extends BaseTest {
     BannersBannersPage bannersBannersPage = new BannersBannersPage();
@@ -46,7 +45,7 @@ public class TC_JOOMLA_BANNERS_BANNERS_001 extends BaseTest {
 //        Assert.assertEquals(bannersCategoriesPage.getAlertMessage(), CATEGORIES_SUCCESS_MESSAGE,
 //                "New Client Alert message failed");
 
-        bannersCategoriesPage.navigateToClientManager();
+        bannersCategoriesPage.navigateToCategoriesManager();
 
         Assert.assertTrue(bannersCategoriesPage.isNewCateGoryTitleDisplayed(categoryTitle),
                 "Create new category title failed");

@@ -40,6 +40,11 @@ public class BrowserHelper {
         Constants.DRIVER.get(url);
     }
 
+    /**
+     * Use for Help page
+     * @param title New web title after action click or open
+     * @return true if it has two browser windows and the title of new window match
+     */
     public static boolean doesNewWindowDisplay(String title) {
         // Get all Open Tabs
         ArrayList<String> tabHandles = new ArrayList<String>(DRIVER.getWindowHandles());

@@ -75,7 +75,6 @@ public class BasePage {
         return DRIVER.findElement(_searchTxt);
     }
 
-
     private WebElement sortByDrd() {
         return DRIVER.findElement(_sortByDrd);
     }
@@ -85,9 +84,13 @@ public class BasePage {
     }
 
     /**
+     * Common method
+     */
+
+    /**
      * Verify that web element is display or not by WebElement
      *
-     * @return true if element is display or false if element is hidden
+     * @return true if element is display or false if element is not attach to DOM
      */
 
     public boolean isElementPresented(WebElement element) {
@@ -96,17 +99,6 @@ public class BasePage {
         } catch (NoSuchElementException e) {
             return false;
         }
-    }
-
-    /**
-     * Used when needed to scroll down to the element needed to interact with
-     * Firefox is not auto scroll to Element like Chrome and Edge
-     */
-
-    public WebElement scrollToElement(WebElement element) {
-        JavascriptExecutor js = (JavascriptExecutor) Constants.DRIVER;
-        js.executeScript("arguments[0].scrollIntoView();", element);
-        return element;
     }
 
     /***
@@ -118,10 +110,6 @@ public class BasePage {
     public WebElement elementByText(String element, String text) {
         return DRIVER.findElement(By.xpath(String.format(element, text)));
     }
-
-    /**
-     * Common method
-     */
 
     public void clickSaveBtn() {
         Log4j.info("Step: Click on 'Save & Close' icon of the top right toolbar");
@@ -193,6 +181,9 @@ public class BasePage {
         searchTxt().sendKeys(text);
     }
 
+    /**
+     * Choose sort By ID Descending to pop-up every new create element to first row of data table
+     */
     public void chooseSortByIdDescending() {
         clickSortByDrd();
         clickSortByIdDescending();
@@ -208,6 +199,11 @@ public class BasePage {
      * Verify method
      */
 
+    /**
+     * Return every successful message in JOOMLA
+     *
+     * @return String success message if message element is displayed, if not return NO MESSAGE FOUND
+     */
     public String getAlertMessage() {
         if (isElementPresented(alertSuccessMessage())) {
             return alertSuccessMessage().getText();

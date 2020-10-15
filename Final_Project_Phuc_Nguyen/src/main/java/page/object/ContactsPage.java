@@ -52,10 +52,13 @@ public class ContactsPage extends BasePage {
         clickHelpBtn();
     }
 
+    /**
+     * Create new contract
+     * @param name random contract name
+     */
     public void createNewContact(String name) {
         navigateToContactPage();
         clickNewBtn();
-
         Log4j.info("Create new contact: " + name);
         inputNameTxt(name);
         clickSaveBtn();
