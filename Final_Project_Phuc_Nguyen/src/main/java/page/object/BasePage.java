@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import utils.Constants;
 import utils.Log4j;
 
-import static helper.NewWindowHelper.doesNewWindowDisplay;
+import static helper.BrowserHelper.doesNewWindowDisplay;
 import static utils.Constants.*;
 
 public class BasePage {

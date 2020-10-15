@@ -75,8 +75,6 @@ public class BannersClientsPage extends BasePage {
     }
 
     public void createNewClient(String title, String name, String email) {
-        navigateToClientsPage();
-        clickNewBtn();
         inputNameTxt(title);
         inputContactNameTxt(name);
         inputEmailTxt(email);
