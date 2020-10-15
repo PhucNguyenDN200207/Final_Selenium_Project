@@ -3363,3 +3363,321 @@
 2020-10-14 21:52:52,175 INFO  [Test] Step: Click on Clients 
 2020-10-14 21:52:54,128 INFO  [Test] Close browser
  
+2020-10-15 08:37:38,650 INFO  [Test] <--------------------Browser: chrome-------------------->
+ 
+2020-10-15 08:37:40,839 INFO  [Test] Navigate to JOOMLA Home Page 
+2020-10-15 08:37:43,546 INFO  [Test] Input to User Name text box:  
+2020-10-15 08:37:43,666 INFO  [Test] Input to Password text box:  
+2020-10-15 08:37:43,749 INFO  [Test] Click on Login Button 
+2020-10-15 08:37:45,304 INFO  [Test] <--------------------TC_JOOMLA_BANNERS_CLIENTS_004-------------------->
+ 
+2020-10-15 08:37:45,647 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-15 08:37:45,768 INFO  [Test] Step: Click on Banners dropdown on Menu tab 
+2020-10-15 08:37:47,135 INFO  [Test] Step: Click on Clients 
+2020-10-15 08:37:47,854 INFO  [Test] Step: Click on 'New' icon of the top right toolbar 
+2020-10-15 08:37:49,082 INFO  [Test] Input Title name 
+2020-10-15 08:37:49,302 INFO  [Test] Input Email text field 
+2020-10-15 08:37:49,419 INFO  [Test] Input Email text field 
+2020-10-15 08:37:49,554 INFO  [Test] Step: Click on 'Save & Close' icon of the top right toolbar 
+2020-10-15 08:37:50,923 INFO  [Test] Close browser
+ 
+2020-10-15 08:38:36,124 INFO  [Test] <--------------------Browser: chrome-------------------->
+ 
+2020-10-15 08:38:38,341 INFO  [Test] Navigate to JOOMLA Home Page 
+2020-10-15 08:38:41,044 INFO  [Test] Input to User Name text box:  
+2020-10-15 08:38:41,174 INFO  [Test] Input to Password text box:  
+2020-10-15 08:38:41,329 INFO  [Test] Click on Login Button 
+2020-10-15 08:38:42,887 INFO  [Test] <--------------------TC_JOOMLA_BANNERS_CLIENTS_004-------------------->
+ 
+2020-10-15 08:38:43,209 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-15 08:38:43,432 INFO  [Test] Step: Click on Banners dropdown on Menu tab 
+2020-10-15 08:38:44,937 INFO  [Test] Step: Click on Clients 
+2020-10-15 08:38:45,746 INFO  [Test] Step: Click on 'New' icon of the top right toolbar 
+2020-10-15 08:38:46,953 INFO  [Test] Input Title name 
+2020-10-15 08:38:47,130 INFO  [Test] Input Email text field 
+2020-10-15 08:38:47,261 INFO  [Test] Input Email text field 
+2020-10-15 08:38:47,414 INFO  [Test] Step: Click on 'Save & Close' icon of the top right toolbar 
+2020-10-15 08:38:49,310 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-15 08:38:49,405 INFO  [Test] Step: Click on Banners dropdown on Menu tab 
+2020-10-15 08:38:50,525 INFO  [Test] Step: Click on Clients 
+2020-10-15 08:38:52,057 INFO  [Test] Close browser
+ 
+2020-10-15 08:38:58,445 INFO  [Test] <--------------------Browser: firefox-------------------->
+ 
+2020-10-15 08:38:58,461 INFO  [Test] Navigate to JOOMLA Home Page 
+2020-10-15 08:39:01,169 INFO  [Test] Input to User Name text box:  
+2020-10-15 08:39:01,238 INFO  [Test] Input to Password text box:  
+2020-10-15 08:39:01,292 INFO  [Test] Click on Login Button 
+2020-10-15 08:39:02,797 INFO  [Test] <--------------------TC_JOOMLA_BANNERS_CLIENTS_004-------------------->
+ 
+2020-10-15 08:39:02,797 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-15 08:39:03,161 INFO  [Test] Step: Click on Banners dropdown on Menu tab 
+2020-10-15 08:39:04,633 INFO  [Test] Step: Click on Clients 
+2020-10-15 08:39:05,621 INFO  [Test] Step: Click on 'New' icon of the top right toolbar 
+2020-10-15 08:39:06,975 INFO  [Test] Input Title name 
+2020-10-15 08:39:07,075 INFO  [Test] Input Email text field 
+2020-10-15 08:39:07,138 INFO  [Test] Input Email text field 
+2020-10-15 08:39:07,207 INFO  [Test] Step: Click on 'Save & Close' icon of the top right toolbar 
+2020-10-15 08:39:09,384 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-15 08:39:09,732 INFO  [Test] Step: Click on Banners dropdown on Menu tab 
+2020-10-15 08:39:10,721 INFO  [Test] Step: Click on Clients 
+2020-10-15 08:39:12,974 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-15 08:39:13,314 INFO  [Test] Step: Click on Banners dropdown on Menu tab 
+2020-10-15 08:39:14,436 INFO  [Test] Step: Click on Categories 
+2020-10-15 08:39:24,587 INFO  [Test] <--------------------Browser: chrome-------------------->
+ 
+2020-10-15 08:39:26,794 INFO  [Test] Navigate to JOOMLA Home Page 
+2020-10-15 08:39:30,545 INFO  [Test] Input to User Name text box:  
+2020-10-15 08:39:30,653 INFO  [Test] Input to Password text box:  
+2020-10-15 08:39:30,784 INFO  [Test] Click on Login Button 
+2020-10-15 08:39:32,358 INFO  [Test] <--------------------TC_JOOMLA_BANNERS_CLIENTS_004-------------------->
+ 
+2020-10-15 08:39:32,672 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-15 08:39:32,794 INFO  [Test] Step: Click on Banners dropdown on Menu tab 
+2020-10-15 08:39:34,085 INFO  [Test] Step: Click on Clients 
+2020-10-15 08:39:34,881 INFO  [Test] Step: Click on 'New' icon of the top right toolbar 
+2020-10-15 08:39:36,072 INFO  [Test] Input Title name 
+2020-10-15 08:39:36,224 INFO  [Test] Input Email text field 
+2020-10-15 08:39:36,338 INFO  [Test] Input Email text field 
+2020-10-15 08:39:36,466 INFO  [Test] Step: Click on 'Save & Close' icon of the top right toolbar 
+2020-10-15 08:39:38,324 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-15 08:39:38,410 INFO  [Test] Step: Click on Banners dropdown on Menu tab 
+2020-10-15 08:39:39,373 INFO  [Test] Step: Click on Clients 
+2020-10-15 08:39:41,178 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-15 08:39:41,256 INFO  [Test] Step: Click on Banners dropdown on Menu tab 
+2020-10-15 08:39:42,215 INFO  [Test] Step: Click on Categories 
+2020-10-15 08:39:43,812 INFO  [Test] Step: Click on 'New' icon of the top right toolbar 
+2020-10-15 08:39:49,797 INFO  [Test] Input Title name 
+2020-10-15 08:39:49,837 INFO  [Test] Close browser
+ 
+2020-10-15 08:39:55,647 INFO  [Test] <--------------------Browser: firefox-------------------->
+ 
+2020-10-15 08:39:55,668 INFO  [Test] Navigate to JOOMLA Home Page 
+2020-10-15 08:42:13,360 INFO  [Test] <--------------------Browser: chrome-------------------->
+ 
+2020-10-15 08:42:15,547 INFO  [Test] Navigate to JOOMLA Home Page 
+2020-10-15 08:42:18,354 INFO  [Test] Input to User Name text box:  
+2020-10-15 08:42:18,460 INFO  [Test] Input to Password text box:  
+2020-10-15 08:42:18,566 INFO  [Test] Click on Login Button 
+2020-10-15 08:42:20,088 INFO  [Test] <--------------------TC_JOOMLA_BANNERS_CLIENTS_004-------------------->
+ 
+2020-10-15 08:42:20,471 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-15 08:42:20,615 INFO  [Test] Step: Click on Banners dropdown on Menu tab 
+2020-10-15 08:42:21,990 INFO  [Test] Step: Click on Clients 
+2020-10-15 08:42:22,756 INFO  [Test] Step: Click on 'New' icon of the top right toolbar 
+2020-10-15 08:42:23,942 INFO  [Test] Input Title name 
+2020-10-15 08:42:24,141 INFO  [Test] Input Email text field 
+2020-10-15 08:42:24,262 INFO  [Test] Input Email text field 
+2020-10-15 08:42:24,385 INFO  [Test] Step: Click on 'Save & Close' icon of the top right toolbar 
+2020-10-15 08:42:26,189 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-15 08:42:26,281 INFO  [Test] Step: Click on Banners dropdown on Menu tab 
+2020-10-15 08:42:27,249 INFO  [Test] Step: Click on Clients 
+2020-10-15 08:42:28,806 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-15 08:42:28,896 INFO  [Test] Step: Click on Banners dropdown on Menu tab 
+2020-10-15 08:42:29,846 INFO  [Test] Step: Click on Categories 
+2020-10-15 08:42:31,138 INFO  [Test] Step: Click on 'New' icon of the top right toolbar 
+2020-10-15 08:42:37,739 INFO  [Test] Input Title 
+2020-10-15 08:42:37,786 INFO  [Test] Close browser
+ 
+2020-10-15 08:43:34,187 INFO  [Test] <--------------------Browser: chrome-------------------->
+ 
+2020-10-15 08:43:36,399 INFO  [Test] Navigate to JOOMLA Home Page 
+2020-10-15 08:43:39,287 INFO  [Test] Input to User Name text box:  
+2020-10-15 08:43:39,354 INFO  [Test] Input to Password text box:  
+2020-10-15 08:43:39,439 INFO  [Test] Click on Login Button 
+2020-10-15 08:43:41,031 INFO  [Test] <--------------------TC_JOOMLA_BANNERS_CLIENTS_004-------------------->
+ 
+2020-10-15 08:43:41,295 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-15 08:43:41,467 INFO  [Test] Step: Click on Banners dropdown on Menu tab 
+2020-10-15 08:43:42,822 INFO  [Test] Step: Click on Clients 
+2020-10-15 08:43:43,616 INFO  [Test] Step: Click on 'New' icon of the top right toolbar 
+2020-10-15 08:43:44,856 INFO  [Test] Input Title name 
+2020-10-15 08:43:45,029 INFO  [Test] Input Email text field 
+2020-10-15 08:43:45,146 INFO  [Test] Input Email text field 
+2020-10-15 08:43:45,307 INFO  [Test] Step: Click on 'Save & Close' icon of the top right toolbar 
+2020-10-15 08:43:47,057 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-15 08:43:47,169 INFO  [Test] Step: Click on Banners dropdown on Menu tab 
+2020-10-15 08:43:48,154 INFO  [Test] Step: Click on Clients 
+2020-10-15 08:43:49,723 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-15 08:43:49,812 INFO  [Test] Step: Click on Banners dropdown on Menu tab 
+2020-10-15 08:43:50,764 INFO  [Test] Step: Click on Categories 
+2020-10-15 08:43:52,047 INFO  [Test] Step: Click on 'New' icon of the top right toolbar 
+2020-10-15 08:43:58,052 INFO  [Test] Input Title 
+2020-10-15 08:43:58,220 INFO  [Test] Step: Click on 'Save & Close' icon of the top right toolbar 
+2020-10-15 08:44:00,481 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-15 08:44:00,570 INFO  [Test] Step: Click on Banners dropdown on Menu tab 
+2020-10-15 08:44:01,538 INFO  [Test] Step: Click on Categories 
+2020-10-15 08:44:03,242 INFO  [Test] Close browser
+ 
+2020-10-15 09:12:40,112 INFO  [Test] <--------------------Browser: chrome-------------------->
+ 
+2020-10-15 09:12:42,295 INFO  [Test] Navigate to JOOMLA Home Page 
+2020-10-15 09:12:44,917 INFO  [Test] Input to User Name text box:  
+2020-10-15 09:12:44,989 INFO  [Test] Input to Password text box:  
+2020-10-15 09:12:45,085 INFO  [Test] Click on Login Button 
+2020-10-15 09:12:46,602 INFO  [Test] <--------------------TC_JOOMLA_BANNERS_CLIENTS_004-------------------->
+ 
+2020-10-15 09:12:46,874 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-15 09:12:47,068 INFO  [Test] Step: Click on Banners dropdown on Menu tab 
+2020-10-15 09:12:48,417 INFO  [Test] Step: Click on Clients 
+2020-10-15 09:12:49,164 INFO  [Test] Step: Click on 'New' icon of the top right toolbar 
+2020-10-15 09:12:50,364 INFO  [Test] Input Title name 
+2020-10-15 09:12:50,538 INFO  [Test] Input Email text field 
+2020-10-15 09:12:50,636 INFO  [Test] Input Email text field 
+2020-10-15 09:12:50,768 INFO  [Test] Step: Click on 'Save & Close' icon of the top right toolbar 
+2020-10-15 09:12:52,560 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-15 09:12:52,654 INFO  [Test] Step: Click on Banners dropdown on Menu tab 
+2020-10-15 09:12:53,628 INFO  [Test] Step: Click on Clients 
+2020-10-15 09:12:55,188 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-15 09:12:55,281 INFO  [Test] Step: Click on Banners dropdown on Menu tab 
+2020-10-15 09:12:56,240 INFO  [Test] Step: Click on Categories 
+2020-10-15 09:12:57,506 INFO  [Test] Step: Click on 'New' icon of the top right toolbar 
+2020-10-15 09:13:04,334 INFO  [Test] Input Title 
+2020-10-15 09:13:04,480 INFO  [Test] Step: Click on 'Save & Close' icon of the top right toolbar 
+2020-10-15 09:13:06,717 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-15 09:13:06,816 INFO  [Test] Step: Click on Banners dropdown on Menu tab 
+2020-10-15 09:13:07,817 INFO  [Test] Step: Click on Categories 
+2020-10-15 09:13:09,565 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-15 09:13:09,651 INFO  [Test] Step: Click on Banners dropdown on Menu tab 
+2020-10-15 09:13:10,608 INFO  [Test] Step: Click on 'New' icon of the top right toolbar 
+2020-10-15 09:13:11,990 INFO  [Test] Input Title name 
+2020-10-15 09:13:12,476 INFO  [Test]    Choose Category Dropdown: Brookville College 
+2020-10-15 09:13:12,798 INFO  [Test] Close browser
+ 
+2020-10-15 09:16:18,647 INFO  [Test] <--------------------Browser: chrome-------------------->
+ 
+2020-10-15 09:16:20,845 INFO  [Test] Navigate to JOOMLA Home Page 
+2020-10-15 09:16:23,705 INFO  [Test] Input to User Name text box:  
+2020-10-15 09:16:23,838 INFO  [Test] Input to Password text box:  
+2020-10-15 09:16:23,939 INFO  [Test] Click on Login Button 
+2020-10-15 09:16:25,427 INFO  [Test] <--------------------TC_JOOMLA_BANNERS_CLIENTS_004-------------------->
+ 
+2020-10-15 09:16:25,779 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-15 09:16:25,928 INFO  [Test] Step: Click on Banners dropdown on Menu tab 
+2020-10-15 09:16:27,317 INFO  [Test] Step: Click on Clients 
+2020-10-15 09:16:28,221 INFO  [Test] Step: Click on 'New' icon of the top right toolbar 
+2020-10-15 09:16:29,423 INFO  [Test] Input Title name 
+2020-10-15 09:16:29,617 INFO  [Test] Input Email text field 
+2020-10-15 09:16:29,725 INFO  [Test] Input Email text field 
+2020-10-15 09:16:29,851 INFO  [Test] Step: Click on 'Save & Close' icon of the top right toolbar 
+2020-10-15 09:16:31,632 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-15 09:16:31,738 INFO  [Test] Step: Click on Banners dropdown on Menu tab 
+2020-10-15 09:16:32,896 INFO  [Test] Step: Click on Clients 
+2020-10-15 09:16:34,459 INFO  [Test] Close browser
+ 
+2020-10-15 09:16:40,108 INFO  [Test] <--------------------Browser: firefox-------------------->
+ 
+2020-10-15 09:16:40,123 INFO  [Test] Navigate to JOOMLA Home Page 
+2020-10-15 09:16:51,352 INFO  [Test] <--------------------Browser: chrome-------------------->
+ 
+2020-10-15 09:16:53,529 INFO  [Test] Navigate to JOOMLA Home Page 
+2020-10-15 09:16:56,489 INFO  [Test] Input to User Name text box:  
+2020-10-15 09:16:56,601 INFO  [Test] Input to Password text box:  
+2020-10-15 09:16:56,703 INFO  [Test] Click on Login Button 
+2020-10-15 09:16:58,237 INFO  [Test] <--------------------TC_JOOMLA_BANNERS_CLIENTS_004-------------------->
+ 
+2020-10-15 09:16:58,561 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-15 09:16:58,691 INFO  [Test] Step: Click on Banners dropdown on Menu tab 
+2020-10-15 09:17:00,028 INFO  [Test] Step: Click on Clients 
+2020-10-15 09:17:00,793 INFO  [Test] Step: Click on 'New' icon of the top right toolbar 
+2020-10-15 09:17:02,063 INFO  [Test] Input Title name 
+2020-10-15 09:17:02,221 INFO  [Test] Input Email text field 
+2020-10-15 09:17:02,336 INFO  [Test] Input Email text field 
+2020-10-15 09:17:02,463 INFO  [Test] Step: Click on 'Save & Close' icon of the top right toolbar 
+2020-10-15 09:17:04,238 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-15 09:17:04,330 INFO  [Test] Step: Click on Banners dropdown on Menu tab 
+2020-10-15 09:17:05,309 INFO  [Test] Step: Click on Clients 
+2020-10-15 09:17:06,861 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-15 09:17:06,946 INFO  [Test] Step: Click on Banners dropdown on Menu tab 
+2020-10-15 09:17:07,909 INFO  [Test] Step: Click on Categories 
+2020-10-15 09:17:09,231 INFO  [Test] Step: Click on 'New' icon of the top right toolbar 
+2020-10-15 09:17:22,751 INFO  [Test] Input Title 
+2020-10-15 09:17:22,899 INFO  [Test] Step: Click on 'Save & Close' icon of the top right toolbar 
+2020-10-15 09:17:25,112 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-15 09:17:25,211 INFO  [Test] Step: Click on Banners dropdown on Menu tab 
+2020-10-15 09:17:26,173 INFO  [Test] Step: Click on Categories 
+2020-10-15 09:17:29,810 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-15 09:17:29,899 INFO  [Test] Step: Click on Banners dropdown on Menu tab 
+2020-10-15 09:17:30,854 INFO  [Test] Step: Click on 'New' icon of the top right toolbar 
+2020-10-15 09:17:32,233 INFO  [Test] Input Title name 
+2020-10-15 09:17:32,723 INFO  [Test]    Choose Category Dropdown: Lakeacre University 
+2020-10-15 09:17:33,159 INFO  [Test]    Choose Client Dropdown: A Time of Gifts 
+2020-10-15 09:17:33,160 INFO  [Test] Step: Click on 'Save & Close' icon of the top right toolbar 
+2020-10-15 09:17:39,497 INFO  [Test] Close browser
+ 
+2020-10-15 09:19:42,716 INFO  [Test] <--------------------Browser: chrome-------------------->
+ 
+2020-10-15 09:19:44,918 INFO  [Test] Navigate to JOOMLA Home Page 
+2020-10-15 09:19:53,017 INFO  [Test] Input to User Name text box:  
+2020-10-15 09:19:53,149 INFO  [Test] Input to Password text box:  
+2020-10-15 09:19:53,250 INFO  [Test] Click on Login Button 
+2020-10-15 09:19:55,038 INFO  [Test] <--------------------TC_JOOMLA_BANNERS_CLIENTS_004-------------------->
+ 
+2020-10-15 09:20:01,569 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-15 09:20:01,746 INFO  [Test] Step: Click on Banners dropdown on Menu tab 
+2020-10-15 09:20:34,674 INFO  [Test] Step: Click on Clients 
+2020-10-15 09:20:35,691 INFO  [Test] Step: Click on 'New' icon of the top right toolbar 
+2020-10-15 09:20:37,002 INFO  [Test] Input Title name 
+2020-10-15 09:20:37,148 INFO  [Test] Input Email text field 
+2020-10-15 09:20:37,253 INFO  [Test] Input Email text field 
+2020-10-15 09:20:37,386 INFO  [Test] Step: Click on 'Save & Close' icon of the top right toolbar 
+2020-10-15 09:20:50,526 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-15 09:20:50,621 INFO  [Test] Step: Click on Banners dropdown on Menu tab 
+2020-10-15 09:20:51,687 INFO  [Test] Step: Click on Clients 
+2020-10-15 09:21:01,800 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-15 09:21:02,013 INFO  [Test] Step: Click on Banners dropdown on Menu tab 
+2020-10-15 09:21:03,239 INFO  [Test] Step: Click on Categories 
+2020-10-15 09:21:04,573 INFO  [Test] Step: Click on 'New' icon of the top right toolbar 
+2020-10-15 09:21:13,984 INFO  [Test] Input Title 
+2020-10-15 09:21:14,156 INFO  [Test] Step: Click on 'Save & Close' icon of the top right toolbar 
+2020-10-15 09:21:16,476 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-15 09:21:16,595 INFO  [Test] Step: Click on Banners dropdown on Menu tab 
+2020-10-15 09:21:17,608 INFO  [Test] Step: Click on Categories 
+2020-10-15 09:21:36,006 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-15 09:21:36,138 INFO  [Test] Step: Click on Banners dropdown on Menu tab 
+2020-10-15 09:21:37,315 INFO  [Test] Step: Click on 'New' icon of the top right toolbar 
+2020-10-15 09:21:38,653 INFO  [Test] Input Title name 
+2020-10-15 09:21:39,250 INFO  [Test]    Choose Category Dropdown: Ironbarrow TAFE 
+2020-10-15 09:21:39,686 INFO  [Test]    Choose Client Dropdown: Skiles Inc 
+2020-10-15 09:21:39,686 INFO  [Test] Step: Click on 'Save & Close' icon of the top right toolbar 
+2020-10-15 09:21:46,044 INFO  [Test] Close browser
+ 
+2020-10-15 09:25:05,741 INFO  [Test] <--------------------Browser: chrome-------------------->
+ 
+2020-10-15 09:25:07,938 INFO  [Test] Navigate to JOOMLA Home Page 
+2020-10-15 09:25:11,045 INFO  [Test] Input to User Name text box:  
+2020-10-15 09:25:11,169 INFO  [Test] Input to Password text box:  
+2020-10-15 09:25:11,275 INFO  [Test] Click on Login Button 
+2020-10-15 09:25:12,785 INFO  [Test] <--------------------TC_JOOMLA_BANNERS_CLIENTS_004-------------------->
+ 
+2020-10-15 09:25:13,155 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-15 09:25:13,304 INFO  [Test] Step: Click on Banners dropdown on Menu tab 
+2020-10-15 09:25:14,903 INFO  [Test] Step: Click on Clients 
+2020-10-15 09:25:15,683 INFO  [Test] Step: Click on 'New' icon of the top right toolbar 
+2020-10-15 09:25:16,911 INFO  [Test] Input Title name 
+2020-10-15 09:25:17,059 INFO  [Test] Input Email text field 
+2020-10-15 09:25:17,151 INFO  [Test] Input Email text field 
+2020-10-15 09:25:17,280 INFO  [Test] Step: Click on 'Save & Close' icon of the top right toolbar 
+2020-10-15 09:25:19,655 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-15 09:25:19,739 INFO  [Test] Step: Click on Banners dropdown on Menu tab 
+2020-10-15 09:25:20,817 INFO  [Test] Step: Click on Clients 
+2020-10-15 09:25:22,436 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-15 09:25:22,517 INFO  [Test] Step: Click on Banners dropdown on Menu tab 
+2020-10-15 09:25:23,476 INFO  [Test] Step: Click on Categories 
+2020-10-15 09:25:24,783 INFO  [Test] Step: Click on 'New' icon of the top right toolbar 
+2020-10-15 09:25:38,996 INFO  [Test] Input Title 
+2020-10-15 09:25:39,160 INFO  [Test] Step: Click on 'Save & Close' icon of the top right toolbar 
+2020-10-15 09:25:41,352 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-15 09:25:41,455 INFO  [Test] Step: Click on Banners dropdown on Menu tab 
+2020-10-15 09:25:42,448 INFO  [Test] Step: Click on Categories 
+2020-10-15 09:25:44,208 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-15 09:25:44,311 INFO  [Test] Step: Click on Banners dropdown on Menu tab 
+2020-10-15 09:25:45,242 INFO  [Test] Step: Click on 'New' icon of the top right toolbar 
+2020-10-15 09:25:46,643 INFO  [Test] Input Title name 
+2020-10-15 09:25:47,135 INFO  [Test]    Choose Category Dropdown: Ostbarrow Technical College 
+2020-10-15 09:25:47,558 INFO  [Test]    Choose Client Dropdown: Hickle-Kautzer 
+2020-10-15 09:25:47,558 INFO  [Test] Step: Click on 'Save & Close' icon of the top right toolbar 
+2020-10-15 09:25:49,439 INFO  [Test] Step: Click on Components on Menu tab 
+2020-10-15 09:25:49,526 INFO  [Test] Step: Click on Banners dropdown on Menu tab 
+2020-10-15 09:25:51,713 INFO  [Test] Close browser
+ 

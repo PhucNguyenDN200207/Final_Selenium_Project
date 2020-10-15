@@ -17,7 +17,7 @@ public class DataHelper {
     }
 
     public static String randomTitle() {
-        return faker.book().title();
+        return faker.company().name();
     }
 
     public static String randomBanner() {

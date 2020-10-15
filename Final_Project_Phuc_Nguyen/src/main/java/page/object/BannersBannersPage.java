@@ -1,10 +1,11 @@
 package page.object;
 
+import helper.DriverHelper;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import utils.Constants;
 import utils.Log4j;
 
-import static helper.DataHelper.*;
 import static utils.Constants.*;
 
 public class BannersBannersPage extends BasePage {
@@ -13,17 +14,19 @@ public class BannersBannersPage extends BasePage {
      * This is place of Locator
      */
 
-    private final By _bannerCategories = By.xpath("//*[@id='submenu']/li/a[.='Categories']");
     private final By _bannerQuantity = By.cssSelector("#list_limit_chzn > a");
     private final By _bannerQuantity20 = By.xpath("//li[.='20']");
+    private final String _newBanner = "//a[contains(.,'%s')]";
+    private By _categoryDropdown = By.xpath("//div[@class='controls']/select[@id='jform_catid']/..");
+    private String _dropdownOption = "//ul[@class='chzn-results']/li[contains(.,'%s')]";
+    private By _bannerDetailsTab = By.cssSelector("div.form-horizontal li>a[href='#otherparams']");
+    private By _clientDropdown = By.cssSelector("div[id='jform_cid_chzn']>a");
+
 
     /**
      * This is place of Web Elements
      */
 
-    private WebElement bannerCategories() {
-        return DRIVER.findElement(_bannerCategories);
-    }
 
     private WebElement bannerQuantity() {
         return DRIVER.findElement(_bannerQuantity);
@@ -33,14 +36,29 @@ public class BannersBannersPage extends BasePage {
         return DRIVER.findElement(_bannerQuantity20);
     }
 
+    private WebElement newBannersBanner(String banner) {
+        return elementByText(_newBanner, banner);
+    }
+
+    private WebElement categoryDropdown() {
+        return DRIVER.findElement(_categoryDropdown);
+    }
+
+    private WebElement dropdownOption(String option) {
+        return DRIVER.findElement(By.xpath(String.format(_dropdownOption, option)));
+    }
+
+    private WebElement bannerDetailsTab() {
+        return DRIVER.findElement(_bannerDetailsTab);
+    }
+
+    private WebElement clientDropdown() {
+        return DRIVER.findElement(_clientDropdown);
+    }
+
     /**
      * This is place create methods
      */
-
-    public void clickBannerCategories() {
-        Log4j.info("Step: Click on Categories");
-        bannerCategories().click();
-    }
 
     public void clickBannerQuantity() {
         Log4j.info("Step: Select quantity that user wants to display");
@@ -52,29 +70,24 @@ public class BannersBannersPage extends BasePage {
         bannerQuantity20().click();
     }
 
-    public void navigateToBannersPage() {
-        clickComponentsMenu();
-        clickBannersDrd();
-    }
-
-
-    public void navigateToCategoriesPage() {
-        clickComponentsMenu();
-        clickBannerCategories();
-    }
-
-    public void createNewBanner() {
+    public void createNewBanner(String bannerName, String categoryTitle, String clientTitle) {
         navigateToBannersPage();
         clickNewBtn();
-        inputNameTxt(randomBanner());
+        inputNameTxt(bannerName);
+        clickWhenElementReady(categoryDropdown());
+        clickWhenElementReady(dropdownOption(categoryTitle));
+        Log4j.info("   Choose Category Dropdown: " + categoryTitle);
+        clickWhenElementReady(bannerDetailsTab());
+        clickWhenElementReady(clientDropdown());
+        clickWhenElementReady(dropdownOption(clientTitle));
+        Log4j.info("   Choose Client Dropdown: " + clientTitle);
         clickSaveBtn();
     }
 
-    public void createCategories() {
-        navigateToCategoriesPage();
-        clickNewBtn();
-        inputNameTxt(randomCategories());
-        clickSaveBtn();
+    public void navigateToBannerManager() {
+        DriverHelper.navigate(Constants.JOOMLA_HOME_URL);
+        navigateToBannersPage();
+        chooseSortByIdDescending();
     }
 
     public void selectQuantity20() {
@@ -92,4 +105,7 @@ public class BannersBannersPage extends BasePage {
         return bannerQuantity().getText().equals("20");
     }
 
+    public Boolean isNewBannerDisplayed(String banner) {
+        return isElementPresented(newBannersBanner(banner));
+    }
 }

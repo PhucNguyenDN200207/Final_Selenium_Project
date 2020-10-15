@@ -1,9 +1,12 @@
 package page.object;
 
+import helper.DriverHelper;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import utils.Constants;
 import utils.Log4j;
 
@@ -23,6 +26,7 @@ public class BasePage {
     private final By _helpBtn = By.cssSelector("#toolbar-help  button");
     private final By _newBtn = By.cssSelector(".button-new");
     private final By _nameTxt = By.cssSelector("#jform_name");
+    private final By _titleTxt = By.cssSelector("#jform_title");
     private final By _sortByDrd = By.xpath("//*[@id='list_fullordering_chzn']/a");
     private final By _sortByIdDescending = By.xpath("//li[.='ID descending']");
 
@@ -57,6 +61,11 @@ public class BasePage {
     private WebElement nameTxt() {
         return DRIVER.findElement(_nameTxt);
     }
+
+    private WebElement titleTxt() {
+        return DRIVER.findElement(_titleTxt);
+    }
+
 
     private WebElement sortByDrd() {
         return DRIVER.findElement(_sortByDrd);
@@ -138,14 +147,42 @@ public class BasePage {
         sortByIdDescending().click();
     }
 
+    public void clickWhenElementReady(WebElement element) {
+        waitUntilVisible(element);
+        waitUntilClickable(element);
+        //Logger.info("Waited for element!");
+        element.click();
+    }
+
+    public void waitUntilVisible(WebElement element) {
+        WebDriverWait wait = new WebDriverWait(DRIVER, EXPLICIT_WAIT);
+        wait.until(ExpectedConditions.visibilityOf(element));
+    }
+
+    public void waitUntilClickable(WebElement element) {
+        WebDriverWait wait = new WebDriverWait(DRIVER, EXPLICIT_WAIT);
+        wait.until(ExpectedConditions.elementToBeClickable(element));
+    }
+
     public void inputNameTxt(String name) {
         Log4j.info("Input Title name");
         nameTxt().sendKeys(name);
     }
 
+    public void inputTitleTxt(String title) {
+        Log4j.info("Input Title");
+        titleTxt().sendKeys(title);
+    }
+
     public void chooseSortByIdDescending() {
         clickSortByDrd();
         clickSortByIdDescending();
+    }
+
+
+    public void navigateToBannersPage() {
+        clickComponentsMenu();
+        clickBannersDrd();
     }
 
     /**
