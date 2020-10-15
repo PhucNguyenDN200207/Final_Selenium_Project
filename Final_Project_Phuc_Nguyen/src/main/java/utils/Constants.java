@@ -19,6 +19,9 @@ public class Constants {
     public static final String BANNERS_SUCCESS_MESSAGE = "Banner saved.";
     public static final String CLIENTS_SUCCESS_MESSAGE = "Client saved.";
     public static final String CATEGORIES_SUCCESS_MESSAGE = "Category saved.";
+    public static final String ARTICLE_UNPUBLISHED_MESSAGE = "1 article unpublished.";
+    public static final String CLIENT_UNPUBLISHED_MESSAGE = "1 client unpublished.";
+
     public static final String NO_MESSAGE_FOUND = "NO MESSAGE FOUND";
     public static final int PAGE_LOAD_TIME_OUT = 3;
     public static final int EXPLICIT_WAIT = 15;

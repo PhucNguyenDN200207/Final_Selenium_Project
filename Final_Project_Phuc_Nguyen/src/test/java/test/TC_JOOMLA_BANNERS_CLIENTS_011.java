@@ -20,7 +20,7 @@ public class TC_JOOMLA_BANNERS_CLIENTS_011 extends BaseTest {
         String client1Email = randomEmail();
 
         // Verify point 1: TO_JOOMLA_BANNERS_CLIENTS_001
-        bannersClientsPage.navigateToClientsPage();
+        browserHelper.navigateToClientsPage();
         bannersClientsPage.clickNewBtn();
         bannersClientsPage.createNewClient(client1Title, client1Name, client1Email);
         bannersClientsPage.clickSaveNewBtn();

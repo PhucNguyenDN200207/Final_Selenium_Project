@@ -40,12 +40,8 @@ public class ContactsPage extends BasePage {
      * This is place create verify methods
      */
 
-    public void navigateToContactPage() {
-
-    }
 
     public void openHelpPage() {
-        navigateToContactPage();
         clickHelpBtn();
     }
 

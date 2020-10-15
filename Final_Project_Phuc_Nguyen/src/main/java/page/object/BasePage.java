@@ -9,6 +9,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import utils.Constants;
 import utils.Log4j;
 
+import java.util.List;
+
 import static helper.BrowserHelper.doesNewWindowDisplay;
 import static utils.Constants.*;
 
@@ -29,6 +31,8 @@ public class BasePage {
     private final By _nameTxt = By.cssSelector("#jform_name");
     private final By _titleTxt = By.cssSelector("#jform_title");
     private final By _searchTxt = By.cssSelector("#filter_search");
+    private final String _checkBox = "//td//a[normalize-space(text())='%s']//ancestor::tr//input";
+    private final String _boxName = "//td//a[normalize-space(text())='%s']//ancestor::tr//span[@class='icon-%s']";
     private final By _sortByDrd = By.xpath("//*[@id='list_fullordering_chzn']/a");
     private final By _sortByIdDescending = By.xpath("//li[.='ID descending']");
     private final By _unpublishBtn = By.id("toolbar-unpublish");
@@ -80,6 +84,11 @@ public class BasePage {
 
     private WebElement searchTxt() {
         return DRIVER.findElement(_searchTxt);
+    }
+
+    private List<WebElement> checkBox(String title) {
+        return DRIVER.findElements(
+                By.xpath(String.format(_checkBox, title)));
     }
 
     private WebElement sortByDrd() {
@@ -178,6 +187,19 @@ public class BasePage {
     public void waitUntilClickable(WebElement element) {
         WebDriverWait wait = new WebDriverWait(DRIVER, EXPLICIT_WAIT);
         wait.until(ExpectedConditions.elementToBeClickable(element));
+    }
+
+    public void selectCheckbox(String title) {
+        if (checkBox(title).size() == 1) {
+            Constants.DRIVER.findElement(
+                    By.xpath(String.format(_checkBox, title))).click();
+        }
+    }
+
+    public boolean doesElementStatus(String title, String status) {
+        return Constants.DRIVER.findElements(
+                By.xpath(String.format(_boxName, title, status))).size() == 1;
+
     }
 
     public void inputNameTxt(String name) {

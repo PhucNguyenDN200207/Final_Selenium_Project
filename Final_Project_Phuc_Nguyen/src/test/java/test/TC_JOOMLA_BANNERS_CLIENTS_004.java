@@ -8,7 +8,7 @@ import utils.Log4j;
 import static helper.DataHelper.*;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
-import static utils.Constants.CLIENTS_SUCCESS_MESSAGE;
+import static utils.Constants.*;
 
 public class TC_JOOMLA_BANNERS_CLIENTS_004 extends BaseTest {
     BannersClientsPage bannersClientsPage = new BannersClientsPage();
@@ -22,7 +22,7 @@ public class TC_JOOMLA_BANNERS_CLIENTS_004 extends BaseTest {
         String clientEmail = randomEmail();
 
         // Verify point 1: TO_JOOMLA_BANNERS_CLIENTS_001
-        bannersClientsPage.navigateToClientsPage();
+        browserHelper.navigateToClientsPage();
         bannersClientsPage.clickNewBtn();
         bannersClientsPage.createNewClient(clientTitle, clientName, clientEmail);
         bannersClientsPage.clickSaveBtn();
@@ -43,7 +43,7 @@ public class TC_JOOMLA_BANNERS_CLIENTS_004 extends BaseTest {
         bannersClientsPage.clickUnPublishBtn();
 
         // VP 2. A message : "1 client successfully unpublished" shows and Client is unpublished
-        assertEquals(bannersClientsPage.getAlertMessage(), "1 client unpublished.",
+        assertEquals(bannersClientsPage.getAlertMessage(), CLIENT_UNPUBLISHED_MESSAGE,
                 "Unpublished failed ");
         assertTrue(bannersClientsPage.doesElementStatus(clientTitle,
                 "unpublish"), "Element does not exist");

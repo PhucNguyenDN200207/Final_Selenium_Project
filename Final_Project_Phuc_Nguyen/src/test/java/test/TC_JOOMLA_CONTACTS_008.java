@@ -13,6 +13,8 @@ public class TC_JOOMLA_CONTACTS_008 extends BaseTest {
         Log4j.header("TC_JOOMLA_CONTACTS_008");
 
         Log4j.info("Navigate to Article manager page");
+        contactsPage.clickComponentsMenu();
+        contactsPage.clickContactDrd();
         contactsPage.openHelpPage();
 
         Assert.assertTrue(contactsPage.doesHelpWindowDisplay(), "Help page title failed");

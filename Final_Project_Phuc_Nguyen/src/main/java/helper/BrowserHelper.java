@@ -19,10 +19,7 @@ import static utils.Constants.PAGE_LOAD_TIME_OUT;
 
 public class BrowserHelper {
     ArticlePage articlePage = new ArticlePage();
-    BannersBannersPage bannersBannersPage = new BannersBannersPage();
-    BannersCategoriesPage bannersCategoriesPage = new BannersCategoriesPage();
     BannersClientsPage bannersClientsPage = new BannersClientsPage();
-    ContactsPage contactsPage = new ContactsPage();
 
     public static void openChromeBrowser() {
         WebDriverManager.chromedriver().setup();
@@ -55,6 +52,11 @@ public class BrowserHelper {
         articlePage.clickArticleManager();
     }
 
+    public void navigateToClientsPage() {
+        bannersClientsPage.clickComponentsMenu();
+        bannersClientsPage.clickBannersDrd();
+        bannersClientsPage.clickBannerClients();
+    }
 
     /**
      * Re-navigate to JOOMLA administrator main page then navigate to Client Manager
@@ -62,7 +64,7 @@ public class BrowserHelper {
      */
     public void navigateToClientManager() {
         navigate(Constants.JOOMLA_HOME_URL);
-        bannersClientsPage.navigateToClientsPage();
+        navigateToClientsPage();
     }
 
     /**

@@ -20,9 +20,6 @@ public class BannersClientsPage extends BasePage {
     private final By _contactNameTxt = By.cssSelector("#jform_contact");
     private final By _saveNewBtn = By.cssSelector(".button-save-new");
     private final String _newClientName = "//a[contains(.,'%s')]";
-    private final String _checkBox = "//td//a[normalize-space(text())='%s']//ancestor::tr//input";
-    private final String _boxName = "//td//a[normalize-space(text())='%s']//ancestor::tr//span[@class='icon-%s']";
-
 
     /**
      * This is place of Web Elements
@@ -48,10 +45,7 @@ public class BannersClientsPage extends BasePage {
         return DRIVER.findElement(_saveNewBtn);
     }
 
-    private List<WebElement> checkBox(String title) {
-        return DRIVER.findElements(
-                By.xpath(String.format(_checkBox, title)));
-    }
+
 
     /**
      * This is place create methods
@@ -77,12 +71,6 @@ public class BannersClientsPage extends BasePage {
         saveNewBtn().click();
     }
 
-    public void navigateToClientsPage() {
-        clickComponentsMenu();
-        clickBannersDrd();
-        clickBannerClients();
-    }
-
     /**
      * Create new Client for Banner
      *
@@ -96,18 +84,7 @@ public class BannersClientsPage extends BasePage {
         inputEmailTxt(email);
     }
 
-    public void selectCheckbox(String title) {
-        if (checkBox(title).size() == 1){
-            Constants.DRIVER.findElement(
-                    By.xpath(String.format(_checkBox, title))).click();
-        }
-    }
 
-    public boolean doesElementStatus(String title, String status) {
-        return Constants.DRIVER.findElements(
-                By.xpath(String.format(_boxName, title, status))).size() == 1;
-
-    }
 
     public Boolean isNewClientTitleDisplayed(String title) {
         return isElementPresented(newClientName(title));

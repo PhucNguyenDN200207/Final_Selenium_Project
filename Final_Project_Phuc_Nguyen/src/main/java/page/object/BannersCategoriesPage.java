@@ -39,12 +39,6 @@ public class BannersCategoriesPage extends BasePage {
         bannerCategories().click();
     }
 
-    public void navigateToCategoriesPage() {
-        clickComponentsMenu();
-        clickBannersDrd();
-        clickBannerCategories();
-    }
-
     /**
      * Create new Category for Banner
      * @param title random category title

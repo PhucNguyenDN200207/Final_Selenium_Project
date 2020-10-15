@@ -1,6 +1,5 @@
 package test;
 
-import helper.BrowserHelper;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import page.object.ArticlePage;
@@ -8,6 +7,8 @@ import utils.Log4j;
 
 import static helper.DataHelper.randomContent;
 import static helper.DataHelper.randomTitle;
+import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
 import static utils.Constants.*;
 
 public class TC_JOOMLA_ARTICLE_015 extends BaseTest {
@@ -38,7 +39,14 @@ public class TC_JOOMLA_ARTICLE_015 extends BaseTest {
         Assert.assertTrue(articlePage.isNewArticleTitleDisplayed(title), "Article title fail");
         Assert.assertEquals(articlePage.getAuthor(title), AUTHOR, "Author failed");
 
-        //TODO: Publish and un Publish
+        articlePage.selectCheckbox(title);
 
+        articlePage.clickUnPublishBtn();
+
+        // VP 2. A message : "1 client successfully unpublished" shows and Article is unpublished
+        assertEquals(articlePage.getAlertMessage(), ARTICLE_UNPUBLISHED_MESSAGE,
+                "Unpublished failed ");
+        assertTrue(articlePage.doesElementStatus(title,
+                "unpublish"), "Element does not exist");
     }
 }

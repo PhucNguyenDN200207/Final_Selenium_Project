@@ -9,7 +9,7 @@ public class TC_JOOMLA_ARTICLE_008 extends BaseTest {
     ArticlePage articlePage = new ArticlePage();
 
     @Test(description = "User can access article's help section")
-    public void testcase008() throws InterruptedException {
+    public void testcase008() {
         Log4j.header("TO_JOOMLA_ARTICLE_008");
 
         Log4j.info("Navigate to Article manager page");
