@@ -9,7 +9,7 @@ public class DataHelper {
     static Faker faker = new Faker(new Locale("en"));
 
     public static String randomName() {
-        return faker.name().name();
+        return faker.name().fullName();
     }
 
     public static String randomEmail() {

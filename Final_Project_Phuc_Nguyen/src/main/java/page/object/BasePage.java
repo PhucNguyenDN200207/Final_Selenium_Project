@@ -25,8 +25,10 @@ public class BasePage {
     private final By _alertSuccessMsg = By.cssSelector("div.alert-success .alert-message");
     private final By _helpBtn = By.cssSelector("#toolbar-help  button");
     private final By _newBtn = By.cssSelector(".button-new");
+    private final By _searchBtn = By.cssSelector(".icon-search");
     private final By _nameTxt = By.cssSelector("#jform_name");
     private final By _titleTxt = By.cssSelector("#jform_title");
+    private final By _searchTxt = By.cssSelector("#filter_search");
     private final By _sortByDrd = By.xpath("//*[@id='list_fullordering_chzn']/a");
     private final By _sortByIdDescending = By.xpath("//li[.='ID descending']");
 
@@ -44,6 +46,10 @@ public class BasePage {
 
     private WebElement helpBtn() {
         return DRIVER.findElement(_helpBtn);
+    }
+
+    private WebElement searchBtn() {
+        return DRIVER.findElement(_searchBtn);
     }
 
     private WebElement componentsMenu() {
@@ -64,6 +70,10 @@ public class BasePage {
 
     private WebElement titleTxt() {
         return DRIVER.findElement(_titleTxt);
+    }
+
+    private WebElement searchTxt() {
+        return DRIVER.findElement(_searchTxt);
     }
 
 
@@ -124,6 +134,11 @@ public class BasePage {
         helpBtn().click();
     }
 
+    public void clickSearchBtn() {
+        Log4j.info("Step: Click on 'search' icon");
+        searchBtn().click();
+    }
+
     public void clickComponentsMenu() {
         Log4j.info("Step: Click on Components on Menu tab");
         componentsMenu().click();
@@ -150,7 +165,6 @@ public class BasePage {
     public void clickWhenElementReady(WebElement element) {
         waitUntilVisible(element);
         waitUntilClickable(element);
-        //Logger.info("Waited for element!");
         element.click();
     }
 
@@ -166,12 +180,18 @@ public class BasePage {
 
     public void inputNameTxt(String name) {
         Log4j.info("Input Title name");
+        clickWhenElementReady(nameTxt());
         nameTxt().sendKeys(name);
     }
 
     public void inputTitleTxt(String title) {
         Log4j.info("Input Title");
         titleTxt().sendKeys(title);
+    }
+
+    public void inputSearch(String text) {
+        Log4j.info("Input in Search field");
+        searchTxt().sendKeys(text);
     }
 
     public void chooseSortByIdDescending() {

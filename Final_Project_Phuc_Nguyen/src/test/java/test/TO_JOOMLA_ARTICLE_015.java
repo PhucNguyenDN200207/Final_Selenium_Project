@@ -29,7 +29,7 @@ public class TO_JOOMLA_ARTICLE_015 extends BaseTest {
         Assert.assertTrue(articlePage.isNewArticleTitleDisplayed(title), "Article title fail");
         Assert.assertTrue(articlePage.isAuthorCorrected(title), "Author failed");
 
-        //TODO: Not finish yet
+        //TODO: Publish and un Publish
 
     }
 }

@@ -33,6 +33,7 @@ public class TC_JOOMLA_BANNERS_CLIENTS_004 extends BaseTest {
                 "Create new client title failed");
 
         // Verify point 2: TO_JOOMLA_BANNERS_CLIENTS_004
+        //TODO: Publish and un Publish
 
     }
 }
