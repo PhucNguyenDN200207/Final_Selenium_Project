@@ -17,15 +17,15 @@ public class DataHelper {
     }
 
     public static String randomTitle() {
-        return faker.company().name().trim();
+        return faker.name().username().trim();
     }
 
     public static String randomBanner() {
-        return faker.app().name().trim();
+        return faker.name().nameWithMiddle().trim();
     }
 
     public static String randomCategories() {
-        return faker.educator().university().trim();
+        return faker.educator().course().trim();
     }
 
     public static String randomContent() {

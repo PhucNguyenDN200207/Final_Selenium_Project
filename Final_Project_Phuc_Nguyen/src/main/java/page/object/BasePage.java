@@ -236,6 +236,7 @@ public class BasePage {
      * @return String success message if message element is displayed, if not return NO MESSAGE FOUND
      */
     public String getAlertMessage() {
+        waitUntilVisible(alertSuccessMessage());
         if (isElementPresented(alertSuccessMessage())) {
             return alertSuccessMessage().getText();
         } else return NO_MESSAGE_FOUND;

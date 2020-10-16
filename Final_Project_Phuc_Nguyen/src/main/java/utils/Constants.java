@@ -13,7 +13,7 @@ public class Constants {
     public static final String PASSWORD = "phuc123";
     public static final String AUTHOR = "Phuc";
     public static final String ARTICLE_ALERT_MESSAGE = "Article saved.";
-    public static final String DEFAUT_ARTICLE_CATEGORY = "Corporate Marketing Director";
+    public static final String DEFAUT_ARTICLE_CATEGORY = "Sample Data-Articles";
     public static final String HELP_PAGE_TITLE = "Joomla! Help Screens";
     public static final String CONTACT_SUCCESS_MESSAGE = "Contact saved.";
     public static final String BANNERS_SUCCESS_MESSAGE = "Banner saved.";
@@ -23,7 +23,7 @@ public class Constants {
     public static final String CLIENT_UNPUBLISHED_MESSAGE = "1 client unpublished.";
 
     public static final String NO_MESSAGE_FOUND = "NO MESSAGE FOUND";
-    public static final int PAGE_LOAD_TIME_OUT = 3;
+    public static final int PAGE_LOAD_TIME_OUT = 5;
     public static final int EXPLICIT_WAIT = 15;
 
 }

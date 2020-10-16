@@ -11,6 +11,7 @@
             <class name="test.TC_JOOMLA_BANNERS_BANNERS_008"/>
             <class name="test.TC_JOOMLA_BANNERS_BANNERS_015"/>
             <class name="test.TC_JOOMLA_BANNERS_CLIENTS_004"/>
+            <class name="test.TC_JOOMLA_BANNERS_CLIENTS_011"/>
             <class name="test.TC_JOOMLA_CONTACTS_001"/>
             <class name="test.TC_JOOMLA_CONTACTS_008"/>
         </classes>
@@ -26,6 +27,7 @@
             <class name="test.TC_JOOMLA_BANNERS_BANNERS_008"/>
             <class name="test.TC_JOOMLA_BANNERS_BANNERS_015"/>
             <class name="test.TC_JOOMLA_BANNERS_CLIENTS_004"/>
+            <class name="test.TC_JOOMLA_BANNERS_CLIENTS_011"/>
             <class name="test.TC_JOOMLA_CONTACTS_001"/>
             <class name="test.TC_JOOMLA_CONTACTS_008"/>
         </classes>
@@ -41,6 +43,7 @@
             <class name="test.TC_JOOMLA_BANNERS_BANNERS_008"/>
             <class name="test.TC_JOOMLA_BANNERS_BANNERS_015"/>
             <class name="test.TC_JOOMLA_BANNERS_CLIENTS_004"/>
+            <class name="test.TC_JOOMLA_BANNERS_CLIENTS_011"/>
             <class name="test.TC_JOOMLA_CONTACTS_001"/>
             <class name="test.TC_JOOMLA_CONTACTS_008"/>
         </classes>

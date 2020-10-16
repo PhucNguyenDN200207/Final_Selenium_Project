@@ -20,6 +20,7 @@ import static utils.Constants.PAGE_LOAD_TIME_OUT;
 public class BrowserHelper {
     ArticlePage articlePage = new ArticlePage();
     BannersClientsPage bannersClientsPage = new BannersClientsPage();
+    BannersBannersPage bannersBannersPage = new BannersBannersPage();
 
     public static void openChromeBrowser() {
         WebDriverManager.chromedriver().setup();
@@ -65,6 +66,13 @@ public class BrowserHelper {
     public void navigateToClientManager() {
         navigate(Constants.JOOMLA_HOME_URL);
         navigateToClientsPage();
+    }
+
+
+    public void navigateToBannerManager() {
+        navigate(Constants.JOOMLA_HOME_URL);
+        bannersBannersPage.clickComponentsMenu();
+        bannersBannersPage.clickBannersDrd();
     }
 
     /**
