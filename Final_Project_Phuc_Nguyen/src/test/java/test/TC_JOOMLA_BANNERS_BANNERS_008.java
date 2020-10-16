@@ -65,10 +65,12 @@ public class TC_JOOMLA_BANNERS_BANNERS_008 extends BaseTest {
         bannersCategoriesPage.createCategories(categoryTitle);
 
         Log4j.info("Click 'Save & Close' button");
-        bannersClientsPage.clickSaveAndCloseBtn();
+        bannersClientsPage.clickSaveBtn();
 
         Assert.assertEquals(bannersCategoriesPage.getAlertMessage(), CATEGORIES_SUCCESS_MESSAGE,
                 "New Client Alert message failed");
+
+        browserHelper.navigateToBannerManager();
 
         bannersCategoriesPage.chooseSortByIdDescending();
 

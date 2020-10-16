@@ -22,7 +22,7 @@ public class BasePage {
     private final By _componentsMenu = By.xpath("//*[@id='menu']/li//a[contains(.,'Components')]");
     private final By _bannersDrd = By.xpath("//li[@class='dropdown open']//li[@class='dropdown-submenu']/a[.='Banners']");
     private final By _saveBtn = By.cssSelector(".button-apply");
-    private final By _alertSuccessMsg = By.cssSelector("div.alert-success .alert-message");
+    private final By _alertSuccessMsg = By.cssSelector(".alert-message");
     private final By _helpBtn = By.cssSelector("#toolbar-help  button");
     private final By _newBtn = By.cssSelector(".button-new");
     private final By _searchBtn = By.cssSelector(".icon-search");
