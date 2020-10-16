@@ -26,7 +26,9 @@ public class TC_JOOMLA_BANNERS_BANNERS_001 extends BaseTest {
         //Verify point 1: TO_JOOMLA_BANNERS_CLIENTS_001
         Log4j.info("Select Components -> Banners -> Clients");
         bannersClientsPage.clickComponentsMenu();
+
         bannersClientsPage.clickBannersDrd();
+
         bannersClientsPage.clickBannerClients();
 
         Log4j.info("Click 'New' button in the right top corner");
@@ -51,7 +53,9 @@ public class TC_JOOMLA_BANNERS_BANNERS_001 extends BaseTest {
 
         Log4j.info("Select Components -> Banners -> Categories");
         bannersClientsPage.clickComponentsMenu();
+
         bannersClientsPage.clickBannersDrd();
+
         bannersCategoriesPage.clickBannerCategories();
 
         Log4j.info("Click 'New' button in the right top corner");
@@ -74,8 +78,11 @@ public class TC_JOOMLA_BANNERS_BANNERS_001 extends BaseTest {
         // Verify point 3: TO_JOOMLA_BANNERS_BANNERS_001
 
         String bannerName = randomBanner();
+
         bannersBannersPage.clickComponentsMenu();
+
         bannersBannersPage.clickBannersDrd();
+
         Log4j.info("Select Components -> Banners -> Banners");
 
         Log4j.info("Click 'New' button in the right top corner");

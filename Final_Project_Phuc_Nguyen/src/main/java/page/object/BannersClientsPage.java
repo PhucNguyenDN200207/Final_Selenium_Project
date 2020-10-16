@@ -43,7 +43,6 @@ public class BannersClientsPage extends BasePage {
         return DRIVER.findElement(_saveNewBtn);
     }
 
-
     /**
      * This is place create methods
      */

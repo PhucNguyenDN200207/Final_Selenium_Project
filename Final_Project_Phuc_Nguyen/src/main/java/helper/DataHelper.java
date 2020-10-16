@@ -32,8 +32,4 @@ public class DataHelper {
         return faker.lorem().paragraph().trim();
     }
 
-    public static int randomNumber(int min, int max) {
-        return faker.number().numberBetween(min, max);
-    }
-
 }

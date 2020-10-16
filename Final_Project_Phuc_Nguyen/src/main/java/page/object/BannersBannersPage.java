@@ -101,11 +101,11 @@ public class BannersBannersPage extends BasePage {
     /**
      * Choose value 20 option as testcase Banner Banner 15 asked for
      */
-    public void selectQuantityNumber(String number) {
+    public void selectQuantityNumber(String num) {
         clickComponentsMenu();
         clickBannersDrd();
         clickBannerQuantity();
-        clickBannerQuantitySelect(number);
+        clickBannerQuantitySelect(num);
     }
 
     /**

@@ -21,8 +21,11 @@ public class TC_JOOMLA_BANNERS_CLIENTS_011 extends BaseTest {
 
         // Verify point 1: TO_JOOMLA_BANNERS_CLIENTS_001
         browserHelper.navigateToClientsPage();
+
         bannersClientsPage.clickNewBtn();
+
         bannersClientsPage.createNewClient(client1Title, client1Name, client1Email);
+
         bannersClientsPage.clickSaveNewBtn();
 
         Assert.assertEquals(bannersClientsPage.getAlertMessage(), CLIENTS_SUCCESS_MESSAGE,
@@ -37,16 +40,19 @@ public class TC_JOOMLA_BANNERS_CLIENTS_011 extends BaseTest {
 
         // Verify point 1: TO_JOOMLA_BANNERS_CLIENTS_001
         bannersClientsPage.createNewClient(client2Title, client2Name, client2Email);
+
         bannersClientsPage.clickSaveBtn();
 
         Assert.assertEquals(bannersClientsPage.getAlertMessage(), CLIENTS_SUCCESS_MESSAGE,
                 "New Client 2 Alert message failed");
 
         browserHelper.navigateToClientManager();
+
         bannersClientsPage.chooseSortByIdDescending();
 
         Assert.assertTrue(bannersClientsPage.isNewClientTitleDisplayed(client1Title),
                 "Create new client 1 title failed");
+
         Assert.assertTrue(bannersClientsPage.isNewClientTitleDisplayed(client2Title),
                 "Create new client 2 title failed");
     }

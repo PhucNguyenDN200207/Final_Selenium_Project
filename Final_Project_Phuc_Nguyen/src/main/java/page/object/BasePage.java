@@ -36,7 +36,6 @@ public class BasePage {
     private final By _sortByIdDescending = By.xpath("//li[.='ID descending']");
     private final By _unPublishBtn = By.id("toolbar-unpublish");
 
-
     /**
      * This is place create common Web elements
      */
@@ -242,6 +241,6 @@ public class BasePage {
      */
 
     public Boolean doesHelpWindowDisplay() {
-        return doesNewWindowDisplay(HELP_PAGE_TITLE);
+        return doesNewWindowDisplay(HELP_PAGE_TITLE,2);
     }
 }

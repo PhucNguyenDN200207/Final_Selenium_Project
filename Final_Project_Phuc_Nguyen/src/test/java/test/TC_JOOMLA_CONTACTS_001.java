@@ -18,6 +18,7 @@ public class TC_JOOMLA_CONTACTS_001 extends BaseTest {
 
         Log4j.info("Select Components > Contacts");
         contactsPage.clickComponentsMenu();
+
         contactsPage.clickContactDrd();
 
         contactsPage.clickNewBtn();

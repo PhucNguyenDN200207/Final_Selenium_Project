@@ -14,8 +14,7 @@ import utils.Log4j;
 
 import java.util.ArrayList;
 
-import static utils.Constants.DRIVER;
-import static utils.Constants.PAGE_LOAD_TIME_OUT;
+import static utils.Constants.*;
 
 public class BrowserHelper {
     ArticlePage articlePage = new ArticlePage();
@@ -84,14 +83,14 @@ public class BrowserHelper {
      * @param title New web title after action click or open
      * @return true if it has two browser windows and the title of new window match
      */
-    public static boolean doesNewWindowDisplay(String title) {
+    public static boolean doesNewWindowDisplay(String title,int numberWindow) {
         // Get all Open Tabs
         ArrayList<String> tabHandles = new ArrayList<String>(DRIVER.getWindowHandles());
         // handel Firefox
         WebDriverWait wait = new WebDriverWait(DRIVER.switchTo().window(tabHandles.get(tabHandles.size() - 1)), PAGE_LOAD_TIME_OUT);
         wait.until(ExpectedConditions.titleContains(title));
 
-        return tabHandles.size() == 2 &&
+        return tabHandles.size() == numberWindow &&
                 DRIVER.switchTo().window(tabHandles.get(tabHandles.size() - 1)).getTitle().equals(title);
     }
 }

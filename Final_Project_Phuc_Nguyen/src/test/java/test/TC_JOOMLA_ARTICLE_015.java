@@ -25,7 +25,6 @@ public class TC_JOOMLA_ARTICLE_015 extends BaseTest {
         Log4j.info("Select Content > Article Manager");
         articlePage.clickNewArticle();
 
-
         articlePage.createNewArticle(title, content, DEFAULT_ARTICLE_CATEGORY);
 
         Log4j.info("Click on 'Save & Close' icon of the top right toolbar");
@@ -35,9 +34,11 @@ public class TC_JOOMLA_ARTICLE_015 extends BaseTest {
 
         Log4j.info("Navigate to Article manager page");
         browserHelper.navigateToArticleManager();
+
         articlePage.chooseSortByIdDescending();
 
         Assert.assertTrue(articlePage.isNewArticleTitleDisplayed(title), "Article title fail");
+
         Assert.assertEquals(articlePage.getAuthor(title), AUTHOR, "Author failed");
 
         // Verify Point 2. A message : "1 client successfully unpublished" shows and Article is unpublished
@@ -49,6 +50,7 @@ public class TC_JOOMLA_ARTICLE_015 extends BaseTest {
 
         assertEquals(articlePage.getAlertMessage(), ARTICLE_UNPUBLISHED_MESSAGE,
                 "Unpublished failed ");
+
         assertTrue(articlePage.doesElementStatus(title,
                 "unpublish"), "Element does not exist");
 

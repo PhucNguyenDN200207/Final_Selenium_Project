@@ -21,7 +21,6 @@ public class TC_JOOMLA_ARTICLE_001 extends BaseTest {
         Log4j.info("Select Content > Article Manager");
         articlePage.clickNewArticle();
 
-
         articlePage.createNewArticle(title, content, DEFAULT_ARTICLE_CATEGORY);
 
         articlePage.clickSaveBtn();
@@ -32,6 +31,7 @@ public class TC_JOOMLA_ARTICLE_001 extends BaseTest {
         browserHelper.navigateToArticleManager();
 
         Assert.assertTrue(articlePage.isNewArticleTitleDisplayed(title), "Article title fail");
+
         Assert.assertEquals(articlePage.getAuthor(title), AUTHOR, "Author failed");
 
 

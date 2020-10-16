@@ -23,14 +23,18 @@ public class TC_JOOMLA_BANNERS_CLIENTS_004 extends BaseTest {
 
         // Verify point 1: TO_JOOMLA_BANNERS_CLIENTS_001
         browserHelper.navigateToClientsPage();
+
         bannersClientsPage.clickNewBtn();
+
         bannersClientsPage.createNewClient(clientTitle, clientName, clientEmail);
+
         bannersClientsPage.clickSaveBtn();
 
         Assert.assertEquals(bannersClientsPage.getAlertMessage(), CLIENTS_SUCCESS_MESSAGE,
                 "New Client Alert message failed");
 
         browserHelper.navigateToClientManager();
+
         bannersClientsPage.chooseSortByIdDescending();
 
         Assert.assertTrue(bannersClientsPage.isNewClientTitleDisplayed(clientTitle),
@@ -45,6 +49,7 @@ public class TC_JOOMLA_BANNERS_CLIENTS_004 extends BaseTest {
         // VP 2. A message : "1 client successfully unpublished" shows and Client is unpublished
         assertEquals(bannersClientsPage.getAlertMessage(), CLIENT_UNPUBLISHED_MESSAGE,
                 "Unpublished failed ");
+
         assertTrue(bannersClientsPage.doesElementStatus(clientTitle,
                 "unpublish"), "Element does not exist");
     }
