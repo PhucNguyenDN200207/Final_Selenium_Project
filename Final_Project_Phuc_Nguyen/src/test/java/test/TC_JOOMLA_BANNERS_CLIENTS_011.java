@@ -1,15 +1,24 @@
 package test;
 
 import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import page.object.BannersClientsPage;
+import page.object.LoginPage;
 import utils.Log4j;
 
 import static helper.DataHelper.*;
-import static utils.Constants.CLIENTS_SUCCESS_MESSAGE;
+import static utils.Constants.*;
 
 public class TC_JOOMLA_BANNERS_CLIENTS_011 extends BaseTest {
     BannersClientsPage bannersClientsPage = new BannersClientsPage();
+    LoginPage loginPage = new LoginPage();
+
+    @BeforeMethod
+    public void login() {
+        loginPage.login(USER_NAME, PASSWORD);
+
+    }
 
     @Test(description = "Verify that user can create many clients by using 'Save & New' button")
     public void testcase004() {

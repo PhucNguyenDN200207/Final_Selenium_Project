@@ -1,10 +1,12 @@
 package test;
 
 import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import page.object.BannersBannersPage;
 import page.object.BannersCategoriesPage;
 import page.object.BannersClientsPage;
+import page.object.LoginPage;
 import utils.Log4j;
 
 import static helper.DataHelper.*;
@@ -14,6 +16,13 @@ public class TC_JOOMLA_BANNERS_BANNERS_001 extends BaseTest {
     BannersBannersPage bannersBannersPage = new BannersBannersPage();
     BannersClientsPage bannersClientsPage = new BannersClientsPage();
     BannersCategoriesPage bannersCategoriesPage = new BannersCategoriesPage();
+    LoginPage loginPage = new LoginPage();
+
+    @BeforeMethod
+    public void login() {
+        loginPage.login(USER_NAME, PASSWORD);
+
+    }
 
     @Test(description = "User can create new banner with valid information")
     public void testcase001() {

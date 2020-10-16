@@ -1,12 +1,24 @@
 package test;
 
 import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import page.object.ContactsPage;
+import page.object.LoginPage;
 import utils.Log4j;
+
+import static utils.Constants.PASSWORD;
+import static utils.Constants.USER_NAME;
 
 public class TC_JOOMLA_CONTACTS_008 extends BaseTest {
     ContactsPage contactsPage = new ContactsPage();
+    LoginPage loginPage = new LoginPage();
+
+    @BeforeMethod
+    public void login() {
+        loginPage.login(USER_NAME, PASSWORD);
+
+    }
 
     @Test(description = "Verify user can access contact's help section")
     public void testcase008() throws InterruptedException {
