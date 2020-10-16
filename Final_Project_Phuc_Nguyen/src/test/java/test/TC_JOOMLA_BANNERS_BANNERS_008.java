@@ -19,6 +19,7 @@ public class TC_JOOMLA_BANNERS_BANNERS_008 extends BaseTest {
     public void testcase008() {
         Log4j.header("TC_JOOMLA_BANNERS_BANNERS_008");
 
+
         String clientTitle = randomTitle();
         String clientName = randomName();
         String clientEmail = randomEmail();
@@ -65,12 +66,10 @@ public class TC_JOOMLA_BANNERS_BANNERS_008 extends BaseTest {
         bannersCategoriesPage.createCategories(categoryTitle);
 
         Log4j.info("Click 'Save & Close' button");
-        bannersClientsPage.clickSaveBtn();
+        bannersClientsPage.clickSaveAndCloseBtn();
 
         Assert.assertEquals(bannersCategoriesPage.getAlertMessage(), CATEGORIES_SUCCESS_MESSAGE,
                 "New Client Alert message failed");
-
-        browserHelper.navigateToBannerManager();
 
         bannersCategoriesPage.chooseSortByIdDescending();
 

@@ -25,7 +25,7 @@ public class DataHelper {
     }
 
     public static String randomCategories() {
-        return faker.educator().course().trim();
+        return faker.funnyName().name().trim();
     }
 
     public static String randomContent() {
