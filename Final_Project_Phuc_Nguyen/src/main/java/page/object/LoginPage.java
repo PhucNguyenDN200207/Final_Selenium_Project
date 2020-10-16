@@ -52,15 +52,15 @@ public class LoginPage extends BasePage {
     }
 
     /**
-     * input valid username and password to Joomla
+     * Login with input valid username and password to Joomla
      */
-    public void login() {
+    public void login(String username, String password) {
 
         Log4j.info("Input to User Name text box: ");
-        this.inputUserName(USER_NAME);
+        this.inputUserName(username);
 
         Log4j.info("Input to Password text box: ");
-        this.inputPassword(PASSWORD);
+        this.inputPassword(password);
 
         clickLoginBtn();
     }

@@ -68,7 +68,10 @@ public class BrowserHelper {
         navigateToClientsPage();
     }
 
-
+    /**
+     * Re-navigate to JOOMLA administrator main page then navigate to Banner Manager
+     * to verify new create Banner
+     */
     public void navigateToBannerManager() {
         navigate(Constants.JOOMLA_HOME_URL);
         bannersBannersPage.clickComponentsMenu();

@@ -30,7 +30,7 @@ public class BaseTest {
         Log4j.info("Navigate to JOOMLA Home Page");
         BrowserHelper.navigate(JOOMLA_HOME_URL);
 
-        loginPage.login();
+        loginPage.login(USER_NAME,PASSWORD);
     }
 
     @AfterMethod

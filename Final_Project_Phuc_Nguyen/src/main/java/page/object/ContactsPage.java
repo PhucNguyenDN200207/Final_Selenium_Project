@@ -12,6 +12,7 @@ public class ContactsPage extends BasePage {
     /**
      * This is place of Locator
      */
+
     private final By _contactDrd = By.xpath("//li[@class='dropdown open']//li[@class='dropdown-submenu']/a[.='Contacts']");
     private final String _newContactTitle = "//a[.='%s']";
 
@@ -37,15 +38,6 @@ public class ContactsPage extends BasePage {
     }
 
     /**
-     * This is place create verify methods
-     */
-
-
-    public void openHelpPage() {
-        clickHelpBtn();
-    }
-
-    /**
      * Create new contract
      * @param name random contract name
      */
@@ -53,6 +45,10 @@ public class ContactsPage extends BasePage {
         Log4j.info("Create new contact: " + name);
         inputNameTxt(name);
     }
+
+    /**
+     * This is place create verify methods
+     */
 
     public Boolean isNewContactDisplayed(String title) {
         return isElementPresented(newContactTitle(title));

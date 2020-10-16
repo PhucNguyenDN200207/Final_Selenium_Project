@@ -1,16 +1,14 @@
 package page.object;
 
-import helper.BrowserHelper;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import utils.Constants;
 import utils.Log4j;
 
-import java.util.List;
 
 import static utils.Constants.DRIVER;
 
 public class BannersClientsPage extends BasePage {
+
     /**
      * This is place of Locator
      */
@@ -44,7 +42,6 @@ public class BannersClientsPage extends BasePage {
     private WebElement saveNewBtn() {
         return DRIVER.findElement(_saveNewBtn);
     }
-
 
 
     /**
@@ -85,14 +82,7 @@ public class BannersClientsPage extends BasePage {
     }
 
 
-
     public Boolean isNewClientTitleDisplayed(String title) {
         return isElementPresented(newClientName(title));
     }
-
-
-    /**
-     * This is place create verify methods
-     */
-
 }

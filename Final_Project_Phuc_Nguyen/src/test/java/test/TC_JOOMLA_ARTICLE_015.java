@@ -20,12 +20,13 @@ public class TC_JOOMLA_ARTICLE_015 extends BaseTest {
 
         String title = randomTitle();
         String content = randomContent();
+        // Verify Point 1: TO_JOOMLA_ARTICLE_001
 
         Log4j.info("Select Content > Article Manager");
         articlePage.clickNewArticle();
 
 
-        articlePage.createNewArticle(title, content, DEFAUT_ARTICLE_CATEGORY);
+        articlePage.createNewArticle(title, content, DEFAULT_ARTICLE_CATEGORY);
 
         Log4j.info("Click on 'Save & Close' icon of the top right toolbar");
         articlePage.clickSaveBtn();
@@ -39,14 +40,18 @@ public class TC_JOOMLA_ARTICLE_015 extends BaseTest {
         Assert.assertTrue(articlePage.isNewArticleTitleDisplayed(title), "Article title fail");
         Assert.assertEquals(articlePage.getAuthor(title), AUTHOR, "Author failed");
 
+        // Verify Point 2. A message : "1 client successfully unpublished" shows and Article is unpublished
+
         articlePage.selectCheckbox(title);
 
         articlePage.clickUnPublishBtn();
 
-        // VP 2. A message : "1 client successfully unpublished" shows and Article is unpublished
+
         assertEquals(articlePage.getAlertMessage(), ARTICLE_UNPUBLISHED_MESSAGE,
                 "Unpublished failed ");
         assertTrue(articlePage.doesElementStatus(title,
                 "unpublish"), "Element does not exist");
+
     }
+
 }

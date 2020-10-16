@@ -22,9 +22,8 @@ public class TC_JOOMLA_ARTICLE_001 extends BaseTest {
         articlePage.clickNewArticle();
 
 
-        articlePage.createNewArticle(title, content, DEFAUT_ARTICLE_CATEGORY);
+        articlePage.createNewArticle(title, content, DEFAULT_ARTICLE_CATEGORY);
 
-        Log4j.info("Click on 'Save & Close' icon of the top right toolbar");
         articlePage.clickSaveBtn();
 
         Assert.assertEquals(articlePage.getAlertMessage(), ARTICLE_ALERT_MESSAGE, "Article Alert message failed");

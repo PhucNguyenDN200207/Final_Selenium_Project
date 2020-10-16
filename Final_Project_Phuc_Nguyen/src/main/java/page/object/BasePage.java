@@ -1,7 +1,6 @@
 package page.object;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -35,7 +34,7 @@ public class BasePage {
     private final String _boxName = "//td//a[normalize-space(text())='%s']//ancestor::tr//span[@class='icon-%s']";
     private final By _sortByDrd = By.xpath("//*[@id='list_fullordering_chzn']/a");
     private final By _sortByIdDescending = By.xpath("//li[.='ID descending']");
-    private final By _unpublishBtn = By.id("toolbar-unpublish");
+    private final By _unPublishBtn = By.id("toolbar-unpublish");
 
 
     /**
@@ -99,9 +98,15 @@ public class BasePage {
         return DRIVER.findElement(_sortByIdDescending);
     }
 
-    /**
-     * Common method
+    /***
+     * This method choose Web Element by String Test
+     * @param element for example: "//tbody/tr//a[contains(.,'%s')]"
+     * @param text title
+     * @return Web Element identify by Xpath title
      */
+    public WebElement elementByText(String element, String text) {
+        return DRIVER.findElement(By.xpath(String.format(element, text)));
+    }
 
     /**
      * Verify that web element is display or not by WebElement
@@ -117,26 +122,18 @@ public class BasePage {
         }
     }
 
-    /***
-     * This method choose Web Element by String Test
-     * @param element for example: "//tbody/tr//a[contains(.,'%s')]"
-     * @param text title
-     * @return Web Element identify by Xpath title
-     */
-    public WebElement elementByText(String element, String text) {
-        return DRIVER.findElement(By.xpath(String.format(element, text)));
-    }
-
     public void clickUnPublishBtn() {
-        Constants.DRIVER.findElement(_unpublishBtn).click();
+        Log4j.info("Step: Click UnPublish with the title  ");
+        Constants.DRIVER.findElement(_unPublishBtn).click();
     }
 
     public void clickSaveBtn() {
-        Log4j.info("Step: Click on 'Save & Close' icon of the top right toolbar");
+        Log4j.info("Step: Click on 'Save' icon of the top right toolbar");
         saveBtn().click();
     }
 
     public void clickSaveAndCloseBtn() {
+        Log4j.info("Step: Click on 'Save & Close' icon of the top right toolbar");
         saveAndCloseBtn().click();
     }
 
@@ -191,13 +188,13 @@ public class BasePage {
 
     public void selectCheckbox(String title) {
         if (checkBox(title).size() == 1) {
-            Constants.DRIVER.findElement(
+            DRIVER.findElement(
                     By.xpath(String.format(_checkBox, title))).click();
         }
     }
 
     public boolean doesElementStatus(String title, String status) {
-        return Constants.DRIVER.findElements(
+        return DRIVER.findElements(
                 By.xpath(String.format(_boxName, title, status))).size() == 1;
 
     }
@@ -223,12 +220,9 @@ public class BasePage {
      */
     public void chooseSortByIdDescending() {
         clickSortByDrd();
+        Log4j.info("Sort table data by ID Descending");
         clickSortByIdDescending();
     }
-
-    /**
-     * Verify method
-     */
 
     /**
      * Return every successful message in JOOMLA
@@ -242,6 +236,10 @@ public class BasePage {
         } else return NO_MESSAGE_FOUND;
 
     }
+
+    /**
+     * Verify method
+     */
 
     public Boolean doesHelpWindowDisplay() {
         return doesNewWindowDisplay(HELP_PAGE_TITLE);

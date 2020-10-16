@@ -1,9 +1,7 @@
 package page.object;
 
-import helper.BrowserHelper;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import utils.Constants;
 import utils.Log4j;
 
 import java.util.List;

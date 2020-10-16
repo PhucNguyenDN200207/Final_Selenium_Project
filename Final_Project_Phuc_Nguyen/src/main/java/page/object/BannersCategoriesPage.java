@@ -1,9 +1,7 @@
 package page.object;
 
-import helper.BrowserHelper;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import utils.Constants;
 import utils.Log4j;
 
 import static utils.Constants.*;
@@ -42,12 +40,10 @@ public class BannersCategoriesPage extends BasePage {
     /**
      * Create new Category for Banner
      * @param title random category title
-     * TODO function fail when create random data with special characters.
      */
     public void createCategories(String title) {
         inputTitleTxt(title);
     }
-
 
     /**
      * This is place create verify methods
