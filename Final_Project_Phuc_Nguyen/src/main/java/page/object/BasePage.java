@@ -187,8 +187,7 @@ public class BasePage {
 
     public void selectCheckbox(String title) {
         if (checkBox(title).size() == 1) {
-            DRIVER.findElement(
-                    By.xpath(String.format(_checkBox, title))).click();
+            checkBox(title).get(0).click();
         }
     }
 
@@ -229,10 +228,9 @@ public class BasePage {
      * @return String success message if message element is displayed, if not return NO MESSAGE FOUND
      */
     public String getAlertMessage() {
-        waitUntilVisible(alertSuccessMessage());
         if (isElementPresented(alertSuccessMessage())) {
             return alertSuccessMessage().getText();
-        } else return NO_MESSAGE_FOUND;
+        } else return ELEMENT_MESSAGE_NOT_FOUND;
 
     }
 
@@ -241,6 +239,6 @@ public class BasePage {
      */
 
     public Boolean doesHelpWindowDisplay() {
-        return doesNewWindowDisplay(HELP_PAGE_TITLE,2);
+        return doesNewWindowDisplay(HELP_PAGE_TITLE, 2);
     }
 }

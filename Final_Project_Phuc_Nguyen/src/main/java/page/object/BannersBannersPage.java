@@ -21,8 +21,8 @@ public class BannersBannersPage extends BasePage {
     private final String _dropdownOption = "//ul[@class='chzn-results']/li[contains(.,'%s')]";
     private final By _bannerDetailsTab = By.cssSelector("div.form-horizontal li>a[href='#otherparams']");
     private final By _clientDropdown = By.cssSelector("div[id='jform_cid_chzn']>a");
-    private final By _numberTableRows = By.xpath("//*[@id=\"articleList\"]/tbody/tr");
-
+    private final By _numberTableRows = By.xpath("//*[@id='articleList']/tbody/tr");
+// fix _numberTableRows
     /**
      * This is place of Web Elements
      */
