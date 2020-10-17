@@ -26,7 +26,6 @@ public class BannersCategoriesPage extends BasePage {
         return elementByText(_newCateGoryTitle, title);
     }
 
-
     /**
      * This is place create methods
      */
@@ -39,7 +38,7 @@ public class BannersCategoriesPage extends BasePage {
      * Create new Category for Banner
      * @param title random category title
      */
-    public void createCategories(String title) {
+    public void enterCategories(String title) {
         enterTitleTxt(title);
     }
 

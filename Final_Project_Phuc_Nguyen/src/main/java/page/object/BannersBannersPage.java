@@ -4,8 +4,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import utils.Log4j;
 
-import java.util.List;
-
 import static utils.Constants.*;
 
 public class BannersBannersPage extends BasePage {
@@ -97,7 +95,7 @@ public class BannersBannersPage extends BasePage {
      */
 
     //Get the number of Row in Table by size of Checkbox with title ="" and minus 1
-    public int DoesChooseQuantityOptionCorrect() {
+    public int getChooseQuantityOption() {
         return sizeOfCheckbox("") - 1;
     }
 

@@ -240,7 +240,6 @@ public class BasePage {
         if (isElementPresented(alertSuccessMessage())) {
             return alertSuccessMessage().getText();
         } else return ELEMENT_MESSAGE_NOT_FOUND;
-
     }
 
     /**

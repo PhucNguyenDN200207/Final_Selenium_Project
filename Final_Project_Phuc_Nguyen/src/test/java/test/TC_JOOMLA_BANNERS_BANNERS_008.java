@@ -77,7 +77,7 @@ public class TC_JOOMLA_BANNERS_BANNERS_008 extends BaseTest {
         bannersCategoriesPage.clickNewBtn();
 
         Log4j.info("Step: Enter valid Category Name to Name text box");
-        bannersCategoriesPage.createCategories(categoryTitle);
+        bannersCategoriesPage.enterCategories(categoryTitle);
 
         Log4j.info("Step: Click 'Save & Close' button");
         bannersClientsPage.clickSaveAndCloseBtn();

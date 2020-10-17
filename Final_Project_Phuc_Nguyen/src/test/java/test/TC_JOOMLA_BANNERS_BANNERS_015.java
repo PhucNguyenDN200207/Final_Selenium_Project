@@ -35,6 +35,6 @@ public class TC_JOOMLA_BANNERS_BANNERS_015 extends BaseTest {
         bannersPage.selectQuantityOption(quantity);
 
         Log4j.info("Verify: Quantity of items displayed in table is changed");
-        Assert.assertEquals(bannersPage.DoesChooseQuantityOptionCorrect(), quantity, "Choose quantity failed");
+        Assert.assertEquals(bannersPage.getChooseQuantityOption(), quantity, "Choose quantity failed");
     }
 }
