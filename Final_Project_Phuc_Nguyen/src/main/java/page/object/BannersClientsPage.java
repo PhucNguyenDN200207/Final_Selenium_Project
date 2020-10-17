@@ -47,12 +47,12 @@ public class BannersClientsPage extends BasePage {
      * This is place create methods
      */
 
-    public void inputEmailTxt(String email) {
+    public void enterEmailTxt(String email) {
         Log4j.info("Input Email text field");
         emailTxt().sendKeys(email);
     }
 
-    public void inputContactNameTxt(String name) {
+    public void enterContactNameTxt(String name) {
         Log4j.info("Input Email text field");
         contactNameTxt().sendKeys(name);
     }
@@ -74,10 +74,10 @@ public class BannersClientsPage extends BasePage {
      * @param name  random Client name
      * @param email radom Client email
      */
-    public void createNewClient(String title, String name, String email) {
-        inputNameTxt(title);
-        inputContactNameTxt(name);
-        inputEmailTxt(email);
+    public void enterNewClient(String title, String name, String email) {
+        enterNameTxt(title);
+        enterContactNameTxt(name);
+        enterEmailTxt(email);
     }
 
 

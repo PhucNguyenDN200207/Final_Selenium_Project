@@ -29,17 +29,28 @@ public class TC_JOOMLA_BANNERS_CLIENTS_011 extends BaseTest {
         String client1Email = randomEmail();
 
         // Verify point 1: TO_JOOMLA_BANNERS_CLIENTS_001
-        browserHelper.navigateToClientsPage();
+        Log4j.info("Step: Select Components -> Banners -> Clients");
+        bannersClientsPage.clickComponentsMenu();
 
+        bannersClientsPage.clickBannersOpt();
+
+        bannersClientsPage.clickBannerClients();
+
+        Log4j.info("Step: Click 'New' button in the right top corner");
         bannersClientsPage.clickNewBtn();
 
-        bannersClientsPage.createNewClient(client1Title, client1Name, client1Email);
 
+        Log4j.info("Step:Enter valid Client Name 1 to Client Name textbox");
+        Log4j.info("Step:Enter valid Contact Name 1 to Contact Name textbox");
+        Log4j.info("Step:Enter valid Contact Email 1 to Contact Email textbox");
+        bannersClientsPage.enterNewClient(client1Title, client1Name, client1Email);
+
+        Log4j.info("Step: Click 'Save & Close' button");
         bannersClientsPage.clickSaveNewBtn();
 
-        Assert.assertEquals(bannersClientsPage.getAlertMessage(), CLIENTS_SUCCESS_MESSAGE,
-                "New Client 1 Alert message failed");
-
+        Log4j.info("Verify: A message : 'Client successfully saved' shows.");
+        Assert.assertEquals(bannersClientsPage.getMessage(), CLIENTS_SUCCESS_MESSAGE,
+                "New Client Alert message failed");
 
         // Verify point 2: TO_JOOMLA_BANNERS_CLIENTS_011
 
@@ -47,18 +58,21 @@ public class TC_JOOMLA_BANNERS_CLIENTS_011 extends BaseTest {
         String client2Name = randomName();
         String client2Email = randomEmail();
 
-        // Verify point 1: TO_JOOMLA_BANNERS_CLIENTS_001
-        bannersClientsPage.createNewClient(client2Title, client2Name, client2Email);
+        Log4j.info("Step:Enter valid Client Name 2 to Client Name textbox");
+        Log4j.info("Step:Enter valid Contact Name 2 to Contact Name textbox");
+        Log4j.info("Step:Enter valid Contact Email 2 to Contact Email textbox");
+        bannersClientsPage.enterNewClient(client1Title, client1Name, client1Email);
+        bannersClientsPage.enterNewClient(client2Title, client2Name, client2Email);
 
-        bannersClientsPage.clickSaveBtn();
+        bannersClientsPage.clickSaveAndCloseBtn();
 
-        Assert.assertEquals(bannersClientsPage.getAlertMessage(), CLIENTS_SUCCESS_MESSAGE,
-                "New Client 2 Alert message failed");
-
-        browserHelper.navigateToClientManager();
+        Log4j.info("Verify: A message : 'Client successfully saved' shows.");
+        Assert.assertEquals(bannersClientsPage.getMessage(), CLIENTS_SUCCESS_MESSAGE,
+                "New Client Alert message failed");
 
         bannersClientsPage.chooseSortByIdDescending();
 
+        Log4j.info("Verify: Two new clients are created");
         Assert.assertTrue(bannersClientsPage.isNewClientTitleDisplayed(client1Title),
                 "Create new client 1 title failed");
 

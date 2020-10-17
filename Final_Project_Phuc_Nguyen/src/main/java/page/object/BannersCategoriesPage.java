@@ -2,7 +2,6 @@ package page.object;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import utils.Log4j;
 
 import static utils.Constants.*;
 
@@ -33,7 +32,6 @@ public class BannersCategoriesPage extends BasePage {
      */
 
     public void clickBannerCategories() {
-        Log4j.info("Step: Click on Categories");
         bannerCategories().click();
     }
 
@@ -42,7 +40,7 @@ public class BannersCategoriesPage extends BasePage {
      * @param title random category title
      */
     public void createCategories(String title) {
-        inputTitleTxt(title);
+        enterTitleTxt(title);
     }
 
     /**

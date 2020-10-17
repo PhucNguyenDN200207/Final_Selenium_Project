@@ -65,16 +65,14 @@ public class BannersBannersPage extends BasePage {
      */
 
     public void clickBannerQuantity() {
-        Log4j.info("Step: Select quantity that user wants to display");
         bannerQuantity().click();
     }
 
-    public void clickBannerQuantitySelect(String number) {
-        Log4j.info("Step: Select quantity : 20");
-        bannerQuantitySelect(number).click();
+    public void clickBannerQuantityOption(String option) {
+        bannerQuantitySelect(option).click();
     }
 
-    public String getNumberTableRows() {
+    public String getSizeOfRows() {
         return String.valueOf(numberTableRows().size());
     }
 
@@ -86,7 +84,7 @@ public class BannersBannersPage extends BasePage {
      * @param clientTitle   choose from dropdown Client
      */
     public void createNewBanner(String bannerName, String categoryTitle, String clientTitle) {
-        inputNameTxt(bannerName);
+        enterNameTxt(bannerName);
 
         clickWhenElementReady(categoryDropdown());
         clickWhenElementReady(dropdownOption(categoryTitle));
@@ -98,22 +96,17 @@ public class BannersBannersPage extends BasePage {
         Log4j.info("Choose Client Dropdown: " + clientTitle);
     }
 
-    /**
-     * Choose value 20 option as testcase Banner Banner 15 asked for
-     */
-    public void selectQuantityNumber(String num) {
-        clickComponentsMenu();
-        clickBannersDrd();
+    public void selectQuantityOption(String quantity) {
         clickBannerQuantity();
-        clickBannerQuantitySelect(num);
+        clickBannerQuantityOption(quantity);
     }
 
     /**
      * This is place create verify methods
      */
 
-    public Boolean verifyChooseQuantityNumber(String num) {
-        return getNumberTableRows().equals(num);
+    public Boolean DoesChooseQuantityOptionCorrect(String num) {
+        return getSizeOfRows().equals(num);
     }
 
     public Boolean isNewBannerDisplayed(String banner) {

@@ -16,8 +16,6 @@ public class ArticlePage extends BasePage {
     private final By _articleManager = By.xpath("//div[@class='j-links-groups']//a[contains(.,'Articles')]");
     private final By _articleTitle = By.cssSelector("#jform_title");
     private final By _articleContentTxt = By.cssSelector("#jform_articletext_ifr");
-    private final By _categoryDropdown = By.xpath("//div[@class='controls']/select[@id='jform_catid']/..");
-    private final String _categoryOption = "//ul[@class='chzn-results']/li[contains(.,'%s')]";
     private final String _newTitle = "//tbody/tr//a[contains(.,'%s')]";
     private final String _authorByNewTitle = "//tbody/tr//a[contains(.,'%s')]//ancestor::tr//td/a[@data-original-title='Author']";
 
@@ -49,43 +47,25 @@ public class ArticlePage extends BasePage {
         return elementByText(_authorByNewTitle, author);
     }
 
-    private WebElement categoryDropdown() {
-        return DRIVER.findElement(_categoryDropdown);
-    }
-
-    private WebElement categoryOption(String option) {
-        return DRIVER.findElement(By.xpath(String.format(_categoryOption, option)));
-    }
-
     /**
      * This is place create methods
      */
 
     public void clickNewArticle() {
-        Log4j.info("Step: Click on New Article in Content Tab");
         newArticle().click();
     }
 
     public void inputArticleTitle(String title) {
-        Log4j.info("Step: Input a title on 'Title' field");
         articleTitle().sendKeys(title);
     }
 
     public void inputArticleContentTxt(String text) {
-        Log4j.info("Step: Input value on 'Article Text' text area");
         articleContentTxt().sendKeys(text);
     }
 
 
     public void clickArticleManager() {
-        Log4j.info("Step: Click on Articles in Content Tab");
         articleManager().click();
-    }
-
-    public void selectCategory(String category) {
-        clickWhenElementReady(categoryDropdown());
-        clickWhenElementReady(categoryOption(category));
-        Log4j.info("Selected: " + category);
     }
 
     /***
@@ -95,14 +75,11 @@ public class ArticlePage extends BasePage {
      * @param articleCategory default Sample Data-Articles
      *  TODO function fail when create random data with special characters.
      */
-    public void createNewArticle(String title, String content, String articleCategory) {
-        Log4j.info("Enter a title on 'Title' field");
+    public void enterNewArticle(String title, String content, String articleCategory) {
         inputArticleTitle(title);
 
-        Log4j.info("Enter value on 'Article Text' text area");
         inputArticleContentTxt(content);
 
-        Log4j.info("Select an item from the 'Category' dropdown list");
         selectCategory(articleCategory);
     }
 

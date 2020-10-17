@@ -56,10 +56,10 @@ public class LoginPage extends BasePage {
      */
     public void login(String username, String password) {
 
-        Log4j.info("Input to User Name text box: ");
+        Log4j.info("Enter valid username into Username field");
         this.inputUserName(username);
 
-        Log4j.info("Input to Password text box: ");
+        Log4j.info("Enter valid password into Password field");
         this.inputPassword(password);
 
         clickLoginBtn();

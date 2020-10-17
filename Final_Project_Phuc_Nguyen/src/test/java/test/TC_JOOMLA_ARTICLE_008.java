@@ -1,10 +1,13 @@
 package test;
 
+import helper.BrowserHelper;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import page.object.ArticlePage;
 import page.object.LoginPage;
+import sun.rmi.runtime.Log;
+import utils.Constants;
 import utils.Log4j;
 
 import static utils.Constants.PASSWORD;
@@ -24,12 +27,14 @@ public class TC_JOOMLA_ARTICLE_008 extends BaseTest {
     public void testcase008() {
         Log4j.header("TO_JOOMLA_ARTICLE_008");
 
-        Log4j.info("Navigate to Article manager page");
+        Log4j.info("Step: Go to Article manager page");
+        articlePage.clickArticleManager();
 
-        browserHelper.navigateToArticleManager();
-
+        Log4j.info("Step: Click on'Help'icon of the top right toolbar");
         articlePage.clickHelpBtn();
 
+        Log4j.info("Verify the article's help window is displayed");
         Assert.assertTrue(articlePage.doesHelpWindowDisplay(), "Help page title failed");
     }
 }
+

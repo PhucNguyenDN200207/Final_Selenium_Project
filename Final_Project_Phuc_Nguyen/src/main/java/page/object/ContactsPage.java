@@ -3,7 +3,6 @@ package page.object;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import utils.Log4j;
 
 import static utils.Constants.*;
 
@@ -33,7 +32,6 @@ public class ContactsPage extends BasePage {
      */
 
     public void clickContactDrd() {
-        Log4j.info("Step: Click on Components on Menu tab");
         contactDrd().click();
     }
 
@@ -41,9 +39,8 @@ public class ContactsPage extends BasePage {
      * Create new contract
      * @param name random contract name
      */
-    public void createNewContact(String name) {
-        Log4j.info("Create new contact: " + name);
-        inputNameTxt(name);
+    public void enterNewContact(String name) {
+        enterNameTxt(name);
     }
 
     /**

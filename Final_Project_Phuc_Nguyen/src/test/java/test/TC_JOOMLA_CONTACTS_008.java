@@ -24,13 +24,14 @@ public class TC_JOOMLA_CONTACTS_008 extends BaseTest {
     public void testcase008() throws InterruptedException {
         Log4j.header("TC_JOOMLA_CONTACTS_008");
 
-        Log4j.info("Navigate to Article manager page");
+        Log4j.info("Navigate to Contact manager page");
         contactsPage.clickComponentsMenu();
-
         contactsPage.clickContactDrd();
 
+        Log4j.info("Step: Click on'Help'icon of the top right toolbar");
         contactsPage.clickHelpBtn();
 
+        Log4j.info("Verify the contact's help window is displayed");
         Assert.assertTrue(contactsPage.doesHelpWindowDisplay(), "Help page title failed");
     }
 }

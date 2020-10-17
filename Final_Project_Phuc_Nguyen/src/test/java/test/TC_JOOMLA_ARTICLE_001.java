@@ -27,24 +27,27 @@ public class TC_JOOMLA_ARTICLE_001 extends BaseTest {
         String title = randomTitle();
         String content = randomContent();
 
-        Log4j.info("Select Content > Article Manager");
+        Log4j.info("Step: Click on New Article on Menu");
         articlePage.clickNewArticle();
 
-        articlePage.createNewArticle(title, content, DEFAULT_ARTICLE_CATEGORY);
+        Log4j.info("Step: Enter value on 'Article Text' text area");
+        Log4j.info("Step: Enter value on 'Article Content' text area");
+        Log4j.info("Step: Choose Default category on Dropdown");
+        articlePage.enterNewArticle(title, content, DEFAULT_ARTICLE_CATEGORY);
 
-        articlePage.clickSaveBtn();
+        Log4j.info("Step: Click on'Save & Close'icon of the top right toolbar");
+        articlePage.clickSaveAndCloseBtn();
 
-        Assert.assertEquals(articlePage.getAlertMessage(), ARTICLE_ALERT_MESSAGE, "Article Alert message failed");
+        articlePage.chooseSortByIdDescending();
 
-        Log4j.info("Navigate to Article manager page");
-        browserHelper.navigateToArticleManager();
+        Log4j.info("Verify: 'Article successfully saved' message is displayed");
+        Assert.assertEquals(articlePage.getMessage(), ARTICLE_ALERT_MESSAGE, "Article Alert message failed");
 
+        Log4j.info("Verify: Created article is displayed on the articles table");
         Assert.assertTrue(articlePage.isNewArticleTitleDisplayed(title), "Article title fail");
 
         Assert.assertEquals(articlePage.getAuthor(title), AUTHOR, "Author failed");
 
-
     }
-
 }
 

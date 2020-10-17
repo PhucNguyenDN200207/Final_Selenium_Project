@@ -24,13 +24,17 @@ public class TC_JOOMLA_BANNERS_BANNERS_015 extends BaseTest {
     public void testcase015() {
         Log4j.header("TO_JOOMLA_BANNERS_BANNERS_015");
 
-        String quantity = "25";
+        String quantity = "20";
+
+        Log4j.info("Step: Select Components -> Banners");
         bannersPage.clickComponentsMenu();
 
-        bannersPage.clickBannersDrd();
+        bannersPage.clickBannersOpt();
 
-        bannersPage.selectQuantityNumber(quantity);
+        Log4j.info("Step: Select quantity that user wants to display:" + quantity);
+        bannersPage.selectQuantityOption(quantity);
 
-        Assert.assertTrue(bannersPage.verifyChooseQuantityNumber(quantity), "Choose quantity 20 failed");
+        Log4j.info("Verify: Quantity of items displayed in table is changed");
+        Assert.assertTrue(bannersPage.DoesChooseQuantityOptionCorrect(quantity), "Choose quantity failed");
     }
 }

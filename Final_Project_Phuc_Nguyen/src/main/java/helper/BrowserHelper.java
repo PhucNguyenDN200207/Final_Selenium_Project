@@ -17,9 +17,6 @@ import java.util.ArrayList;
 import static utils.Constants.*;
 
 public class BrowserHelper {
-    ArticlePage articlePage = new ArticlePage();
-    BannersClientsPage bannersClientsPage = new BannersClientsPage();
-    BannersBannersPage bannersBannersPage = new BannersBannersPage();
 
     public static void openChromeBrowser() {
         WebDriverManager.chromedriver().setup();
@@ -41,40 +38,6 @@ public class BrowserHelper {
 
     public static void navigate(String url) {
         Constants.DRIVER.get(url);
-    }
-
-    /**
-     * Re-navigate to JOOMLA administrator main page then navigate to Article Manager
-     * to verify new create Article
-     */
-    public void navigateToArticleManager() {
-        navigate(Constants.JOOMLA_HOME_URL);
-        articlePage.clickArticleManager();
-    }
-
-    public void navigateToClientsPage() {
-        bannersClientsPage.clickComponentsMenu();
-        bannersClientsPage.clickBannersDrd();
-        bannersClientsPage.clickBannerClients();
-    }
-
-    /**
-     * Re-navigate to JOOMLA administrator main page then navigate to Client Manager
-     * to verify new create Client
-     */
-    public void navigateToClientManager() {
-        navigate(Constants.JOOMLA_HOME_URL);
-        navigateToClientsPage();
-    }
-
-    /**
-     * Re-navigate to JOOMLA administrator main page then navigate to Banner Manager
-     * to verify new create Banner
-     */
-    public void navigateToBannerManager() {
-        navigate(Constants.JOOMLA_HOME_URL);
-        bannersBannersPage.clickComponentsMenu();
-        bannersBannersPage.clickBannersDrd();
     }
 
     /**

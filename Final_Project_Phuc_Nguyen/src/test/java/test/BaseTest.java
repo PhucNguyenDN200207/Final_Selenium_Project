@@ -9,7 +9,6 @@ import static utils.Constants.*;
 
 
 public class BaseTest {
-    BrowserHelper browserHelper = new BrowserHelper();
 
     @Parameters("browser")
     @BeforeMethod

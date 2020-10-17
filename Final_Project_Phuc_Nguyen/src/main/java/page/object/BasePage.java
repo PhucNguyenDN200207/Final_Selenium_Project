@@ -20,7 +20,7 @@ public class BasePage {
      **/
 
     private final By _componentsMenu = By.xpath("//*[@id='menu']/li//a[contains(.,'Components')]");
-    private final By _bannersDrd = By.xpath("//li[@class='dropdown open']//li[@class='dropdown-submenu']/a[.='Banners']");
+    private final By _bannersOpt = By.xpath("//li[@class='dropdown open']//li[@class='dropdown-submenu']/a[.='Banners']");
     private final By _saveBtn = By.cssSelector(".button-apply");
     private final By _alertSuccessMsg = By.cssSelector(".alert-message");
     private final By _helpBtn = By.cssSelector("#toolbar-help  button");
@@ -30,6 +30,8 @@ public class BasePage {
     private final By _nameTxt = By.cssSelector("#jform_name");
     private final By _titleTxt = By.cssSelector("#jform_title");
     private final By _searchTxt = By.cssSelector("#filter_search");
+    private final By _categoryDropdown = By.xpath("//div[@class='controls']/select[@id='jform_catid']/..");
+    private final String _categoryOption = "//ul[@class='chzn-results']/li[contains(.,'%s')]";
     private final String _checkBox = "//td//a[normalize-space(text())='%s']//ancestor::tr//input";
     private final String _boxName = "//td//a[normalize-space(text())='%s']//ancestor::tr//span[@class='icon-%s']";
     private final By _sortByDrd = By.xpath("//*[@id='list_fullordering_chzn']/a");
@@ -64,8 +66,8 @@ public class BasePage {
         return DRIVER.findElement(_componentsMenu);
     }
 
-    private WebElement bannersDrd() {
-        return DRIVER.findElement(_bannersDrd);
+    private WebElement bannersOpt() {
+        return DRIVER.findElement(_bannersOpt);
     }
 
     private WebElement newBtn() {
@@ -97,6 +99,14 @@ public class BasePage {
         return DRIVER.findElement(_sortByIdDescending);
     }
 
+    private WebElement categoryDropdown() {
+        return DRIVER.findElement(_categoryDropdown);
+    }
+
+    private WebElement categoryOption(String option) {
+        return DRIVER.findElement(By.xpath(String.format(_categoryOption, option)));
+    }
+
     /***
      * This method choose Web Element by String Test
      * @param element for example: "//tbody/tr//a[contains(.,'%s')]"
@@ -122,42 +132,34 @@ public class BasePage {
     }
 
     public void clickUnPublishBtn() {
-        Log4j.info("Step: Click UnPublish with the title  ");
         Constants.DRIVER.findElement(_unPublishBtn).click();
     }
 
     public void clickSaveBtn() {
-        Log4j.info("Step: Click on 'Save' icon of the top right toolbar");
         saveBtn().click();
     }
 
     public void clickSaveAndCloseBtn() {
-        Log4j.info("Step: Click on 'Save & Close' icon of the top right toolbar");
         saveAndCloseBtn().click();
     }
 
     public void clickHelpBtn() {
-        Log4j.info("Step: Click on 'Help' icon of the top right toolbar");
         helpBtn().click();
     }
 
     public void clickSearchBtn() {
-        Log4j.info("Step: Click on 'search' icon");
         searchBtn().click();
     }
 
     public void clickComponentsMenu() {
-        Log4j.info("Step: Click on Components on Menu tab");
         componentsMenu().click();
     }
 
-    public void clickBannersDrd() {
-        Log4j.info("Step: Click on Banners dropdown on Menu tab");
-        bannersDrd().click();
+    public void clickBannersOpt() {
+        bannersOpt().click();
     }
 
     public void clickNewBtn() {
-        Log4j.info("Step: Click on 'New' icon of the top right toolbar");
         newBtn().click();
     }
 
@@ -191,25 +193,28 @@ public class BasePage {
         }
     }
 
+    public void selectCategory(String category) {
+        clickWhenElementReady(categoryDropdown());
+        clickWhenElementReady(categoryOption(category));
+        Log4j.info("Selected: " + category);
+    }
+
     public boolean doesElementStatus(String title, String status) {
         return DRIVER.findElements(
                 By.xpath(String.format(_boxName, title, status))).size() == 1;
 
     }
 
-    public void inputNameTxt(String name) {
-        Log4j.info("Input Title name");
+    public void enterNameTxt(String name) {
         clickWhenElementReady(nameTxt());
         nameTxt().sendKeys(name);
     }
 
-    public void inputTitleTxt(String title) {
-        Log4j.info("Input Title");
+    public void enterTitleTxt(String title) {
         titleTxt().sendKeys(title);
     }
 
-    public void inputSearch(String text) {
-        Log4j.info("Input in Search field");
+    public void enterSearch(String text) {
         searchTxt().sendKeys(text);
     }
 
@@ -227,7 +232,7 @@ public class BasePage {
      *
      * @return String success message if message element is displayed, if not return NO MESSAGE FOUND
      */
-    public String getAlertMessage() {
+    public String getMessage() {
         if (isElementPresented(alertSuccessMessage())) {
             return alertSuccessMessage().getText();
         } else return ELEMENT_MESSAGE_NOT_FOUND;

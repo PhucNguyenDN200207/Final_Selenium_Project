@@ -31,34 +31,48 @@ public class TC_JOOMLA_BANNERS_CLIENTS_004 extends BaseTest {
         String clientEmail = randomEmail();
 
         // Verify point 1: TO_JOOMLA_BANNERS_CLIENTS_001
-        browserHelper.navigateToClientsPage();
+        Log4j.info("Step: Select Components -> Banners -> Clients");
+        bannersClientsPage.clickComponentsMenu();
 
+        bannersClientsPage.clickBannersOpt();
+
+        bannersClientsPage.clickBannerClients();
+
+        Log4j.info("Step: Click 'New' button in the right top corner");
         bannersClientsPage.clickNewBtn();
 
-        bannersClientsPage.createNewClient(clientTitle, clientName, clientEmail);
 
-        bannersClientsPage.clickSaveBtn();
+        Log4j.info("Step:Enter valid Client Name to Client Name textbox");
+        Log4j.info("Step:Enter valid Contact Name to Contact Name textbox");
+        Log4j.info("Step:Enter valid Contact Email to Contact Email textbox");
+        bannersClientsPage.enterNewClient(clientTitle, clientName, clientEmail);
 
-        Assert.assertEquals(bannersClientsPage.getAlertMessage(), CLIENTS_SUCCESS_MESSAGE,
+        Log4j.info("Step: Click 'Save & Close' button");
+        bannersClientsPage.clickSaveAndCloseBtn();
+
+        Log4j.info("Verify: A message : 'Client successfully saved' shows.");
+        Assert.assertEquals(bannersClientsPage.getMessage(), CLIENTS_SUCCESS_MESSAGE,
                 "New Client Alert message failed");
-
-        browserHelper.navigateToClientManager();
 
         bannersClientsPage.chooseSortByIdDescending();
 
+        Log4j.info("Verify: New client is created");
         Assert.assertTrue(bannersClientsPage.isNewClientTitleDisplayed(clientTitle),
                 "Create new client title failed");
 
         // Verify point 2: TO_JOOMLA_BANNERS_CLIENTS_004
 
+        Log4j.info("Step: Check the Client recently created");
         bannersClientsPage.selectCheckbox(clientTitle);
 
+        Log4j.info("Step: Click 'Unpublish' button in the right top corner");
         bannersClientsPage.clickUnPublishBtn();
 
-        // VP 2. A message : "1 client successfully unpublished" shows and Client is unpublished
-        assertEquals(bannersClientsPage.getAlertMessage(), CLIENT_UNPUBLISHED_MESSAGE,
+        Log4j.info("Verify: A message : '1 client successfully unpublished' shows.");
+        assertEquals(bannersClientsPage.getMessage(), CLIENT_UNPUBLISHED_MESSAGE,
                 "Unpublished failed ");
 
+        Log4j.info("Verify: Client is unpublished");
         assertTrue(bannersClientsPage.doesElementStatus(clientTitle,
                 "unpublish"), "Element does not exist");
     }
