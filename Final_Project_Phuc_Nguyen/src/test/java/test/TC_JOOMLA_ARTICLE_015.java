@@ -37,7 +37,7 @@ public class TC_JOOMLA_ARTICLE_015 extends BaseTest {
         Log4j.info("Step: Enter value on 'Article Text' text area");
         Log4j.info("Step: Enter value on 'Article Content' text area");
         Log4j.info("Step: Choose Default category on Dropdown");
-        articlePage.enterNewArticle(title, content, DEFAULT_CONTACT_CATEGORY);
+        articlePage.enterNewArticle(title, content, DEFAULT_ARTICLE_CATEGORY);
 
         Log4j.info("Step: Click on'Save & Close'icon of the top right toolbar");
         articlePage.clickSaveAndCloseBtn();
