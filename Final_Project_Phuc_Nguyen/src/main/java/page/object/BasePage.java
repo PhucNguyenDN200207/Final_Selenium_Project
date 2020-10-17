@@ -91,6 +91,11 @@ public class BasePage {
                 By.xpath(String.format(_checkBox, title)));
     }
 
+    private List<WebElement> boxName(String title, String status) {
+        return DRIVER.findElements(
+                By.xpath(String.format(_boxName, title, status)));
+    }
+
     private WebElement sortByDrd() {
         return DRIVER.findElement(_sortByDrd);
     }
@@ -133,10 +138,6 @@ public class BasePage {
 
     public void clickUnPublishBtn() {
         Constants.DRIVER.findElement(_unPublishBtn).click();
-    }
-
-    public void clickSaveBtn() {
-        saveBtn().click();
     }
 
     public void clickSaveAndCloseBtn() {
@@ -187,8 +188,12 @@ public class BasePage {
         wait.until(ExpectedConditions.elementToBeClickable(element));
     }
 
+    public int sizeOfCheckbox(String title) {
+        return checkBox(title).size();
+    }
+
     public void selectCheckbox(String title) {
-        if (checkBox(title).size() == 1) {
+        if (sizeOfCheckbox(title) == 1) {
             checkBox(title).get(0).click();
         }
     }
@@ -200,8 +205,7 @@ public class BasePage {
     }
 
     public boolean doesElementStatus(String title, String status) {
-        return DRIVER.findElements(
-                By.xpath(String.format(_boxName, title, status))).size() == 1;
+        return boxName(title, status).size() == 1;
 
     }
 

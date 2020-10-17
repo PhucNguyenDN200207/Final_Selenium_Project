@@ -16,13 +16,12 @@ public class BannersBannersPage extends BasePage {
 
     private final By _bannerQuantity = By.cssSelector("#list_limit_chzn > a");
     private final String _bannerQuantitySelect = "//li[.='%s']";
-    private final String _newBanner = "//a[contains(.,'%s')]";
+    private final String _newBanner = "//td//a[normalize-space(text())='%s']";
     private final By _categoryDropdown = By.xpath("//div[@class='controls']/select[@id='jform_catid']/..");
     private final String _dropdownOption = "//ul[@class='chzn-results']/li[contains(.,'%s')]";
     private final By _bannerDetailsTab = By.cssSelector("div.form-horizontal li>a[href='#otherparams']");
     private final By _clientDropdown = By.cssSelector("div[id='jform_cid_chzn']>a");
-    private final By _numberTableRows = By.xpath("//*[@id='articleList']/tbody/tr");
-// fix _numberTableRows
+
     /**
      * This is place of Web Elements
      */
@@ -56,10 +55,6 @@ public class BannersBannersPage extends BasePage {
         return DRIVER.findElement(_clientDropdown);
     }
 
-    private List<WebElement> numberTableRows() {
-        return DRIVER.findElements(_numberTableRows);
-    }
-
     /**
      * This is place create methods
      */
@@ -68,12 +63,8 @@ public class BannersBannersPage extends BasePage {
         bannerQuantity().click();
     }
 
-    public void clickBannerQuantityOption(String option) {
-        bannerQuantitySelect(option).click();
-    }
-
-    public String getSizeOfRows() {
-        return String.valueOf(numberTableRows().size());
+    public void clickBannerQuantityOption(int option) {
+        bannerQuantitySelect(String.valueOf(option)).click();
     }
 
     /**
@@ -96,7 +87,7 @@ public class BannersBannersPage extends BasePage {
         Log4j.info("Choose Client Dropdown: " + clientTitle);
     }
 
-    public void selectQuantityOption(String quantity) {
+    public void selectQuantityOption(int quantity) {
         clickBannerQuantity();
         clickBannerQuantityOption(quantity);
     }
@@ -105,8 +96,9 @@ public class BannersBannersPage extends BasePage {
      * This is place create verify methods
      */
 
-    public Boolean DoesChooseQuantityOptionCorrect(String num) {
-        return getSizeOfRows().equals(num);
+    //Get the number of Row in Table by size of Checkbox with title ="" and minus 1
+    public int DoesChooseQuantityOptionCorrect() {
+        return sizeOfCheckbox("") - 1;
     }
 
     public Boolean isNewBannerDisplayed(String banner) {

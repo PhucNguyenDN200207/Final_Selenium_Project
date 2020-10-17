@@ -21,7 +21,7 @@ public class TC_JOOMLA_BANNERS_CLIENTS_011 extends BaseTest {
     }
 
     @Test(description = "Verify that user can create many clients by using 'Save & New' button")
-    public void testcase004() {
+    public void testcase011() {
         Log4j.header("TC_JOOMLA_BANNERS_CLIENTS_011");
 
         String client1Title = randomTitle();

@@ -21,7 +21,7 @@ public class TC_JOOMLA_CONTACTS_008 extends BaseTest {
     }
 
     @Test(description = "Verify user can access contact's help section")
-    public void testcase008() throws InterruptedException {
+    public void testcase008() {
         Log4j.header("TC_JOOMLA_CONTACTS_008");
 
         Log4j.info("Navigate to Contact manager page");

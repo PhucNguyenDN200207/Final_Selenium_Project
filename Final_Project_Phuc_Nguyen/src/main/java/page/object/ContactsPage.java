@@ -13,7 +13,7 @@ public class ContactsPage extends BasePage {
      */
 
     private final By _contactDrd = By.xpath("//li[@class='dropdown open']//li[@class='dropdown-submenu']/a[.='Contacts']");
-    private final String _newContactTitle = "//a[.='%s']";
+    private final String _newContactTitle = "//td//a[normalize-space(text())='%s']";
 
     /**
      * This is place of Web Elements

@@ -16,7 +16,7 @@ public class ArticlePage extends BasePage {
     private final By _articleManager = By.xpath("//div[@class='j-links-groups']//a[contains(.,'Articles')]");
     private final By _articleTitle = By.cssSelector("#jform_title");
     private final By _articleContentTxt = By.cssSelector("#jform_articletext_ifr");
-    private final String _newTitle = "//tbody/tr//a[contains(.,'%s')]";
+    private final String _newTitle = "//td//a[normalize-space(text())='%s']";
     private final String _authorByNewTitle = "//tbody/tr//a[contains(.,'%s')]//ancestor::tr//td/a[@data-original-title='Author']";
 
     /**

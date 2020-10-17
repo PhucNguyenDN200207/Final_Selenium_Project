@@ -12,7 +12,7 @@ public class BannersCategoriesPage extends BasePage {
      */
 
     private final By _bannerCategories = By.xpath("//*[@id='submenu']/li/a[.='Categories']");
-    private final String _newCateGoryTitle = "//a[contains(.,'%s')]";
+    private final String _newCateGoryTitle = "//td//a[normalize-space(text())='%s']";
 
     /**
      * This is place of Web Elements
