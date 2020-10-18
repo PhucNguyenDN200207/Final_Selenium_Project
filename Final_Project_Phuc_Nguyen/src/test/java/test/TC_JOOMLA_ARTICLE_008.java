@@ -1,13 +1,10 @@
 package test;
 
-import helper.BrowserHelper;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import page.object.ArticlePage;
 import page.object.LoginPage;
-import sun.rmi.runtime.Log;
-import utils.Constants;
 import utils.Log4j;
 
 import static utils.Constants.PASSWORD;

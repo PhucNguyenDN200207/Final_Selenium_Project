@@ -225,7 +225,7 @@ public class BasePage {
     /**
      * Choose sort By ID Descending to pop-up every new create element to first row of data table
      */
-    public void chooseSortByIdDescending() {
+    public void selectSortByIdDescending() {
         clickSortByDrd();
         Log4j.info("Sort table data by ID Descending");
         clickSortByIdDescending();

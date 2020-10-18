@@ -53,7 +53,7 @@ public class TC_JOOMLA_BANNERS_BANNERS_001 extends BaseTest {
         Assert.assertEquals(bannersClientsPage.getMessage(), CLIENTS_SUCCESS_MESSAGE,
                 "New Client Alert message failed");
 
-        bannersClientsPage.chooseSortByIdDescending();
+        bannersClientsPage.selectSortByIdDescending();
 
         Log4j.info("Verify: New client is created");
         Assert.assertTrue(bannersClientsPage.isNewClientTitleDisplayed(clientTitle),
@@ -81,7 +81,7 @@ public class TC_JOOMLA_BANNERS_BANNERS_001 extends BaseTest {
         Assert.assertEquals(bannersCategoriesPage.getMessage(), CATEGORIES_SUCCESS_MESSAGE,
                 "New Client Alert message failed");
 
-        bannersCategoriesPage.chooseSortByIdDescending();
+        bannersCategoriesPage.selectSortByIdDescending();
 
         Log4j.info("Verify: New Category is created");
         Assert.assertTrue(bannersCategoriesPage.isNewCateGoryTitleDisplayed(categoryTitle),
@@ -110,7 +110,7 @@ public class TC_JOOMLA_BANNERS_BANNERS_001 extends BaseTest {
         Assert.assertEquals(bannersBannersPage.getMessage(), BANNERS_SUCCESS_MESSAGE,
                 "New Banner Alert message failed");
 
-        bannersBannersPage.chooseSortByIdDescending();
+        bannersBannersPage.selectSortByIdDescending();
 
         Log4j.info("Verify: New Banner is created");
         Assert.assertTrue(bannersBannersPage.isNewBannerDisplayed(bannerName),

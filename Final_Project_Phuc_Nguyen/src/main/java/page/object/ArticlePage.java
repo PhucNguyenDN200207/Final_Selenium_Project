@@ -62,7 +62,6 @@ public class ArticlePage extends BasePage {
         articleContentTxt().sendKeys(text);
     }
 
-
     public void clickArticleManager() {
         articleManager().click();
     }

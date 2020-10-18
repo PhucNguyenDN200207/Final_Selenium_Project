@@ -42,7 +42,7 @@ public class TC_JOOMLA_ARTICLE_015 extends BaseTest {
         Log4j.info("Step: Click on'Save & Close'icon of the top right toolbar");
         articlePage.clickSaveAndCloseBtn();
 
-        articlePage.chooseSortByIdDescending();
+        articlePage.selectSortByIdDescending();
 
         Log4j.info("Verify: 'Article successfully saved' message is displayed");
         Assert.assertEquals(articlePage.getMessage(), ARTICLE_ALERT_MESSAGE, "Article Alert message failed");

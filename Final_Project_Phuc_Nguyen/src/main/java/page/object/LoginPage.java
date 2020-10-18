@@ -47,7 +47,6 @@ public class LoginPage extends BasePage {
     }
 
     public void clickLoginBtn() {
-        Log4j.info("Click on Login Button");
         loginBtn().click();
     }
 
@@ -62,6 +61,7 @@ public class LoginPage extends BasePage {
         Log4j.info("Enter valid password into Password field");
         this.inputPassword(password);
 
+        Log4j.info("Click Login button");
         clickLoginBtn();
     }
 

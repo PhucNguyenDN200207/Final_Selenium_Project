@@ -40,7 +40,7 @@ public class BrowserHelper {
     }
 
     /**
-     * Use for Help page
+     * Use for verify Help page opened
      *
      * @param title New web title after action click or open
      * @return true if it has two browser windows and the title of new window match

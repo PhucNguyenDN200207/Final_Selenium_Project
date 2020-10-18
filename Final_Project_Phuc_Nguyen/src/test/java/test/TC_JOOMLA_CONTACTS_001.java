@@ -46,7 +46,7 @@ public class TC_JOOMLA_CONTACTS_001 extends BaseTest {
         Assert.assertEquals(contactsPage.getMessage(),
                 CONTACT_SUCCESS_MESSAGE, "Contact Alert message failed");
 
-        contactsPage.chooseSortByIdDescending();
+        contactsPage.selectSortByIdDescending();
 
         Log4j.info("Verify: Created contact is displayed on the contacts table");
         Assert.assertTrue(contactsPage.isNewContactDisplayed(name), "New Contact create failed");

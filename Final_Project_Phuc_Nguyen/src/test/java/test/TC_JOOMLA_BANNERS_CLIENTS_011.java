@@ -70,7 +70,7 @@ public class TC_JOOMLA_BANNERS_CLIENTS_011 extends BaseTest {
         Assert.assertEquals(bannersClientsPage.getMessage(), CLIENTS_SUCCESS_MESSAGE,
                 "New Client Alert message failed");
 
-        bannersClientsPage.chooseSortByIdDescending();
+        bannersClientsPage.selectSortByIdDescending();
 
         Log4j.info("Verify: Two new clients are created");
         Assert.assertTrue(bannersClientsPage.isNewClientTitleDisplayed(client1Title),

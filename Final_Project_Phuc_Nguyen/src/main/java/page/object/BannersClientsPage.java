@@ -48,22 +48,18 @@ public class BannersClientsPage extends BasePage {
      */
 
     public void enterEmailTxt(String email) {
-        Log4j.info("Input Email text field");
         emailTxt().sendKeys(email);
     }
 
     public void enterContactNameTxt(String name) {
-        Log4j.info("Input Email text field");
         contactNameTxt().sendKeys(name);
     }
 
     public void clickBannerClients() {
-        Log4j.info("Step: Click on Clients");
         bannerClients().click();
     }
 
     public void clickSaveNewBtn() {
-        Log4j.info("Step: Click on Save & New button");
         saveNewBtn().click();
     }
 

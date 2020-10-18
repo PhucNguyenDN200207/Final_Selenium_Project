@@ -2,7 +2,6 @@ package test;
 
 import helper.BrowserHelper;
 import org.testng.annotations.*;
-import page.object.LoginPage;
 import utils.Log4j;
 
 import static utils.Constants.*;
