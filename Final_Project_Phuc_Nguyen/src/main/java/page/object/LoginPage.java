@@ -46,9 +46,7 @@ public class LoginPage extends BasePage {
         password().sendKeys(password);
     }
 
-    public void clickLoginBtn() {
-        loginBtn().click();
-    }
+    public void clickLoginBtn() { loginBtn().click();}
 
     /**
      * Login with input valid username and password to Joomla

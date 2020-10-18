@@ -42,10 +42,6 @@ public class BasePage {
      * This is place create common Web elements
      */
 
-    private WebElement saveBtn() {
-        return DRIVER.findElement(_saveBtn);
-    }
-
     private WebElement saveAndCloseBtn() {
         return DRIVER.findElement(_saveAndCloseBtn);
     }
@@ -188,22 +184,6 @@ public class BasePage {
         wait.until(ExpectedConditions.elementToBeClickable(element));
     }
 
-    public int sizeOfCheckbox(String title) {
-        return checkBox(title).size();
-    }
-
-    public void selectCheckbox(String title) {
-        if (sizeOfCheckbox(title) == 1) {
-            checkBox(title).get(0).click();
-        }
-    }
-
-    public void selectCategory(String category) {
-        clickWhenElementReady(categoryDropdown());
-        clickWhenElementReady(categoryOption(category));
-        Log4j.info("Selected: " + category);
-    }
-
     public boolean doesElementStatus(String title, String status) {
         return boxName(title, status).size() == 1;
 
@@ -229,6 +209,22 @@ public class BasePage {
         clickSortByDrd();
         Log4j.info("Sort table data by ID Descending");
         clickSortByIdDescending();
+    }
+
+    public int sizeOfCheckbox(String title) {
+        return checkBox(title).size();
+    }
+
+    public void selectCheckbox(String title) {
+        if (sizeOfCheckbox(title) == 1) {
+            checkBox(title).get(0).click();
+        }
+    }
+
+    public void selectCategory(String category) {
+        clickWhenElementReady(categoryDropdown());
+        clickWhenElementReady(categoryOption(category));
+        Log4j.info("Selected: " + category);
     }
 
     /**

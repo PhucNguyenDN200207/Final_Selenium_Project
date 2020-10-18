@@ -14,7 +14,6 @@ public class BaseTest {
     public void beforeMethod(String browser) {
         if (browser.equals("chrome")) {
             BrowserHelper.openChromeBrowser();
-
         } else {
             if (browser.equals("firefox")) {
                 BrowserHelper.openFirefoxBrowser();
