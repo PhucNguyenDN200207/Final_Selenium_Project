@@ -54,11 +54,11 @@ public class ArticlePage extends BasePage {
         newArticle().click();
     }
 
-    public void inputArticleTitle(String title) {
+    public void enterArticleTitle(String title) {
         articleTitle().sendKeys(title);
     }
 
-    public void inputArticleContentTxt(String text) {
+    public void enterArticleContentTxt(String text) {
         articleContentTxt().sendKeys(text);
     }
 
@@ -74,9 +74,9 @@ public class ArticlePage extends BasePage {
      *  TODO function fail when create random data with special characters.
      */
     public void enterNewArticle(String title, String content, String articleCategory) {
-        inputArticleTitle(title);
+        enterArticleTitle(title);
 
-        inputArticleContentTxt(content);
+        enterArticleContentTxt(content);
 
         selectCategory(articleCategory);
     }

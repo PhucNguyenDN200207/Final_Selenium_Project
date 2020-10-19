@@ -29,7 +29,7 @@ public class DataHelper {
     }
 
     public static String randomContent() {
-        return faker.lorem().paragraph(randomNumber(1, 99)).trim();
+        return faker.lorem().paragraph(randomNumber(1, 10)).trim();
     }
 
     public static int randomNumber(int min, int max) {

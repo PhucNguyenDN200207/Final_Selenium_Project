@@ -6,7 +6,6 @@ import utils.Log4j;
 
 import static utils.Constants.*;
 
-
 public class BaseTest {
 
     @Parameters("browser")

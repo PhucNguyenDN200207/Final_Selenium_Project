@@ -24,7 +24,6 @@ public class BannersBannersPage extends BasePage {
      * This is place of Web Elements
      */
 
-
     private WebElement bannerQuantity() {
         return DRIVER.findElement(_bannerQuantity);
     }

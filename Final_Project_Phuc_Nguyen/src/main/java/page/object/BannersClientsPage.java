@@ -2,8 +2,6 @@ package page.object;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import utils.Log4j;
-
 
 import static utils.Constants.DRIVER;
 

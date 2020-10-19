@@ -38,11 +38,11 @@ public class LoginPage extends BasePage {
     /**
      * Common method
      */
-    public void inputUserName(String userName) {
+    public void enterUserName(String userName) {
         userName().sendKeys(userName);
     }
 
-    public void inputPassword(String password) {
+    public void enterPassword(String password) {
         password().sendKeys(password);
     }
 
@@ -54,10 +54,10 @@ public class LoginPage extends BasePage {
     public void login(String username, String password) {
 
         Log4j.info("Enter valid username into Username field");
-        this.inputUserName(username);
+        this.enterUserName(username);
 
         Log4j.info("Enter valid password into Password field");
-        this.inputPassword(password);
+        this.enterPassword(password);
 
         Log4j.info("Click Login button");
         clickLoginBtn();
